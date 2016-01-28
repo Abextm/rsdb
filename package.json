@@ -1,0 +1,17 @@
+{
+  "name": "rsdb",
+  "version": "1.0.0",
+  "description": "Runescape database server",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Abex",
+  "license": "CC BY-SA 4.0",
+  "dependencies": {
+    "express": "^4.13.4",
+    "helmet": "^1.1.0",
+    "http-proxy": "^1.13.0",
+    "rimraf": "^2.5.1"
+  }
+}
