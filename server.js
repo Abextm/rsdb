@@ -22,13 +22,15 @@ app.use(function(req,res,next){
 	var s=[].concat(req.subdomains);
 	s.reverse();
 	var subs=s.join(".");
-	sub[subs](req,res,next);
+	sub[subs]&&sub[subs](req,res,next);
 });
 
 sub["www"].use(function(req,res){
 	var host = req.hostname.split(".");
 	host=host.slice(1);
-	res.redirect(301,"http://"+host.join(".")+req.path);
+	var path = req.path;
+	if(path[path.length-1]=="/")path=path.slice(0,-1);
+	res.redirect(301,"http://"+host.join(".")+path);
 });
 
 //static serving
@@ -73,7 +75,9 @@ app.get("/status",function(req,res){
 });
 
 sub[""].get("/:name(?:os([^\/]*))",function(req,res,next){
-	res.redirect(301,"http://os."+req.hostname+"/"+req.params.name);
+	var url="http://os."+req.hostname+"/"+req.params.name;
+	res.send('<html><head><meta http-equiv="refresh" content="1; url='+url+'"></head><body><a href="'+url+'">Here!</a></body></html>');
+	//res.redirect(301,url);
 });
 
 //Error handlers
