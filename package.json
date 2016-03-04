@@ -4,7 +4,6 @@
   "description": "Runescape database server",
   "main": "server.js",
   "scripts": {
-    "postinstall": "npm install -g forever",
     "start": "node server.js"
   },
   "author": "Abex",
