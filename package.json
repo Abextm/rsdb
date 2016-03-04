@@ -2,17 +2,18 @@
   "name": "rsdb",
   "version": "1.0.0",
   "description": "Runescape database server",
-  "main": "server/index.js",
+  "main": "server.js",
   "scripts": {
+    "postinstall": "npm install -g forever",
     "start": "node server.js"
   },
   "author": "Abex",
   "license": "CC BY-SA 4.0",
   "dependencies": {
+    "cloudscraper": "^1.2.1",
     "express": "^4.13.4",
+    "extend": "^3.0.0",
     "helmet": "^1.1.0",
-    "http-proxy": "^1.13.0",
-    "rimraf": "^2.5.1",
-    "uglify-js": "^2.6.1"
+    "msgpack-lite": "^0.1.17"
   }
 }

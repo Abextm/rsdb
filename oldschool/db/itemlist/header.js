@@ -1,53 +1,56 @@
-(function(){
-	var ItemList;
-	var id2icon = function(id){
-		return "http://cdn.rsbuddy.com/items/"+id+".png";
+//define(function(){ (in the index.js)
+	//var d = {...};
+	var T=function(id){
+		this.ID=id;
 	};
-	var Item = function(id){
-		var i = ItemList._store[id];
-		if(i.length>=4){
-			for(var k in i[3]){
-				if(["Name","Store","HighAlch","LowAlch","ID","Icon","Note","NoteIcon"].indexOf(k)==-1){
-					this[k]=i[3][k];
-				}else{
-					this["_"+k]=i[3][k];
-				}
-			}
+	T.prototype=Object.create(Object.prototype,{});
+	var AddGetter=function(o){
+		for (var k in o) {
+			Object.defineProperty(T.prototype,k,{enumerable:true,configurable:true,get:o[k]});
 		}
-		this.ID=ID;
 	};
-	Item.prototype=Object.create(Object.prototype,{
-		Name:{get:function(){return this._Name||ItemList._store[this.ID][0];}},
-		Store:{get:function(){return this._Store||ItemList._store[this.ID][1];}},
-		HighAlch:{get:function(){return this._HighAlch||this.Store*.6;}},
-		LowAlch:{get:function(){return this._LowAlch||this.Store*.3;}},
-		Icon:{get:function(){return this._Icon||id2icon(this.ID);}},
-		Note:{get:function(){return this._Note||ItemList._store[this.ID][2];}},
-		NoteIcon:{get:function(){return this._NoteIcon||this.Note?id2icon(this.Note):undefined;}},
-	});
-	var MkItem = function(i){
-		if(!ItemList._store[id])return;
-		return new Item(i);
+	var GetName=function(v){
+		if(n[v]!==undefined)return new T(n[v]);
+		console.warn("Cannot get item by name",v);
 	};
-	ItemList={
-		Item:MkItem,
-		GetID:function(id){
-			return MkItem(id);
-		},
-		GetName:function(name){
-			if(!ItemList._namelookup){
-				ItemList._namelookup={};
-				ItemList.Each(function(i){
-					ItemList._namelookup[i.Name]=i.ID;
-				})
-			}
-			return MkItem(ItemList._namelookup[name])
-		},
-		Get:function(v){
-			var id = parseInt(v);
-			if(id){
-				return ItemList.GetID(id);
-			}else{
-				return ItemList.GetName(v);
-			}
-		},
+	var GetID=function(v){
+		if(d[v]!==undefined)return new T(v);
+		console.warn("Cannot get item by id",v);
+	}
+	AddGetter({//noted noteid (name members price)
+		Name:function(){return (d[this.ID][2]!==null)?d[this.ID][2]:this.Note.Name;},
+		Members:function(){return (d[this.ID][3]!==null)?d[this.ID][3]:this.Note.Members;},
+		Store:function(){return (d[this.ID][4]!==null)?d[this.ID][4]:this.Note.Store;},
+		HighAlch:function(){return ~~(this.Store*.6);},
+		LowAlch:function(){return ~~(this.Store*.3);},
+		Icon:function(){return "http://cdn.rsbuddy.com/items/"+this.ID+".png";},
+		NoteID:function(){return d[this.ID][1];},
+		Note:function(){return GetID(this.NoteID);},
+		NoteIcon:function(){return this.Note&&this.Note.Icon;},
+		IsNote:function(){return d[this.ID][0];},
+	})
+	var n={};
+	var i=new T(0);
+	for(var k in d){
+		i.ID=k;
+		if(!i.IsNote&&!n[i.Name]){
+			n[i.Name]=i.ID;
+		}
+	}
+	var each=function(cb){
+		for(var k in d){
+			cb(new T(d[k]),k);
+		}
+	}
+	return {
+		Name:"ItemList",
+		Get:function(v){return d[v]?GetID(v):GetName(v);},
+		GetName:GetName,
+		GetID:GetID,
+		Type:T,
+		Each:each,forEach:each,
+		Func:function(){return Object.keys(d).map(function(v){return new T(v);})},
+		Data:function(){return d;},
+		AddGetter:AddGetter,
+	};
+});

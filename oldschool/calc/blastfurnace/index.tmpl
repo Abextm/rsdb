@@ -1,0 +1,119 @@
+<rsdb-title>Blast Furnace</rsdb-title>
+<template require="itemlist,smithing.bars,prices">
+  <div id="table"><div></div></div>
+  <script>//,prices,
+    var BfBars=Smithing.Bars.filter(function(v){
+      return v.BFCoal!==undefined;
+    });
+  </script>
+  <fieldset><legend>Bars/Hour</legend>
+    <rsdb-opt change="calc()" id="coalbag" checked>Coal bag</rsdb-opt><br>
+    <rsdb-opt change="calc()" id="goldgaunts" checked>Goldsmith Gaunts</rsdb-opt><br>
+    <table><tbody id="bphtable">
+      <tr><th>Bar</th><th>Bars/hr</th></tr>
+    </tbody></table>
+    <script>
+    (function(){
+      var e=document.getElementById("bphtable");
+      e.innerHTML=e.innerHTML+(BfBars.map(function(Item){
+        return ["<tr><td><rsdb-item>",Item.ID,"</rsdb-item></td><td><input type='number' oninput='calc()' id='barperhr",Item.ID,"'></td></tr>"].join("");
+      }).join(""));
+    })();
+     </script>
+  </fieldset>
+  <script>
+  function lerp(a,b,x){
+    var x0=a.IR;
+    var x1=b.IR;
+    var y0=a.BpHR;
+    var y1=b.BpHR;
+    var y=y0+(y1-y0)*((x-x0)/(x1-x0));
+    return y;
+  }
+  function calc(){
+    var cb=~~document.getElementById("coalbag").value;
+    var Coal=ItemList.Get("Coal");
+    //           0 . 1 . 2 . 3 . 4 . 5
+    var barsphr=[0,0,0,0,0,0,0,0,0,0,0];
+    {
+      var set=0;
+      BfBars.forEach(function(Item){
+        var v=document.getElementById("barperhr"+Item.ID).value
+        if(v){
+          barsphr[Item.ItemRun[cb]*2]=parseInt(v);
+          set++;
+        }
+      });
+      if(set==0){
+        barsphr[2]=4000;//Resonable default (4k gold/hr)
+        set=1;//Then do item-run
+      }
+      var speed=barsphr.map(function(v,i){
+        if(!i||!v)return;
+        return {
+          BpHR:v,
+          IR:i/2,
+          IRpH:v*(i/2),
+        };
+      });
+      if(set==1){//Figure off item-run
+        var IRpH=speed.filter(function(v){return v;})[0].IRpH;
+        for(var i=0;i<barsphr.length;i++){
+          barsphr[i]=IRpH/(i/2);
+        }
+      }else{//lerp
+        var barsphr=speed.map(function(v,i){
+          if(v)return v.BpHR;
+          var args=[];
+          for(var ii=1;;ii++){
+            if(i-ii>0&&speed[i-ii])args.push(speed[i-ii]);
+            if(i+ii<speed.length&&speed[i+ii])args.push(speed[i+ii]);
+            if(args.length>=2)break;
+          }
+          return lerp(args[0],args[1],i/2);
+        });
+      }
+      var bph=barsphr;
+      barsphr={};
+      BfBars.forEach(function(e){
+        barsphr[e.ID]=bph[e.ItemRun[cb]*2];
+        document.getElementById("barperhr"+e.ID).placeholder=~~(barsphr[e.ID]);
+      });
+    }
+    var table=document.getElementById("table").children[0];
+  replaceSortedTable(table,[
+"<table>",
+  "<th><rsdb-sort>",
+    ["Bar","XP","Profit","Cost","Sell","GP/Slot","GP/Hour","XP/Slot","XP/Hour"].join("</rsdb-sort></th><th><rsdb-sort>"),
+  "</rsdb-sort></th><tr><td>",
+    BfBars.map(function(bar){
+      var cost=bar.Ores.reduce(function(acc,oreid){
+        return ItemList.Get(oreid).Buy+acc
+      },0);
+      cost+=bar.BFCoal*Coal.Buy;
+      var profit=bar.Sell-cost;
+      var xp=bar.BarExp;
+      
+      if(bar.Name=="Gold bar"&&document.getElementById("goldgaunts").value)xp=56.2;
+      return [
+        "<rsdb-item>"+bar.ID+"</rsdb-item>",
+        xp,
+        profit,
+        cost,
+        bar.Sell,
+        profit/bar.ItemRun[cb],
+        profit*barsphr[bar.ID],
+        xp/bar.ItemRun[cb],
+        xp*barsphr[bar.ID],
+      ].map(function(v,i){
+        if(i>1) return "<rsdb-num>"+v+"</rsdb-num>";
+        return v;
+      }).join("</td><td>");
+    }).join("</td></tr><tr><td>"),
+  "</td></tr>",
+"</table>",
+    ].join(""));
+  }
+  calc();
+  </script>
+</template>

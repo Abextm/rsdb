@@ -1,0 +1,30 @@
+<rsdb-title>Testing</rsdb-title>
+<template require="itemlist">
+	text
+	<rsdb-item>453</rsdb-item>
+	<rsdb-item>453</rsdb-item>
+	<rsdb-item>453</rsdb-item>
+	<script>
+		function test(){
+			alert(document.getElementById("opttest").value);
+		}
+	</script>
+	<rsdb-opt change="test();" id="opttest">ClickMe</rsdb-opt>
+	<table>
+		<tr></tr>
+		<tr><td><rsdb-item>453</rsdb-item></td></tr>
+		<tr><td><rsdb-item>453</rsdb-item></td></tr>
+		<tr><td><rsdb-item>453</rsdb-item></td></tr>
+		<tr><td><rsdb-item>453</rsdb-item></td></tr>
+		<tr><td><rsdb-item>453</rsdb-item></td></tr>
+	</table>
+	<rsdb-num>100000</rsdb-num><br>
+	<rsdb-num>1.66667</rsdb-num><br>
+	<rsdb-num>1.583333</rsdb-num><br>
+	<rsdb-num>1000.58333</rsdb-num><br>
+	<rsdb-num>1000000000</rsdb-num><br>
+	<rsdb-num>123456789</rsdb-num><br>
+	<rsdb-num>-1234.45</rsdb-num><br>
+	<rsdb-num>+1234</rsdb-num><br>
+	<rsdb-num>10</rsdb-num>
+</template>
