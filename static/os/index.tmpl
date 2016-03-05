@@ -1,1 +1,70 @@
-Hello
+<div class="container">
+<template require="/index.js">
+	<div id="list">
+	</div>
+
+	<script>
+var list=document.getElementById("list");
+var fail = function(el){
+	if(el.src!="/thumb_fallback.png")el.src="/thumb_fallback.png";
+}
+
+var Index=window["/index.js"];
+list.innerHTML=Object.keys(Index).map(function(id){
+	var calc=Index[id];
+	return [
+"<a href='/",id,"/' title='",calc.Name.replace("'","&quot;"),"' class='calc'>",
+	"<div><img src='/",id,"/thumb.png' onerror='fail(this)'/></div>",
+	"<div>",
+		"<h2>",
+			calc.Name,
+		"</h2>",
+		"<p>",
+			calc.Desc,
+		"</p>",
+	"</div>",
+"</a>"
+	].join("");
+}).join("");
+	</script>
+</template>
+</div>
+<style>
+.list{
+	display: table;
+	width:100%;
+}
+.container{
+	max-width:940px;
+	margin:0 auto;
+}
+.calc{
+	display: table-row;
+	color:#222;
+	text-decoration: none;
+}
+.calc:hover{
+	background: rgba(0,0,0,.1);
+}
+.calc>div{
+	height:128px;
+	display: table-cell;
+	vertical-align: middle;
+	padding:5px 14px;
+	border-bottom:1px solid #ccc;
+	max-width: 100%;
+}
+.calc>div:nth-child(2){
+	width:100%;
+}
+.calc p {
+	word-break: break-all;
+}
+.calc img{
+	width:128px;
+	height:128px;
+}
+#osrslink{
+	color:#333;
+}
+</style>

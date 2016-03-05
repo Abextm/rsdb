@@ -36,22 +36,25 @@ sub["www"].use(function(req,res){
 //static serving
 var tmpl=fs.readFileSync(__dirname+"/static/tmpl.html").toString().split("<<< - CONTENT - >>>");
 var serveTMPL=function(v,req,res,next){
-		var path=req.path;
-		if(path[path.length-1]=="/"){
-			path+="index";
-		}
-		fs.readFile(v+path+".tmpl",function(err,data){
-			if(err)return next();
-			res.send(tmpl[0]+data.toString()+tmpl[1]);
-		});
+	var path=req.path;
+	if(path[path.length-1]=="/"){
+		path+="index";
+	}
+	fs.readFile(v+path+".tmpl",function(err,data){
+		if(err)return next();
+		res.send(tmpl[0]+data.toString()+tmpl[1]);
+	});
 }
 for(var k in staticMap){
-	sub[k].use(express.static(__dirname+"/"+staticMap[k]+"/"))
+	sub[k].use(express.static(__dirname+"/"+staticMap[k]+"/"));
 	sub[k].use(serveTMPL.bind(0,__dirname+"/"+staticMap[k]+"/"));
 }
 
-sub["os"].use(express.static(__dirname+"/oldschool/calc/"))
+sub["os"].use(express.static(__dirname+"/oldschool/calc/"));
 sub["os"].use(serveTMPL.bind(0,__dirname+"/oldschool/calc/"));
+sub["os"].use(express.static(__dirname+"/static/www/"));
+sub["os"].use(serveTMPL.bind(0,__dirname+"/static/www/"));
+
 sub["db.os"].get("/:name/:res",function(req,res,next){
 	load("oldschool/db/"+req.params.name,function(err,mod){
 		if(err){
@@ -79,6 +82,11 @@ sub[""].get("/:name(?:os([^\/]*))",function(req,res,next){
 	res.send('<html><head><meta http-equiv="refresh" content="1; url='+url+'"></head><body><a href="'+url+'">Here!</a></body></html>');
 	//res.redirect(301,url);
 });
+
+sub[""].get("/",function(req,res,next){
+	var url="http://os."+req.hostname+"/";
+	res.send('<html><head><meta http-equiv="refresh" content="1; url='+url+'"></head><body><a href="'+url+'">Here!</a></body></html>');
+})
 
 //Error handlers
 app.use(function(req,res){//404

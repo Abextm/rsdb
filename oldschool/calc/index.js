@@ -1,6 +1,7 @@
-{
-	BlastFurnace:{
+define({
+	blastfurnace:{
 		Name:"Blast Furnace",
-		Tags:["bf","profit"],
-	}
-}
+		Desc:"Blast Furnace profit/xp/bar/hr calculator",
+	},
+
+});

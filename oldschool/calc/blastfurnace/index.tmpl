@@ -1,6 +1,6 @@
 <rsdb-title>Blast Furnace</rsdb-title>
 <template require="itemlist,smithing.bars,prices">
-  <div id="table"><div></div></div>
+  <div id="table" class="linetable"><div></div></div>
   <script>//,prices,
     var BfBars=Smithing.Bars.filter(function(v){
       return v.BFCoal!==undefined;
@@ -81,6 +81,8 @@
       });
     }
     var table=document.getElementById("table").children[0];
+    //           bar,xp,profit,cost,sell,gps,gph,xps,xph
+    var precision=[ ,1 ,0     ,0   ,0    ,1,    ,2 ,   ];
   replaceSortedTable(table,[
 "<table>",
   "<th><rsdb-sort>",
@@ -106,7 +108,7 @@
         xp/bar.ItemRun[cb],
         xp*barsphr[bar.ID],
       ].map(function(v,i){
-        if(i>1) return "<rsdb-num>"+v+"</rsdb-num>";
+        if(i>=1) return "<rsdb-num precision='"+precision[i]+"'>"+v+"</rsdb-num>";
         return v;
       }).join("</td><td>");
     }).join("</td></tr><tr><td>"),

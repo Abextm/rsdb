@@ -33,7 +33,7 @@
 	xtag.register("rsdb-item",{
 		lifecycle:{
 			created:function(){
-				this.item=this.innerHTML;
+				this.item=this.item||this.innerHTML;
 			}
 		},
 		accessors:{
@@ -77,17 +77,34 @@
 						var dot=v.indexOf(".");
 						var trailer="";
 						var forward=v;
+						var precision;
+						if(this.precision){
+							precision=parseInt(this.precision);
+							if(isNaN(precision))precision=undefined;
+							if(precision)precision+=1;//include the .
+						}
 						if(dot!=-1){
 							var dec=v.substr(dot+1);
 							var nr=numrepeatregex.exec(dec)
 							if(nr){
 								if(nr[1]!="0"){
 									trailer=v.substr(dot,nr.index+1)+"<span class='repeating'>"+nr[1]+"</span>";
+									while(trailer.length<precision){
+										trailer=trailer+"\xa0";
+									}
 								}
 							}else{
 								trailer=v.substr(dot);
 							}
+							while(trailer.length<precision){
+								trailer=trailer+"0";
+							}
 							forward=v.substr(0,dot);
+						}else if(precision){
+							trailer=".0";
+						}
+						while(trailer.length<precision){
+							trailer=trailer+"0";
 						}
 						var sign="";
 						if(forward[0]=="-"||forward[0]=="+"){
@@ -97,19 +114,27 @@
 						if(forward.length==0&&sign.length){
 							forward="0";
 						}
-						if(forward.length>4){
-							trailer="";
+						if(!precision){
+							if(forward.length>4){
+								trailer="";
+							}
+							var i=0;
+							while(forward.length>4){
+								i++;
+								forward=forward.slice(0,-3);
+							}
+							forward+=[""," K"," M"," B"," T"," Q"][i]
 						}
-						var i=0;
-						while(forward.length>4){
-							i++;
-							forward=forward.slice(0,-3);
-						}
-						forward+=["","K","M","B","T","Q"][i]
 						this.innerHTML=sign+forward+trailer;
 					}
 				},
 			},
+			precision:{
+				attribute:{},
+				set:function(){
+					this.value=this.value;
+				}
+			}
 		},
 	});
 
