@@ -1,0 +1,121 @@
+<rsdb-title>Herblore</rsdb-title>
+<template require="itemlist,herblore,prices">
+	<div id="table" class="linetable"><div></div></div>
+	<script>
+	var concat=function(acc,v){
+		return acc.concat(v);
+	};
+	var header = ["Out","Level","Exp","GP/XP","Method","Buy","Sell","Profit","","","","","",""];
+	var rows=Herblore.GrimyHerbs.map(function(hid){
+		var Herb=ItemList.Get(hid);
+		//Method = [clean, unf, finall] 0:skip, 1:manual, 2:npc
+		//cleaning/unfing
+		return "010,020,100,110,120,200,210,220".split(",").map(function(m){
+			var i=[(m[0]=="0")?Herb.CleanHerb:Herb];
+			var coins=0;
+			if(m[1]=="2")coins+=200;
+			if(m[0]=="2")coins+=200;
+			if(coins)i.push(ItemList.Get("Coins",coins));
+			return {
+				Method:m,
+				In:i,
+				Out:(m[1]=="0")?Herb.CleanHerb:Herb.UnfPot,
+				Exp:(m[0]=="1")?Herb.CleanExp:0,
+				Level:(m.indexOf("1")==-1)?0:Herb.CleanLevel,
+			};
+		});
+	}).reduce(concat,[]);
+	rows=Herblore.Potions.map(function(pid){
+		//finalling
+		var Pot=ItemList.Get(pid);
+		return "001,011,021,111,121,211,221".split(",").map(function(m){
+			var lvlreq=[];
+			var xp=0;
+			var i=[];
+			var coins=0;
+			function addReq(item){
+				if(item.Herb){
+					var h=item.Herb;
+					h.Count=item.Count
+					if(m[1]=="1"){
+						addReq(h);
+						lvlreq.push(h.GrimyHerb.CleanLevel);
+						return
+					}
+					if(m[1]=="2"){
+						addReq(h);
+						coins+=(200*h.Count);
+						return
+					}
+				}
+				if(item.GrimyHerb){
+					var h=item.GrimyHerb;
+					h.Count=item.Count;
+					if(m[0]=="1"){
+						i.push(h);
+						lvlreq.push(h.CleanLevel);
+						xp+=h.CleanExp;
+						return
+					}
+					if(m[0]=="2"){
+						i.push(h);
+						coins+=(200*h.Count);
+						return
+					}
+				}
+				i.push(item);
+			}
+			var rec=Pot.PotionRecipe;
+			lvlreq.push(rec.Level);
+			xp+=rec.Exp;
+			addReq(rec.Primary);
+			rec.Secondarys.forEach(function(s){
+				addReq(s);
+			});
+			if(coins)i.push(ItemList.Get("Coins",coins));
+			return {
+				Method:m,
+				In: i,
+				Out:Pot,
+				Exp:xp,
+				Level:Math.max.apply(Math,lvlreq),
+			};
+		});
+	}).reduce(concat,rows).map(function(v){
+		var b=v.In.reduce(function(acc,v){
+			if(isNaN(v.Buy))console.log(v);
+			return acc+v.Buy;
+		},0);
+		var s=v.Out.Sell;
+		var cols=[
+			"<rsdb-item>"+v.Out.ID+"</rsdb-item>",
+			v.Level,
+			"<rsdb-num precision='1'>"+v.Exp+"</rsdb-num>",
+			v.Exp?"<rsdb-num precision='3'>"+(s-b)/v.Exp+"</rsdb-num>":"<span class='rightalign'>N/A</span>",
+			v.Method,
+			"<rsdb-num>"+b+"</rsdb-num>",
+			"<rsdb-num>"+s+"</rsdb-num>",
+			"<rsdb-num>"+(s-b)+"</rsdb-num>",
+		];
+		cols=cols.concat(v.In.map(function(v){
+			return "<rsdb-item>"+v.ID+"</rsdb-item>";
+		}));
+		while(cols.length<header.length)cols.push("");
+		return cols.join("</td><td>");
+	});
+	replaceSortedTable(document.getElementById("table").children[0],[
+"<table>",
+	"<tr><th><rsdb-sort>",
+		header.join("</rsdb-sort></th><th><rsdb-sort>"),
+  "</rsdb-sort></th></tr>",
+  "<tr><td>",
+  	rows.join("</td></tr><tr><td>"),
+  "</td></tr></table>",
+ "</table>"].join(""));
+	</script>
+</template>
+<style>
+.rightalign{
+	float:right;
+}
+</style>

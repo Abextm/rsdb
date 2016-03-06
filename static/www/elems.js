@@ -86,12 +86,9 @@
 						if(dot!=-1){
 							var dec=v.substr(dot+1);
 							var nr=numrepeatregex.exec(dec)
-							if(nr){
+							if(nr&&!precision){
 								if(nr[1]!="0"){
 									trailer=v.substr(dot,nr.index+1)+"<span class='repeating'>"+nr[1]+"</span>";
-									while(trailer.length<precision){
-										trailer=trailer+"\xa0";
-									}
 								}
 							}else{
 								trailer=v.substr(dot);
@@ -99,6 +96,7 @@
 							while(trailer.length<precision){
 								trailer=trailer+"0";
 							}
+							if(precision)trailer=trailer.substr(0,precision);
 							forward=v.substr(0,dot);
 						}else if(precision){
 							trailer=".0";
@@ -138,16 +136,7 @@
 		},
 	});
 
-	var StrCmp = function(){
-	  if(window["Intl"]&&Intl.Collator){
-	    var coll = new Intl.Collator("en-us-u-co-phonebk-kn-true",{sensitivity:"accent",numeric:true});
-	    return coll.compare.bind(coll);
-	  }else{
-	    return function(a,b){
-	      return a-b;
-	    }
-	  }
-	}();
+	var coll = new Intl.Collator("en-us-u-co-phonebk-kn-true",{sensitivity:"accent",numeric:true});
 	xtag.register("rsdb-sort",{
 		lifecycle:{
 			created:function(){
@@ -212,8 +201,7 @@
 				if(v==-1){
 					return this.mode=this.last=0;
 				}
-				console.log(v);
-				var rev=v==2?1:-1;
+				var rev=v==2?-1:1;
 				var tr=this.parentElement;
 				var p=this;
 				while(tr.tagName!="TR"){
@@ -253,7 +241,16 @@
 						s:sort,
 					};
 				}).sort(function(a,b){
-					return StrCmp(a.s,b.s)*rev;
+					var aa=parseInt(a.s);
+					var v;
+					if(!isNaN(aa)){
+						var bb=parseInt(b.s);
+						if(!isNaN(bb)){
+							v=bb-aa;
+						}
+					}
+					v=v||coll.compare(a.s,b.s);
+					return v*rev;
 				}).forEach(function(v){
 					tbody.removeChild(v.el);
 					tbody.appendChild(v.el);

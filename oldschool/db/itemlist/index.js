@@ -25,6 +25,12 @@ var wait = waiter({
 					~~item.members,
 					item.store_price);
 			}
+			if(item.no_name_lookup){
+				if(item.noted&&note){
+					payload.push("","","");
+				}
+				payload.push(1);
+			}
 			return item.id+":["+payload.join(",")+"]";
 		}).join(",");
 		str="define(function(){var d={"+out+"};"+str;

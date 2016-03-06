@@ -5523,7 +5523,8 @@
     "store_price": 1,
     "high_alchemy": 0,
     "low_alchemy": 0,
-    "noted": false
+    "noted": false,
+    "no_name_lookup":true
   },
   {
     "id": 618,

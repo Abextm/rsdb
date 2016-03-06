@@ -1,55 +1,67 @@
 //define(function(){ (in the index.js)
 	//var d = {...};
-	var T=function(id){
+	var Item=function(id,count){
 		this.ID=id;
+		this.Count=count||1;
 	};
-	T.prototype=Object.create(Object.prototype,{});
-	var AddGetter=function(o){
+	Item.prototype=Object.create(Object.prototype,{});
+	var AddGetter=function(o,t){
+		t=t||Item;
 		for (var k in o) {
-			Object.defineProperty(T.prototype,k,{enumerable:true,configurable:true,get:o[k]});
+			Object.defineProperty(t.prototype,k,{enumerable:true,configurable:true,get:o[k]});
 		}
 	};
-	var GetName=function(v){
-		if(n[v]!==undefined)return new T(n[v]);
-		console.warn("Cannot get item by name",v);
+	var GetName=function(v,count,s){
+		if(Array.isArray(v)){
+			cout=v[1];
+			v=v[0];
+		}
+		if(n[v]!==undefined)return new Item(n[v],count);
+		if(!s)console.warn("Cannot get item by name",v);
 	};
-	var GetID=function(v){
-		if(d[v]!==undefined)return new T(v);
-		console.warn("Cannot get item by id",v);
+	var GetID=function(v,count,s){
+		if(Array.isArray(v)){
+			cout=v[1];
+			v=v[0];
+		}
+		if(d[v]!==undefined)return new Item(v,count);
+		if(!s)console.warn("Cannot get item by id",v);
 	}
-	AddGetter({//noted noteid (name members price)
+	AddGetter({//noted noteid (name members price (wierd))
 		Name:function(){return (d[this.ID][2]!==null)?d[this.ID][2]:this.Note.Name;},
 		Members:function(){return (d[this.ID][3]!==null)?d[this.ID][3]:this.Note.Members;},
-		Store:function(){return (d[this.ID][4]!==null)?d[this.ID][4]:this.Note.Store;},
-		HighAlch:function(){return ~~(this.Store*.6);},
-		LowAlch:function(){return ~~(this.Store*.3);},
+		OStore:function(){return (d[this.ID][4]!==null)?d[this.ID][4]:this.Note.Store;},
+		Store:function(){return this.Store*this.Count;},
+		HighAlch:function(){return (~~(this.OStore*.6))*this.Count;},
+		LowAlch:function(){return (~~(this.OStore*.3))*this.Count;},
 		Icon:function(){return "http://cdn.rsbuddy.com/items/"+this.ID+".png";},
 		NoteID:function(){return d[this.ID][1];},
 		Note:function(){return GetID(this.NoteID);},
 		NoteIcon:function(){return this.Note&&this.Note.Icon;},
 		IsNote:function(){return d[this.ID][0];},
+		Valid:function(){return d[this.ID]!==undefined},
 	})
 	var n={};
-	var i=new T(0);
+	var i=new Item(0);
 	for(var k in d){
 		i.ID=k;
-		if(!i.IsNote&&!n[i.Name]){
+		if(!i.IsNote&&!n[i.Name]&&!d[i.ID][5]){
 			n[i.Name]=i.ID;
 		}
 	}
 	var each=function(cb){
 		for(var k in d){
-			cb(new T(d[k]),k);
+			cb(new Item(d[k]),k);
 		}
 	}
 	return {
 		Name:"ItemList",
-		Get:function(v){return d[v]?GetID(v):GetName(v);},
+		Get:function(v,c){return d[v]?GetID(v,c):GetName(v,c);},
 		GetName:GetName,
 		GetID:GetID,
-		Type:T,
+		Type:Item,
 		Each:each,forEach:each,
-		Func:function(){return Object.keys(d).map(function(v){return new T(v);})},
+		Func:function(){return Object.keys(d).map(function(v){return new Item(v);})},
 		Data:function(){return d;},
 		AddGetter:AddGetter,
 	};

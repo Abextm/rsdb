@@ -110,7 +110,8 @@ rsdb-sort[mode="2"]:after{
   content: "\25b4";
 }
 
-.linetable table {
+.linetable table,
+table.linetable {
   border-collapse: collapse;
 }
 .linetable tr:nth-child(odd){
@@ -119,6 +120,7 @@ rsdb-sort[mode="2"]:after{
 .linetable td, .linetable th {
   border-right:1px solid #d9d9d9;
   border-left:1px solid #d9d9d9;
+  padding:1px 4px;
 }
 rsdb-num{
   float:right;
