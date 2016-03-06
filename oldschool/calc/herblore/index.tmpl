@@ -5,6 +5,22 @@
 	var concat=function(acc,v){
 		return acc.concat(v);
 	};
+	var mtext={};
+	"010,020,100,110,120,200,210,220,001,011,021,111,121,211,221,002,012,022,111,122,212,222".split(",").forEach(function(v){
+		var o=[];
+		if(v[0]=="0")o.push("Clean");
+		if(v[0]=="1")o.push("Grimy","Clean manually");
+		if(v[0]=="2")o.push("Grimy","Clean with NPC");
+
+		if(v[1]=="0")o.push("Unfinished");
+		if(v[1]=="1")o.push("Unfinished manually");
+		if(v[1]=="2")o.push("Unfinished with NPC");
+
+		if(v[2]!="0")o.push("Finish");
+		if(v[2]=="2")o.push("Decant");
+		o.push("Sell");
+		mtext[v]="Buy "+o.join(" > ");
+	});
 	var header = ["Out","Level","Exp","GP/XP","Method","Buy","Sell","Profit","","","","","",""];
 	var rows=Herblore.GrimyHerbs.map(function(hid){
 		var Herb=ItemList.Get(hid);
@@ -73,14 +89,26 @@
 				addReq(s);
 			});
 			if(coins)i.push(ItemList.Get("Coins",coins));
-			return {
+			var out=[{
 				Method:m,
 				In: i,
 				Out:Pot,
 				Exp:xp,
 				Level:Math.max.apply(Math,lvlreq),
-			};
-		});
+			}];
+			var nitem=ItemList.GetName(Pot.Name.replace("(3)","(4)"),.75);
+			if(nitem){
+				m=m[0]+m[1]+"2";
+				out.push({
+					Method:m,
+					In: i,
+					Out:nitem,
+					Exp:xp,
+					Level:Math.max.apply(Math,lvlreq),
+				});
+			}
+			return out;
+		}).reduce(concat,[]);
 	}).reduce(concat,rows).map(function(v){
 		var b=v.In.reduce(function(acc,v){
 			if(isNaN(v.Buy))console.log(v);
@@ -92,7 +120,7 @@
 			v.Level,
 			"<rsdb-num precision='1'>"+v.Exp+"</rsdb-num>",
 			v.Exp?"<rsdb-num precision='3'>"+(s-b)/v.Exp+"</rsdb-num>":"<span class='rightalign'>N/A</span>",
-			v.Method,
+			"<span title='"+mtext[v.Method]+"'>"+v.Method+"</span>",
 			"<rsdb-num>"+b+"</rsdb-num>",
 			"<rsdb-num>"+s+"</rsdb-num>",
 			"<rsdb-num>"+(s-b)+"</rsdb-num>",
