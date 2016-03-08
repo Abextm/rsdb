@@ -31,7 +31,7 @@
 		Name:function(){return (d[this.ID][3]!==undefined)?d[this.ID][3]:this.Note.Name;},
 		Members:function(){return (d[this.ID][4]!==undefined)?d[this.ID][4]:this.Note.Members;},
 		OStore:function(){return (d[this.ID][5]!==undefined)?d[this.ID][5]:this.Note.Store;},
-		Store:function(){return this.Store*this.Count;},
+		Store:function(){return this.OStore*this.Count;},
 		HighAlch:function(){return (~~(this.OStore*.6))*this.Count;},
 		LowAlch:function(){return (~~(this.OStore*.3))*this.Count;},
 		NoteID:function(){return d[this.ID][1];},

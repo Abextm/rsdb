@@ -1,0 +1,44 @@
+<rsdb-title>query</rsdb-title>
+<template require="itemlist">
+	<label>require: <input id="require" value="prices" oninput="update();"></label>
+	<label>filter: <input id="filter" value="451" oninput="update();"></label>
+	<div id="out"></div>
+	<script>
+function update() {
+	require(document.getElementById("require").value.split(",").map(function(v){
+		if(v.indexOf("/")==-1) return v+"/index";
+		return v;
+	}),function(){
+		var filt = document.getElementById("filter").value;
+		var item = ItemList.Get(filt)
+		if(!item){
+			item=ItemList.Func().filter(function(v){
+				return v.Name.indexOf(filt)!=-1
+			});
+		}else{
+			item=[item];
+		}
+		var map=[];
+		var i0=item[0]||ItemList.Get(0);
+		var ii=0;
+		for (var k in i0){
+			map[map.length]=k
+		}
+		document.getElementById("out").innerHTML="<table class='linetable'><tr><th></th><th>"+
+		map.join("</th><th>")+
+		"</th></tr><tr><td>"+
+		(item.map(function(i){
+			return "<rsdb-item>"+i.ID+"</rsdb-item></td><td>"+map.map(function(k){
+				return escapeHtml(JSON.stringify(i[k]));
+			}).join("</td><td>");
+		}).join("</td></tr><tr><td>"))+"</td></tr></table>";
+	});
+}
+function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+};
+update();
+	</script>
+</template>
