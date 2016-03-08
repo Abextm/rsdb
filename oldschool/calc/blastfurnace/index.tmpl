@@ -41,8 +41,10 @@
       BfBars.forEach(function(Item){
         var v=document.getElementById("barperhr"+Item.ID).value
         if(v){
-          barsphr[Item.ItemRun[cb]*2]=parseInt(v);
-          set++;
+          if(!barsphr[Item.ItemRun[cb]*2]){
+            barsphr[Item.ItemRun[cb]*2]=parseInt(v);
+            set++;
+          }
         }
       });
       if(set==0){
