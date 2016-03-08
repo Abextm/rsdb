@@ -27,10 +27,9 @@ Item
 |`.HighAlch` | Number | The High-Alch of the item (s)   |
 |`.LowAlch`  | Number | The Lew-Alch of the item(s)     |
 |`.ID`       | ID     | The ID                          |
-|`.Icon`     | URL    | The URL of the icon             |
 |`.Note`     | Item   | The item's note                 |
 |`.NoteID`   | ID     | The ID of the item's note       |
-|`.NoteIcon` | URL    | The URL of the note's icon      |
 |`.IsNote`   | Boolean| Is the item noted               |
 |`.Count`    | Number | The count of the item           |
 |`.Valid`    | Boolean| Does this ID exist?             |
+|`.IconHTML  | String | HTML to embed the icon          |

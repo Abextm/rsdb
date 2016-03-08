@@ -78,7 +78,7 @@ tr rsdb-item div {
 rsdb-item{
   display: block;
 }
-tr rsdb-item img{
+tr rsdb-item .ico{
   position:absolute;
 }
 tr rsdb-item>div {
@@ -89,11 +89,11 @@ tr rsdb-item>div {
 rsdb-item {
   white-space:nowrap;
 }
-tr:nth-child(odd) rsdb-item img {
+tr:nth-child(odd) rsdb-item .ico {
   left:32px;
   top:-8px;
 }
-tr:nth-child(even) rsdb-item img {
+tr:nth-child(even) rsdb-item .ico {
   top:-8px;
 }
 .repeating{
@@ -122,6 +122,6 @@ table.linetable {
   border-left:1px solid #d9d9d9;
   padding:1px 4px;
 }
-rsdb-num{
+td rsdb-num{
   float:right;
 }

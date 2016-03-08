@@ -44,7 +44,7 @@
 						var Item=ItemList.Get(v)||ItemList.Get(3247);
 						this.title=Item.ID;
 						this.innerHTML=[
-"<div><img src=\"",Item.Icon,"\"></div>",
+"<div>",Item.IconHTML,"</div>",
 "<span>",Item.Name,"</span>"
 						].join("");
 					}

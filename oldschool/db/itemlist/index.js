@@ -2,6 +2,7 @@
 var waiter=require("waiter");
 var fs = require("fs");
 var names = require("./names.json");
+var coords = require("./coords.json");
 //create waiter
 var wait = waiter({
 	Cache:30*60,//Cache for 30 mins
@@ -15,9 +16,21 @@ var wait = waiter({
 			//noted noteid (name members price)
 			var o=item.noted?-1:1;
 			var note=(names[ii+o]&&names[ii+o].noted!=item.noted&&names[ii+o].name==item.name)?names[ii+o].id:""
+			var icon;
+			{
+				var d=coords[item.id];
+				if(d.Item){
+					icon=d.Item;
+				}else{
+					icon="["+([
+						d.X||0,d.Y||0,d.W||0,d.H||0,d.Sheet||0
+					].join())+"]";
+				}
+			}
 			var payload = [
 				~~item.noted,
 				note?note:"",
+				icon,
 			];
 			if(!item.noted||!note){
 				payload.push(
@@ -39,7 +52,7 @@ var wait = waiter({
 });
 
 module.exports = {
-	files:["index.js","names.json","header.js"],//reload module if any of these change
+	files:["index.js","names.json","header.js","coords.json"],//reload module if any of these change
 	routes:{ // db.os.rsdb.tk/itemlist/index.js
 		"index.js":function(req,res,next){
 			wait.Call(req,res); //just let the waiter handle this
