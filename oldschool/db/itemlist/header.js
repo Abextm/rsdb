@@ -43,8 +43,8 @@
 			if(!_||!_[2])return "";
 			_=Array.isArray(_[2])?_[2]:d[_[2]][2];
 			var s=_[4]>1?_[4]:0;
-			return o=["<div class='ico '",s?"style='background-image:url(\"/ico/bg"+_[4]+".png\");width:36px;height:32px;'><div ":"",
-			"style='width:"+_[2]+"px;height:"+_[3]+"px;background-position:"+(-_[0])+"px "+(-_[1])+"px;background-image:url(\"/ico/"+s+".png\")'></div>",
+			return o=["<div class='ico' style='margin:"+((32-_[3])/2)+"px 0px 0px "+((36-_[2])/2)+"px;",s?"background-image:url(\"/ico/bg"+_[4]+".png\");width:36px;height:32px;'><div style='":"",
+			"width:"+_[2]+"px;height:"+_[3]+"px;background-position:"+(-_[0])+"px "+(-_[1])+"px;background-image:url(\"/ico/"+s+".png\")'></div>",
 			s?"</div>":""].join("");
 		}
 	})

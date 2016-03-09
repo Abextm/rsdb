@@ -44,6 +44,8 @@ footer{
 }
 #content{
   margin: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 footer a {
   color:inherit;
