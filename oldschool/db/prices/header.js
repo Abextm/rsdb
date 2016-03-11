@@ -6,6 +6,7 @@
 		Members:function(){return d[this.ID]?(d[this.ID][3]?true:false):undefined;},
 	});
 	return {
-		loaded:true,
+		Name:"Prices",
+		Loaded:true,
 	};
 });

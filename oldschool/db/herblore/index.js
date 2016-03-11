@@ -373,7 +373,7 @@ var Pots={
 		Primary:"Antidote++(4)",
 		Secondarys:[["Zulrah's scales",20]],
 	},
-	"Super combat potion":{
+	"Super combat potion(4)":{
 		Level:90,
 		Exp:150,
 		Primary:"Torstol",

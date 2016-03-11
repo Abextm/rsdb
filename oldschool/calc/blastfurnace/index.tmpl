@@ -16,7 +16,7 @@
     (function(){
       var e=document.getElementById("bphtable");
       e.innerHTML=e.innerHTML+(BfBars.map(function(Item){
-        return ["<tr><td><rsdb-item>",Item.ID,"</rsdb-item></td><td><input type='number' oninput='calc()' id='barperhr",Item.ID,"'></td></tr>"].join("");
+        return ["<tr><td>",Item.HTML,"</td><td><input type='number' oninput='calc()' id='barperhr",Item.ID,"'></td></tr>"].join("");
       }).join(""));
     })();
      </script>
@@ -101,7 +101,7 @@
       
       if(bar.Name=="Gold bar"&&document.getElementById("goldgaunts").value)xp=56.2;
       return [
-        "<rsdb-item>"+bar.ID+"</rsdb-item>",
+        bar.HTML,
         xp,
         profit,
         cost,

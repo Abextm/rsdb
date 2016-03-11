@@ -33,22 +33,40 @@
 	xtag.register("rsdb-item",{
 		lifecycle:{
 			created:function(){
-				this.item=this.item||this.innerHTML;
+				this.id=this.id||this.innerHTML;
 			}
 		},
 		accessors:{
-			item:{
+			id:{
 				attribute:{},
 				set:function(v){
-					if(v){
-						var Item=ItemList.Get(v)||ItemList.Get(3247);
-						this.title=Item.ID;
-						this.innerHTML=[
-"<div>",Item.IconHTML,"</div>",
-"<span>",Item.Name,"</span>"
-						].join("");
-					}
+					this.Update();
 				},
+			},
+			count:{
+				attribute:{},
+				set:function(v){
+					this.Update();
+				},
+			},
+		},
+		methods:{
+			Update:function(){
+				var Item=ItemList.Get(this.id)||ItemList.Get(3247);
+				this.innerHTML=[
+"<div>",Item.IconHTML,"</div>",
+"<span>",Item.Name,"</span>",
+"<table class='popout'>",
+	"<tr><th>Count</th><td>",this.count||1,"</td></tr>",
+	window.Prices?[
+		"<tr><th>Buy</th><td>",Item.Buy,"</td></tr>",
+		"<tr><th>Sell</th><td>",Item.Sell,"</td></tr>",
+		"<tr><th>Overall</th><td>",Item.Overall,"</td></tr>",
+	].join(""):"",
+	"<tr><th>HighAlch</th><td>",Item.HighAlch,"</td></tr>",
+	"<tr><th>ID</th><td>",Item.ID,"</td></tr>",
+,"</table>",
+				].join("");
 			},
 		},
 	});

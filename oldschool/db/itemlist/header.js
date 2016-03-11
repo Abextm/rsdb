@@ -13,7 +13,7 @@
 	};
 	var GetName=function(v,count,s){
 		if(Array.isArray(v)){
-			cout=v[1];
+			count=v[1];
 			v=v[0];
 		}
 		if(n[v]!==undefined)return new Item(n[v],count);
@@ -21,11 +21,18 @@
 	};
 	var GetID=function(v,count,s){
 		if(Array.isArray(v)){
-			cout=v[1];
+			count=v[1];
 			v=v[0];
 		}
 		if(d[v]!==undefined)return new Item(v,count);
 		if(!s)console.warn("Cannot get item by id",v);
+	}
+	var Get=function(v,c,s){
+		if(Array.isArray(v)){
+			c=v[1];
+			v=v[0];
+		}
+		return d[v]?GetID(v,c,s):GetName(v,c,s);
 	}
 	AddGetter({//noted noteid icon (name members price (wierd))
 		Name:function(){return (d[this.ID][3]!==undefined)?d[this.ID][3]:this.Note.Name;},
@@ -38,12 +45,13 @@
 		Note:function(){return GetID(this.NoteID);},
 		IsNote:function(){return d[this.ID][0];},
 		Valid:function(){return d[this.ID]!==undefined},
+		HTML:function(){return "<rsdb-item id='"+this.ID+"' count='"+this.Count+"'></rsdb-item>"},
 		IconHTML:function(){
 			var _=d[this.ID];
 			if(!_||!_[2])return "";
 			_=Array.isArray(_[2])?_[2]:d[_[2]][2];
 			var s=_[4]>1?_[4]:0;
-			return o=["<div class='ico' style='margin:"+((32-_[3])/2)+"px 0px 0px "+((36-_[2])/2)+"px;",s?"background-image:url(\"/ico/bg"+_[4]+".png\");width:36px;height:32px;'><div style='":"",
+			return o=["<div class='ico' style='margin-top:"+((32-_[3])/2)+"px;",s?"background-image:url(\"/ico/bg"+_[4]+".png\");width:36px;height:32px;'><div style='":"",
 			"width:"+_[2]+"px;height:"+_[3]+"px;background-position:"+(-_[0])+"px "+(-_[1])+"px;background-image:url(\"/ico/"+s+".png\")'></div>",
 			s?"</div>":""].join("");
 		}
@@ -63,7 +71,7 @@
 	}
 	return {
 		Name:"ItemList",
-		Get:function(v,c){return d[v]?GetID(v,c):GetName(v,c);},
+		Get:Get,
 		GetName:GetName,
 		GetID:GetID,
 		Type:Item,

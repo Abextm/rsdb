@@ -22,7 +22,14 @@ app.use(function(req,res,next){
 	var s=[].concat(req.subdomains);
 	s.reverse();
 	var subs=s.join(".");
-	sub[subs]&&sub[subs](req,res,next);
+	res.set({
+		"Access-Control-Allow-Origin":"http://"+req.hostname.replace("db.",""),
+		"Access-Control-Max-Age":"86400",
+		"Access-Control-Allow-Headers":"*",
+		"Access-Control-Allow-Methods":"*",
+	});
+	if(req.method=="OPTIONS") return res.send();
+		sub[subs]&&sub[subs](req,res,next);
 });
 
 sub["www"].use(function(req,res){

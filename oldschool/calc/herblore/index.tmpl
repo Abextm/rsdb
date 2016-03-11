@@ -116,7 +116,7 @@
 		},0);
 		var s=v.Out.Sell;
 		var cols=[
-			"<rsdb-item>"+v.Out.ID+"</rsdb-item>",
+			v.Out.HTML,
 			v.Level,
 			"<rsdb-num precision='1'>"+v.Exp+"</rsdb-num>",
 			v.Exp?"<rsdb-num precision='3'>"+(s-b)/v.Exp+"</rsdb-num>":"<span class='rightalign'>N/A</span>",
@@ -126,7 +126,7 @@
 			"<rsdb-num>"+(s-b)+"</rsdb-num>",
 		];
 		cols=cols.concat(v.In.map(function(v){
-			return "<rsdb-item>"+v.ID+"</rsdb-item>";
+			return v.HTML;
 		}));
 		while(cols.length<header.length)cols.push("");
 		return cols.join("</td><td>");
