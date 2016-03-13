@@ -151,7 +151,7 @@
 				iconEl.style.backgroundPosition=(-D[0])+"px "+(-D[1])+"px";
 				iconEl.style.width=D[2]+"px";
 				iconEl.style.height=D[3]+"px";
-				if(Item.Count>2){
+				if(Item.Count>1){
 					var v=Item.Count;
 					var l=0;
 					while(v>99999){v/=1000;l++}

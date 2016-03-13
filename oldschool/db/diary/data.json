@@ -201,7 +201,10 @@
 					"Quests": [
 						"Underground Pass"
 					],
-					"Skills": {},
+					"Skills": {
+						"Magic":50,
+						"Attack":50
+					},
 					"Items": [
 						"Iban's staff (u)"
 					]
@@ -558,6 +561,14 @@
             "Knife",
             "Waterskin(0)"
           ]
+        },
+        {
+        	"Task":"Travel from the Shantay pass to Pollnivneach by magic carpet.",
+        	"Quests":[],
+        	"Skills":{},
+        	"Items":[
+        		["Coins",200]
+        	]
         }
       ],
 			"Rewards": [
@@ -598,6 +609,16 @@
 						"Rope",
 						"Small fishing net"
 					]
+				},
+				{
+					"Task":"Steal a Phoenix feather from the Desert phoenix. You cannot have it in your bank already.",
+					"Quests":[
+						"Started The Golem"
+					],
+					"Skills":{
+						"Thieving":25
+					},
+					"Items":[]
 				},
 				{
 					"Task": "Travel to Uzer via magic carpet",
@@ -659,6 +680,26 @@
 					"Items": [
 						"Rope",
 						"Lit torch"
+					]
+				},
+				{
+					"Task": "Teleport to Pollnivneach with a redirected teleport to house tablet.",
+					"Quests": [],
+					"Skills": {
+						"Construction":20
+					},
+					"Items": [
+						"Pollnivneach teleport"
+					]
+				},
+				{
+					"Task": "Chop some teak logs near Uzer",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting":35
+					},
+					"Items": [
+						"Bronze axe"
 					]
 				}
 			],
@@ -746,6 +787,18 @@
 					"Items": []
 				},
 				{
+					"Task": "Defeat a Locust rider(or Scarab mage) with Keris.",
+					"Quests": [
+						"Contact!"
+					],
+					"Skills": {
+						"Attack":50
+					},
+					"Items": [
+						"Lit torch"
+					]
+				},
+				{
 					"Task": "Burn some yew logs on the Nardah Mayor's balcony.",
 					"Quests": [],
 					"Skills": {
@@ -754,6 +807,17 @@
 					"Items": [
 						"Yew logs",
 						"Tinderbox"
+					]
+				},
+				{
+					"Task": "Create a Mithril platebody in Nardah.",
+					"Quests": [],
+					"Skills": {
+						"Smithing":68
+					},
+					"Items": [
+						["Mithril bar",5],
+						"Hammer"
 					]
 				}
 			],
@@ -815,6 +879,26 @@
 					"Items": [
 						"Kq head"
 					]
+				},
+				{
+					"Task": "Steal from the Grand Gold Chest in the final room of Pyramid Plunder. ",
+					"Quests": [
+						"Started Icthlarin's Little Helper"
+					],
+					"Skills": {
+						"Thieving":91
+					},
+					"Items": []
+				},
+				{
+					"Task": "Restore at least 85 Prayer points when praying at the Altar in Sophanem.",
+					"Quests": [
+						"Started Icthlarin's Little Helper"
+					],
+					"Skills": {
+						"Prayer":85
+					},
+					"Items": []
 				}
 			],
 			"Rewards": [
@@ -1060,7 +1144,7 @@
 					"Quests":[],
 					"Skills":{
 						"Woodcutting":30,
-						"Firemaking":60
+						"Firemaking":30
 					},
 					"Items":[
 						"Bronze axe",
@@ -2560,7 +2644,9 @@
 					"Quests": [
 						"Rune Mysteries"
 					],
-					"Skills": {},
+					"Skills": {
+						"Runecrafting":44
+					},
 					"Items": [
 						"Pure essence"
 					]
@@ -2599,7 +2685,11 @@
 				{
 					"Task": "Use the Crossbow shortcut south of the volcano.",
 					"Quests": [],
-					"Skills": {},
+					"Skills": {
+						"Agility":53,
+						"Ranged":42,
+						"Strength":21
+					},
 					"Items": [
 						"Bronze crossbow",
 						"Mith grapple"
@@ -3439,15 +3529,28 @@
 		"Hard": {
 			"Tasks": [
 				{
-					"Task":"",
-					"Quests":[],
-					"Skills":{},
-					"Items":[]
+					"Task":"Enter the Kharyrll portal in your POH. ",
+					"Quests":[
+						"Desert Treasure"
+					],
+					"Skills":{
+						"Magic":66,
+						"Construction":50
+					},
+					"Items":[
+						["Teak plank",3],
+						["Law rune",200],
+						["Blood rune",100],
+						"Hammer",
+						"Saw"
+					]
 				},
 				{
 					"Task": "Climb the advanced spike chain within Slayer Tower. Do not wear graceful.",
 					"Quests": [],
-					"Skills": {},
+					"Skills": {
+						"Agility":71
+					},
 					"Items": []
 				},
 				{
@@ -3466,10 +3569,20 @@
 					]
 				},
 				{
-					"Task":"",
-					"Quests":[],
-					"Skills":{},
-					"Items":[]
+					"Task":"Chop and burn some mahogany logs on Mos Le'Harmless.",
+					"Quests":[
+						"Cabin Fever"
+					],
+					"Skills":{
+						"Woodcutting":50,
+						"Firemaking":50
+					},
+					"Items":[
+						"Bronze axe",
+						"Tinderbox",
+						"Lit torch",
+						"Witchwood icon"
+					]
 				},
 				{
 					"Task": "Complete a hard Temple Trekking.",
