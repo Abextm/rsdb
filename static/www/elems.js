@@ -33,11 +33,11 @@
 	xtag.register("rsdb-item",{
 		lifecycle:{
 			created:function(){
-				this.id=this.id||this.innerHTML;
+				this.iid=this.iid||this.innerHTML;
 			}
 		},
 		accessors:{
-			id:{
+			iid:{
 				attribute:{},
 				set:function(v){
 					this.Update();
@@ -52,7 +52,7 @@
 		},
 		methods:{
 			Update:function(){
-				var Item=ItemList.Get(this.id)||ItemList.Get(3247);
+				var Item=ItemList.Get(this.iid,this.count)||ItemList.Get(3247,this.count);
 				this.innerHTML=[
 "<div>",Item.IconHTML,"</div>",
 "<span>",Item.Name,"</span>",
@@ -71,6 +71,103 @@
 		},
 	});
 
+	var bgSizes={
+		2:[31,30],
+		3:[31,21],
+		4:[22,31],
+		5:[22,31],
+		6:[31,31],
+		7:[21,30],
+		8:[29,29],
+		9:[20,30],
+		10:[26,30],
+		11:[27,29],
+		12:[32,24],
+		13:[32,29],
+		14:[22,31],
+		15:[32,24],
+		16:[18,29],
+		17:[33,23],
+		18:[27,28],
+		19:[20,29],
+	};
+	var nlook={//X YL W (h=9)
+		1:[0,0,5],
+		2:[5,0,7],
+		3:[12,0,6],
+		4:[18,0,6],
+		5:[24,0,6],
+		6:[30,0,7],
+		7:[37,0,6],
+		8:[43,0,7],
+		9:[50,0,7],
+		0:[57,0,7],
+		M:[0,1,8],
+		K:[8,1,7],
+		"%":[15,1,7],
+		"-":[22,1,5],
+		"+":[27,1,7],
+		"/":[37,1,5],
+		"*":[39,1,7],
+		"=":[46,0,6],
+		"^":[52,1,5],
+		"(":[57,1,4],
+		")":[60,1,4],
+	};
+	xtag.register("rsdb-icon",{
+		content:"<span></span><div></div>",
+		accessors:{
+			iid:{
+				attribute:{},
+				set:function(v){
+					this.Update();
+				},
+			},
+			count:{
+				attribute:{},
+				set:function(v){
+					this.Update();
+				},
+			},
+		},
+		methods:{
+			Update:function(){
+				var Item=ItemList.Get(this.iid,this.count)||ItemList.Get(3247,this.count);
+				var D=Item.IconData;//X Y W H S
+				var bg=D[4]>1?D[4]:0;
+				var iconEl=this;
+				if(bg){
+					iconEl=this.children[1];
+					this.style.backgroundImage="url('/ico/bg"+bg+".png')";
+					this.style.width=bgSizes[D[4]][0]+"px";
+					this.style.height=bgSizes[D[4]][1]+"px";
+					this.style.marginLeft=(36-bgSizes[D[4]][0])/2+"px";
+					this.style.marginTop=(32-bgSizes[D[4]][1])/2+"px";
+				}else{
+					this.style.marginLeft=(36-D[2])/2+"px";
+					this.style.marginTop=(32-D[3])/2+"px";
+				}
+				iconEl.style.backgroundImage="url('/ico/"+D[4]+".png')";
+				iconEl.style.backgroundPosition=(-D[0])+"px "+(-D[1])+"px";
+				iconEl.style.width=D[2]+"px";
+				iconEl.style.height=D[3]+"px";
+				if(Item.Count>2){
+					var v=Item.Count;
+					var l=0;
+					while(v>99999){v/=1000;l++}
+					v=(~~v)+["","K","M"][l]
+					var x=["","filter:hue-rotate(60deg) brightness(10);","filter:hue-rotate(90deg) brightness(.8);"][l]
+					this.children[0].innerHTML=v.split("").map(function(c){
+						if(c==" ")return " ";
+						var d=nlook[c];
+						if(!d)return c;
+						return "<div style=\"display:inline-block;background-image:url('/numbers.png');height:10px;width:"+d[2]+"px;background-position:-"+d[0]+"px -"+(d[1]*10)+"px;isolation:isolate;"+x+"\"></div>"
+					}).join("");
+				}
+			}
+		},
+	});
+
 	xtag.register("rsdb-title",{
 		lifecycle:{
 			created:function(){
@@ -78,6 +175,42 @@
 			},
 		},
 	});
+
+	var sxl=[[0,26],[26,26],[52,25]];
+	var syl=[[0,25],[25,23],[48,23],[71,23],[94,23],[117,24],[141,25],[166,25]];
+	var snli="attack hitpoints mining strength agility smithing defence herblore fishing ranged thieving cooking prayer crafting firemaking magic fletching woodcutting runecrafting slayer farming construction hunter combat".split(" ");
+	var snl={};
+	snli.forEach(function(name,i){
+		snl[name]=i;
+	})
+	xtag.register("rsdb-skill",{
+		lifecycle:{
+			created:function(){
+				this.skill=this.innerHTML||"Attack";
+				this.innerHTML="";
+			},
+		},
+		accessors:{
+			skill:{
+				attribute:{},
+				set:function(v){
+					this.title=v;
+					var i=snl[v.toLowerCase()];
+					if(i===undefined){
+						console.log(v,"is not a valid skill");
+						i=0;
+					}
+					var x=i%3;
+					var y=~~(i/3);
+					this.style.backgroundImage="url('/skills.png')";
+					this.style.backgroundPosition=-sxl[x][0]+"px -"+syl[y][0]+"px";
+					this.style.width=sxl[x][1]+"px";
+					this.style.height=syl[y][1]+"px";
+				},
+			},
+		},
+	})
+
 
 	numrepeatregex=/(.+?)\1+/
 	xtag.register("rsdb-num",{

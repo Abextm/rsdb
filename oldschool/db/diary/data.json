@@ -1,0 +1,5022 @@
+{
+	"Ardougne": {
+		"Name":"Ardougne",
+		"Easy": {
+			"Tasks": [
+        {
+          "Task": "Have Wizard Cromperty teleport you to the Rune essence mine.",
+          "Quests": [
+            "Rune Mysteries"
+          ],
+          "Skills": {},
+          "Items": []
+        },
+        {
+          "Task": "Steal a cake from the East Ardougne market stalls.",
+          "Quests": [],
+          "Skills": {
+            "Thieving": 5
+          },
+          "Items": []
+        },
+        {
+          "Task": "Sell silk to the Silk merchant in East Ardougne for 60 coins each.",
+          "Quests": [],
+          "Skills": {},
+          "Items": [
+            "Silk"
+          ]
+        },
+        {
+          "Task": "Use the altar in East Ardougne's church.",
+          "Quests": [],
+          "Skills": {},
+          "Items": []
+        },
+				{
+					"Task":"Go out fishing on the Fishing Trawler. ",
+					"Quests":[],
+					"Skills":{
+						"Fishing":15
+					},
+					"Items":[]
+				},
+        {
+          "Task": "Enter the Combat Training Camp north of West Ardougne.",
+          "Quests": [
+            "Biohazard"
+          ],
+          "Skills": {},
+          "Items": []
+        },
+        {
+          "Task": "Have Tindel Marchant identify a Rusty sword for you.",
+          "Quests": [],
+          "Skills": {},
+          "Items": [
+            "Rusty sword",
+            ["Coins",100]
+          ]
+        },
+        {
+          "Task": "Use the Ardougne teleport lever to teleport to the Wilderness.",
+          "Quests": [],
+          "Skills": {},
+          "Items": []
+        },
+        {
+          "Task": "View Aleck's Hunter Emporium shop in Yanille",
+          "Quests": [],
+          "Skills": {},
+          "Items": []
+        },
+				{
+					"Task":"Check what pets you have Insured with Probita in East Ardougne. You must right click on her and select \"Check\".",
+					"Quests":[],
+					"Skills":{},
+					"Items":[]
+				}
+      ],
+			"Rewards": [
+				"1 Antique lamp worth 2,500 experience in any skill above 30",
+				"Double Death runes (200) when trading in cats to civilians",
+				"10% Increased chance to successfully thieve from stalls in Ardougne",
+				"Some drops will be noted at the Tower of Life",
+				"Unlimited teleports to the Ardougne Monastery"
+			],
+			"RewardItem":"Ardougne cloak 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Enter the Unicorn pen in Ardougne Zoo using Fairy rings",
+					"Quests": [
+						"Started Fairytale II - Cure a Queen"
+					],
+					"Skills": {},
+					"Items": [
+						"Dramen staff"
+					]
+				},
+				{
+					"Task":"Grapple over Yanille's south wall.",
+					"Quests":[],
+					"Skills":{
+						"Agility":39,
+						"Strength":38,
+						"Ranged":21
+					},
+					"Items":[
+						"Bronze crossbow",
+						"Mith grapple"
+					]
+				},
+				{
+					"Task": "Cast the Ardougne Teleport spell.",
+					"Quests": [
+						"Plague City"
+					],
+					"Skills": {
+						"Magic": 51
+					},
+					"Items": [
+						["Water rune",2],
+						["Law rune",2]
+					]
+				},
+				{
+					"Task": "Harvest some Strawberries from the Ardougne farming patch",
+					"Quests": [],
+					"Skills": {
+						"Farming": 31
+					},
+					"Items": [
+						["Strawberry seed",3],
+						"Apples(5)"
+					]
+				},
+				{
+					"Task": "Travel to Castle Wars by Balloon transport system.",
+					"Quests": [
+						"Enlightened Journey"
+					],
+					"Skills": {
+						"Firemaking": 50
+					},
+					"Items": [
+						"Yew logs"
+					]
+				},
+				{
+					"Task":"Claim buckets of sand from Bert in Yanille.",
+					"Quests":[
+						"The Hand in the Sand"
+					],
+					"Skills":{},
+					"Items":[]
+				},
+				{
+					"Task": "Catch any fish on the Fishing Platform",
+					"Quests": [
+						"Sea Slug"
+					],
+					"Skills": {},
+					"Items": [
+						"Fishing rod",
+						"Fishing bait"
+					]
+				},
+				{
+					"Task": "Pickpocket the master farmer north of East Ardougne.",
+					"Quests": [],
+					"Skills": {
+						"Thieving": 38
+					},
+					"Items": []
+				},
+				{
+					"Task":"Collect some Cave nightshade from the Skavid caves.",
+					"Quests":[
+						"Watchtower (partial completion)"
+					],
+					"Skills":{},
+					"Items":[
+						"Lit torch",
+						"Skavid map"
+					]
+				},
+				{
+					"Task":"Kill a swordchick in the Tower of Life.",
+					"Quests":[
+						"Tower of Life"
+					],
+					"Skills":{},
+					"Items":[
+						"Raw chicken",
+						"Raw swordfish"
+					]
+				},
+				{
+					"Task": "Equip an Iban's upgraded staff or upgrade an Iban's staff.",
+					"Quests": [
+						"Underground Pass"
+					],
+					"Skills": {},
+					"Items": [
+						"Iban's staff (u)"
+					]
+				},
+				{
+					"Task":"Visit the Island east of the Necromancer Tower. A-I-R",
+					"Quests":[
+						"Fairytale II - Cure a Queen (partial)"
+					],
+					"Skills":{},
+					"Items":[
+						"Dramen staff"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 7,500 experience in any skill above 40",
+				"100 free noted pure essence every day from Wizard Cromperty.",
+				"One free daily teleport to Ardougne farm patch",
+				"Further noted drops from the Tower of Life",
+				"10% increased chance to pickpocket in Ardougne",
+				"Ability to toggle the ring of life teleport to Ardougne"
+			],
+			"RewardItem":"Ardougne cloak 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task": "Recharge some Jewellery at the Totem in the Legends' Guild.",
+					"Quests": [
+						"Legends' Quest"
+					],
+					"Skills": {},
+					"Items": [
+						"Combat bracelet"
+					]
+				},
+				{
+					"Task": "Enter the Wizards' Guild.",
+					"Quests": [],
+					"Skills": {
+						"Magic": 66
+					},
+					"Items": []
+				},
+				{
+					"Task": "Attempt to steal from King Lathas's chest.",
+					"Quests": [],
+					"Skills": {
+						"Thieving": 72
+					},
+					"Items": [
+						"Lockpick"
+					]
+				},
+				{
+					"Task": "Have a Monkey Minder put you in Ardougne Zoo's monkey cage. (Wear a monkey greegree, then talk to the Monkey Minder)",
+					"Quests": [
+						"Monkey Madness"
+					],
+					"Skills": {},
+					"Items": [
+						"Monkey greegree"
+					]
+				},
+				{
+					"Task": "Teleport to the Watchtower (building).",
+					"Quests": [
+						"Watchtower"
+					],
+					"Skills": {
+						"Magic": 58
+					},
+					"Items": [
+						["Earth rune",2],
+						["Law rune",2]
+					]
+				},
+				{
+					"Task": "Catch a Red salamander.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 59
+					},
+					"Items": [
+						"Rope",
+						"Small fishing net"
+					]
+				},
+				{
+					"Task": "Check the health of a palm tree near Tree Gnome Village.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 68
+					},
+					"Items": [
+						"Palm sapling",
+						["Papaya fruit",15]
+					]
+				},
+				{
+					"Task": "Pick some Poison ivy berries from the patch south of East Ardougne.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 70
+					},
+					"Items": [
+						"Poison ivy seed"
+					]
+				},
+				{
+					"Task": "Smith a Mithril platebody near Ardougne",
+					"Quests": [],
+					"Skills": {
+						"Smithing": 68
+					},
+					"Items": [
+						["Mithril bar",5],
+						"Hammer"
+					]
+				},
+				{
+					"Task": "Enter your POH from Yanille",
+					"Quests": [],
+					"Skills": {
+						"Construction": 50
+					},
+					"Items": []
+				},
+				{
+					"Task": "Smith a Dragon sq shield in West Ardougne.",
+					"Quests": [
+						"Legends' Quest"
+					],
+					"Skills": {
+						"Smithing": 60
+					},
+					"Items": [
+						"Shield left half",
+						"Shield right half",
+						"Hammer"
+					]
+				},
+				{
+					"Task":"Craft some death runes.",
+					"Quests":[
+						"Mourning's Ends Part II"
+					],
+					"Skills":{
+						"Runecrafting":65
+					},
+					"Items":[
+						"Pure essence"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 15,000 experience in any skill above 50",
+				"150 free noted pure essence every day from Wizard Cromperty.",
+				"Toggle Watchtower Teleport to the centre of Yanille",
+				"Even more noted drops from the Tower of Life",
+				"10% Increased chance of succeeding when pickpocketing around Gielinor"
+			],
+			"RewardItem":"Ardougne cloak 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task":"Catch a manta ray in the Fishing Trawler and cook it in Port Khazard.",
+					"Quests":[],
+					"Skills":{
+						"Fishing":81,
+						"Cooking":91
+					},
+					"Items":[]
+				},
+				{
+					"Task": "Attempt to picklock the door to the basement of Yanille Agility dungeon.",
+					"Quests": [],
+					"Skills": {
+						"Thieving": 82
+					},
+					"Items": [
+						"Lockpick"
+					]
+				},
+				{
+					"Task": "Pickpocket a Hero.",
+					"Quests": [],
+					"Skills": {
+						"Thieving": 80
+					},
+					"Items": []
+				},
+				{
+					"Task":"Make a rune crossbow yourself from scratch within Witchaven or Yanille.",
+					"Quests":[],
+					"Skills":{
+						"Crafting":10,
+						"Smithing":91,
+						"Fletching":69
+					},
+					"Items":[
+						"Yew logs",
+						"Sinew",
+						"Runite bar",
+						"Hammer",
+						"Knife"
+					]
+				},
+				{
+					"Task": "Equip a salve amulet imbued at Nightmare Zone.",
+					"Quests": [
+						"Haunted Mine"
+					],
+					"Skills": {},
+					"Items": [
+						"Salve amulet (e)"
+					]
+				},
+				{
+					"Task": "Pick some torstol from the patch north of East Ardougne.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 85
+					},
+					"Items": [
+						"Torstol seed"
+					]
+				},
+				{
+					"Task": "Complete a lap of Ardougne Agility Course.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 90
+					},
+					"Items": []
+				},
+				{
+					"Task":"Cast Ice Barrage on another player within Castle Wars",
+					"Quests":[
+						"Desert Treasure"
+					],
+					"Skills":{
+						"Magic":94
+					},
+					"Items":[
+						["Blood rune",2],
+						["Death rune",4],
+						["Water rune",6]
+					]
+				}
+			],
+			"Rewards": [
+				"All hard diary rewards",
+				" 1 Antique lamp worth 50,000 experience in any skill above 70",
+				"Unlimited teleports to Ardougne farm patch",
+				"250 free noted pure essence every day from Wizard Cromperty.",
+				"50% more fish from Fishing Trawler",
+				"25% more marks of grace from the Ardougne Agility Course",
+				"Bert will automatically deliver sand to your bank each day"
+			],
+			"RewardItem":"Ardougne cloak 4"
+		}
+	},
+	"Desert": {
+		"Name":"Desert",
+		"Easy": {
+			"Tasks": [
+        {
+          "Task": "Catch a Golden warbler.",
+          "Quests": [],
+          "Skills": {
+            "Hunter": 5
+          },
+          "Items": [
+            "Bird snare"
+          ]
+        },
+        {
+          "Task": "Mine five clay in the north-eastern desert.",
+          "Quests": [],
+          "Skills": {
+            "Mining": 5
+          },
+          "Items": [
+            "Bronze pickaxe"
+          ]
+        },
+        {
+          "Task": "Enter the Kalphite Lair.",
+          "Quests": [],
+          "Skills": {},
+          "Items": [
+            "Rope"
+          ]
+        },
+        {
+          "Task": "Enter the Desert with a set of Desert robes equipped.",
+          "Quests": [],
+          "Skills": {},
+          "Items": [
+            "Desert shirt",
+            "Desert robe",
+            "Desert boots"
+          ]
+        },
+        {
+          "Task": "Kill a vulture.",
+          "Quests": [],
+          "Skills": {},
+          "Items": []
+        },
+        {
+          "Task": "Have the Zahur clean a herb for you.",
+          "Quests": [],
+          "Skills": {},
+          "Items": [
+            "Grimy guam leaf",
+            ["Coins",200]
+          ]
+        },
+        {
+          "Task": "Collect 5 potato cactus from the Kalphite Hive. You can reuse the cactus.",
+          "Quests": [],
+          "Skills": {},
+          "Items": [
+            "Rope"
+          ]
+        },
+        {
+          "Task": "Sell some artifacts to Simon Templeton.",
+          "Quests": [],
+          "Skills": {},
+          "Items": [
+            "Stone scarab"
+          ]
+        },
+        {
+          "Task": "Open the sarcophagus in the first room of Pyramid Plunder.",
+          "Quests": [
+            "Started Icthlarin's Little Helper"
+          ],
+          "Skills": {
+            "Thieving": 21
+          },
+          "Items": []
+        },
+        {
+          "Task": "Cut a desert cactus open to fill a waterskin.",
+          "Quests": [],
+          "Skills": {},
+          "Items": [
+            "Knife",
+            "Waterskin(0)"
+          ]
+        }
+      ],
+			"Rewards": [
+				"1 Antique lamp worth 2,500 experience in any skill above 30",
+				"Pharaoh's sceptre will hold up to 4 charges",
+				"Simon Templeton will purchase artifacts as bank notes",
+				"Desert goat horn will be dropped in noted form"
+			],
+			"RewardItem":"Desert amulet 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Climb to the summit of the Agility Pyramid.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 30
+					},
+					"Items": []
+				},
+				{
+					"Task": "Slay a Desert lizard.",
+					"Quests": [],
+					"Skills": {
+						"Slayer": 22
+					},
+					"Items": [
+						"Ice cooler"
+					]
+				},
+				{
+					"Task": "Catch an orange salamander.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 47
+					},
+					"Items": [
+						"Rope",
+						"Small fishing net"
+					]
+				},
+				{
+					"Task": "Travel to Uzer via magic carpet",
+					"Quests": [
+						"The Golem"
+					],
+					"Skills": {},
+					"Items": [
+						["Coins",200]
+					]
+				},
+				{
+					"Task": "Travel to the desert via the Eagle transport system.",
+					"Quests": [
+						"Eagles' Peak"
+					],
+					"Skills": {
+						"Strength": 45
+					},
+					"Items": [
+						"Rope"
+					]
+				},
+				{
+					"Task": "Pray at the Elidinis statuette in Nardah.",
+					"Quests": [
+						"Spirits of the Elid"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Create a combat potion in the desert. (Must be made in the desert and not within city limits)",
+					"Quests": [],
+					"Skills": {
+						"Herblore": 36
+					},
+					"Items": [
+						"Harralander potion (unf)",
+						"Goat horn dust"
+					]
+				},
+				{
+					"Task": "Teleport to Enakhra's Temple with the camulet",
+					"Quests": [
+						"Enakhra's Lament"
+					],
+					"Skills": {},
+					"Items": [
+						"Camulet"
+					]
+				},
+				{
+					"Task": "Visit the Genie (Spirits of the Elid)",
+					"Quests": [
+						"Spirits of the Elid"
+					],
+					"Skills": {},
+					"Items": [
+						"Rope",
+						"Lit torch"
+					]
+				}
+			],
+			"Rewards": [
+				"All easy diary rewards",
+				"1 Antique lamp worth 7,500 experience in any skill above 40",
+				"Pharaoh's sceptre holds up to 5 charges",
+				"Free teleport to Nardah once per day"
+			],
+			"RewardItem":"Desert amulet 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task": "Knock out and pickpocket a Menaphite Thug.",
+					"Quests": [
+						"The Feud"
+					],
+					"Skills": {
+						"Thieving": 65
+					},
+					"Items": [
+						"Oak blackjack"
+					]
+				},
+				{
+					"Task": "Mine some granite.",
+					"Quests": [],
+					"Skills": {
+						"Mining": 45
+					},
+					"Items": [
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Refill your waterskins in the Desert using Lunar spells",
+					"Quests": [
+						"Dream Mentor"
+					],
+					"Skills": {
+						"Magic": 68
+					},
+					"Items": [
+						"Waterskin(0)",
+						"Astral rune",
+						"Fire rune",
+						["Water rune",3]
+					]
+				},
+				{
+					"Task": "Kill the Kalphite Queen.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Complete a lap of the Pollnivneach Agility Course.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 70
+					},
+					"Items": []
+				},
+				{
+					"Task": "Slay a Dust Devil with a Slayer helmet equipped.",
+					"Quests": [
+						"Started Desert Treasure"
+					],
+					"Skills": {
+						"Slayer": 65,
+						"Defence": 10,
+						"Crafting": 55
+					},
+					"Items": [
+						"Slayer helmet"
+					]
+				},
+				{
+					"Task": "Activate Ancient Magicks",
+					"Quests": [
+						"Desert Treasure"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Burn some yew logs on the Nardah Mayor's balcony.",
+					"Quests": [],
+					"Skills": {
+						"Firemaking": 60
+					},
+					"Items": [
+						"Yew logs",
+						"Tinderbox"
+					]
+				}
+			],
+			"Rewards": [
+				"All medium diary rewards",
+				"1 Antique lamp worth 15,000 experience in any skill above 50",
+				"All carpet rides are free",
+				"Pharaoh's sceptre holds up to 6 charges",
+				"Option to move the Camulet teleport location to the cavern entrance",
+				"Zahur will create unfinished potions at a cost of 200 coins each, works with notes."
+			],
+			"RewardItem":"Desert amulet 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Bake a wild pie at the Nardah clay oven.",
+					"Quests": [],
+					"Skills": {
+						"Cooking": 85
+					},
+					"Items": [
+						"Raw wild pie"
+					]
+				},
+				{
+					"Task": "Cast Ice Barrage against a foe in the Desert.",
+					"Quests": [
+						"Desert Treasure"
+					],
+					"Skills": {
+						"Magic": 94
+					},
+					"Items": [
+						["Death rune",4],
+						["Blood rune",2],
+						["Water rune",6]
+					]
+				},
+				{
+					"Task": "Fletch some Dragon darts at the Bedabin Camp",
+					"Quests": [
+						"The Tourist Trap"
+					],
+					"Skills": {
+						"Fletching": 95
+					},
+					"Items": [
+						"Dragon dart tip",
+						"Feather"
+					]
+				},
+				{
+					"Task": "Speak to the Kq head in your POH.",
+					"Quests": [],
+					"Skills": {
+						"Construction": 78
+					},
+					"Items": [
+						"Kq head"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 50,000 experience in any skill above 70",
+				"Pharaoh's sceptre holds up to 8 charges",
+				"Access to a shortcut in the Kalphite Lair (86 Agility Required)",
+				"Free Shantay Pass access",
+				"Protection from desert heat when the Desert Amulet 4 is worn",
+				"Unlimited teleports to Nardah",
+				"Permanent rope at the Kalphite Lair entrance (Both ropes need to be placed the first time you enter the Lair after completing the Diary)"
+			],
+			"RewardItem":"Desert amulet 4"
+		}
+	},
+	"Falador": {
+		"Name":"Falador",
+		"Easy": {
+			"Tasks": [
+				{
+					"Task": "Find out what your family crest is from Sir Renitee",
+					"Quests": [],
+					"Skills": {
+						"Construction": 16
+					},
+					"Items": []
+				},
+				{
+					"Task": "Climb over the western Falador wall",
+					"Quests": [],
+					"Skills": {
+						"Agility": 5
+					},
+					"Items": []
+				},
+				{
+					"Task": "Browse Sarah's Farming Shop",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Get a haircut from the Falador hairdresser",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						["Coins",1000]
+					]
+				},
+				{
+					"Task": "Fill a bucket from the pump north of Falador West Bank",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Bucket"
+					]
+				},
+				{
+					"Task": "Kill a duck in Falador Park",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Shortbow"
+					]
+				},
+				{
+					"Task": "Make a mind tiara",
+					"Quests": [
+						"Rune Mysteries"
+					],
+					"Skills": {},
+					"Items": [
+						"Tiara",
+						"Mind talisman"
+					]
+				},
+				{
+					"Task": "Take the boat to Entrana",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Repair a broken strut in the Motherlode Mine",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Hammer",
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task":"Claim a security book from the Security Guard upstairs at Port Sarim jail. ",
+					"Quests":[],
+					"Skills":{},
+					"Items":[]
+				},
+				{
+					"Task":"Smith some Blurite limbs on Doric's anvil.",
+					"Quests":[
+						"The Knight's Sword",
+						"Doric's quest"
+					],
+					"Skills":{
+						"Mining":10,
+						"Smithing":13
+					},
+					"Items":[
+						"Hammer",
+						"Blurite bar"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 2,500 experience in any skill above 30",
+				"Shortcut to the Chaos Temple (Asgarnia) from Burthorpe",
+				"25% Prayer restore daily from the Falador shield 1"
+			],
+			"RewardItem":"Falador shield 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Light a Bullseye lantern at the Chemist's in Rimmington",
+					"Quests": [],
+					"Skills": {
+						"Firemaking": 49
+					},
+					"Items": [
+						"Bullseye lantern",
+						"Tinderbox"
+					]
+				},
+				{
+					"Task": "Telegrab some Wine of zamorak at the Chaos Temple (Asgarnia) by the Wilderness",
+					"Quests": [],
+					"Skills": {
+						"Magic": 33
+					},
+					"Items": [
+						"Air rune",
+						"Law rune"
+					]
+				},
+				{
+					"Task": "Unlock the Crystal chest in Taverley",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Crystal key"
+					]
+				},
+				{
+					"Task": "Place a Scarecrow in the Falador farm patch",
+					"Quests": [],
+					"Skills": {
+						"Farming": 23
+					},
+					"Items": [
+						"Empty sack",
+						"Hay sack",
+						"Bronze spear",
+						"Watermelon"
+					]
+				},
+				{
+					"Task": "Kill a Mogre at Mudskipper Point",
+					"Quests": [
+						"Mogre miniquest"
+					],
+					"Skills": {
+						"Slayer": 32
+					},
+					"Items": [
+						6664
+					]
+				},
+				{
+					"Task": "Visit the Port Sarim Rat Pits",
+					"Quests": [
+						"Progression through Rat Catchers (does not require completion)"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Grapple up and then jump off the north Falador wall.",
+					"Quests":[],
+					"Skills":{
+						"Agility":11,
+						"Strength":37,
+						"Ranged":19
+						},
+					"Items":[
+						"Bronze crossbow",
+						"Mith grapple"
+					]
+				},
+				{
+					"Task": "Pickpocket a Falador Guard",
+					"Quests": [],
+					"Skills": {
+						"Thieving": 40
+					},
+					"Items": []
+				},
+				{
+					"Task":"Pray at the Altar of Guthix in Taverley whilst wearing full Initiate armour.",
+					"Quests":[
+						"Recruitment Drive"
+					],
+					"Skills":{
+						"Prayer":10,
+						"Defence":20
+					},
+					"Items":[
+						"Initiate sallet",
+						"Initiate hauberk",
+						"Initiate cuisse"
+					]
+				},
+				{
+					"Task":"Mine some Gold ore at the Crafting Guild",
+					"Quests":[],
+					"Skills":{
+						"Mining":40,
+						"Crafting":40
+					},
+					"Items":[
+						"Brown apron",
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Squeeze through the crevice in the Dwarven Mines",
+					"Quests": [],
+					"Skills": {
+						"Agility": 42
+					},
+					"Items": []
+				},
+				{
+					"Task":"Chop and burn some willow logs in Taverley.",
+					"Quests":[],
+					"Skills":{
+						"Woodcutting":30,
+						"Firemaking":60
+					},
+					"Items":[
+						"Bronze axe",
+						"Tinderbox"
+					]
+				},
+				{
+					"Task": "Craft a basket on the Falador farm loom",
+					"Quests": [],
+					"Skills": {
+						"Crafting": 36
+					},
+					"Items": [
+						["Willow branch",6]
+					]
+				},
+				{
+					"Task":"Teleport to Falador",
+					"Quests":[],
+					"Skills":{
+						"Magic":37
+					},
+					"Items":[
+						"Law rune",
+						"Water rune",
+						["Air rune",3]
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 7,500 experience in any skill above 40",
+				"10% more experience from the Falador Farming Patch ('''Note: '''The shield does '''not''' need to be equipped to gain this extra experience)",
+				"Access to a shortcut in the Motherlode Mine (requires 54 Agility)",
+				"50% Prayer restore once daily from the Falador shield 2",
+				"20% higher chance of receiving a Clue scroll from a guard in Falador <ref>http://services.runescape.com/m=forum/forums.ws?380,381,169,65611402</ref><references />"
+			],
+			"RewardItem":"Falador shield 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task": "Craft 140 Mind runes simultaneously",
+					"Quests": [],
+					"Skills": {
+						"Runecrafting": 56
+					},
+					"Items": [
+						["Rune essence",28],
+						"Mind tiara"
+					]
+				},
+				{
+					"Task": "Change your family crest to the Saradomin symbol",
+					"Quests": [],
+					"Skills": {
+						"Prayer": 70
+					},
+					"Items": [
+						["Coins",5000]
+					]
+				},
+				{
+					"Task": "Kill the Giant Mole beneath Falador Park",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Lit torch",
+						"Spade"
+					]
+				},
+				{
+					"Task": "Kill a Skeletal Wyvern in the Asgarnia Ice Dungeon",
+					"Quests": [],
+					"Skills": {
+						"Slayer": 72
+					},
+					"Items": [
+						"Elemental shield"
+					]
+				},
+				{
+					"Task": "Complete a lap of the Falador Agility Course",
+					"Quests": [],
+					"Skills": {
+						"Agility": 50
+					},
+					"Items": []
+				},
+				{
+					"Task": "Enter the Mining Guild wearing full Prospector kit",
+					"Quests": [],
+					"Skills": {
+						"Mining": 60
+					},
+					"Items": [
+						"Prospector helmet",
+						"Prospector jacket",
+						"Prospector legs",
+						"Prospector boots"
+					]
+				},
+				{
+					"Task": "Kill the Blue dragon under the Heroes' Guild",
+					"Quests": [
+						"Heroes quest"
+					],
+					"Skills": {},
+					"Items": [
+						"Anti-dragon shield"
+					]
+				},
+				{
+					"Task": "Crack a wall safe within Rogues' Den",
+					"Quests": [],
+					"Skills": {
+						"Thieving": 50
+					},
+					"Items": []
+				},
+				{
+					"Task": "Recharge your Prayer in Port Sarim church while wearing full Proselyte armour",
+					"Quests": [
+						"The Slug Menace"
+					],
+					"Skills": {
+						"Defence": 30
+					},
+					"Items": [
+						"Proselyte sallet",
+						"Proselyte hauberk",
+						"Proselyte cuisse"
+					]
+				},
+				{
+					"Task": "Enter the Warriors' Guild",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Equip a Dwarven helmet within the Dwarven Mines.",
+					"Quests":[
+						"Grim Tales"
+					],
+					"Skills":{
+						"Defence":50
+					},
+					"Items":[
+						"Dwarven helmet"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 15,000 experience in any skill above 50",
+				"Access to a bank chest at the Crafting Guild",
+				"The Giant Mole will drop noted mole skins and mole claws",
+				"Shortcut to the Fountain of Heroes",
+				"Slightly increased chance at receiving higher ores when cleaning pay-dirt.",
+				"Recharge 100% of Prayer once daily from the Falador shield 3",
+				"Mole locator"
+			],
+			"RewardItem":"Falador shield 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Craft 252 Air runes simultaneously",
+					"Quests": [],
+					"Skills": {
+						"Runecrafting": 88
+					},
+					"Items": [
+						["Rune essence",28]
+					]
+				},
+				{
+					"Task": "Purchase a White 2h sword from Sir Vyvin",
+					"Quests": [
+						"Wanted!"
+					],
+					"Skills": {},
+					"Items": [
+						["Coins",1920]
+					]
+				},
+				{
+					"Task":"Find at least 3 Magic roots at once when digging up your Magic tree in Falador",
+					"Quests":[],
+					"Skills":{
+						"Farming":91,
+						"Woodcutting":75
+					},
+					"Items":[
+						"Magic sapling",
+						"Spade",
+						"Bronze axe"
+					]
+				},
+				{
+					"Task": "Perform a Skillcape or Quest cape emote at the top of Falador Castle",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Jump over the strange floor in Taverley Dungeon",
+					"Quests":[],
+					"Skills":{
+						"Agility":80
+					},
+					"Items":[]
+				},
+				{
+					"Task":"Mix a Saradomin brew in Falador east bank.",
+					"Quests":[],
+					"Skills":{
+						"Herblore":81
+					},
+					"Items":[
+						"Toadflax potion (unf)",
+						"Crushed nest"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 50,000 experience in any skill above 70",
+				"Tree patch in Falador will never get diseased",
+				"100% Prayer recharge twice a day from the Falador shield 4",
+				"Further increased chance of receiving higher ores when cleaning pay-dirt."
+			],
+			"RewardItem":"Falador shield 4"
+		}
+	},
+	"Fremennik": {
+		"Name":"Fremennik",
+		"Easy": {
+			"Tasks": [
+				{
+					"Task": "Catch a Cerulean twitch.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 11
+					},
+					"Items": [
+						"Bird snare"
+					]
+				},
+				{
+					"Task": "Change your boots at Yrsa's Shoes Store.",
+					"Quests": [
+						"Fremennik Trials"
+					],
+					"Skills": {},
+					"Items": [
+						["Coins",500]
+					]
+				},
+				{
+					"Task": "Kill 5 Rock crabs.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Craft a tiara from scratch in Rellekka. You must use the furnace to smelt the silver ore.",
+					"Quests": [
+						"Fremennik Trials"
+					],
+					"Skills": {
+						"Crafting": 23,
+						"Mining": 20,
+						"Smithing": 20
+					},
+					"Items": [
+						"Tiara mould",
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Browse the Stonemason. (located southeast of Bank and tavern in West Keldagrim)",
+					"Quests": [
+						"Started The Giant Dwarf"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Collect 5 Snape grass on Waterbirth Island.",
+					"Quests": [
+						"Fremennik Trials"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Steal from the Keldagrim crafting or baker's stall.",
+					"Quests": [
+						"Started The Giant Dwarf"
+					],
+					"Skills": {
+						"Thieving": 5
+					},
+					"Items": []
+				},
+				{
+					"Task": "Fill a bucket with water at the Rellekka well.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Bucket"
+					]
+				},
+				{
+					"Task": "Enter the Troll Stronghold.",
+					"Quests": [
+						"Troll Stronghold",
+						"Death Plateau"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Chop and burn some oak logs in the Fremmenik Province.",
+					"Quests":[],
+					"Skills":{
+						"Woodcutting":15,
+						"Firemaking":15
+					},
+					"Items":[
+						"Bronze axe",
+						"Tinderbox"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 2,500 experience in any skill above 30",
+				"Peer the Seer will act as a bank deposit box",
+				"Fossegrimen will give your enchanted lyre an extra charge when making a sacrifice",
+				" One free teleport to Rellekka every day"
+			],
+			"RewardItem":"Fremennik sea boots 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Slay a Brine rat.",
+					"Quests": [
+						"Started Olaf's quest"
+					],
+					"Skills": {
+						"Slayer": 47
+					},
+					"Items": [
+						"Spade"
+					]
+				},
+				{
+					"Task": "Travel to the Rellekka Hunter area via Eagle.",
+					"Quests": [
+						"Eagles' Peak"
+					],
+					"Skills": {},
+					"Items": [
+						"Rope"
+					]
+				},
+				{
+					"Task":"Mine some coal in Rellekka.",
+					"Quests":[
+						"Fremennik Trials"
+					],
+					"Skills":{
+						"Mining":30
+					},
+					"Items":[
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Steal from the Rellekka Fish stalls",
+					"Quests": [
+						"Fremennik Trials"
+					],
+					"Skills": {
+						"Thieving": 42
+					},
+					"Items": []
+				},
+				{
+					"Task":"Travel to Miscellania by Fairy ring. C-I-P",
+					"Quests":[
+						"Fairytale II - Cure a Queen (partail)"
+					],
+					"Skills":{},
+					"Items":[
+						"Dramen staff"
+					]
+				},
+				{
+					"Task": "Catch a Snowy Knight",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 35
+					},
+					"Items": [
+						"Butterfly net",
+						"Butterfly jar"
+					]
+				},
+				{
+					"Task": "Pick up your pet rock from your POH Menagerie.",
+					"Quests": [
+						"Fremennik Trials"
+					],
+					"Skills": {
+						"Construction": 37
+					},
+					"Items": [
+						"Pet rock"
+					]
+				},
+				{
+					"Task":"Visit the Lighthouse from Waterbirth Island.",
+					"Quests":[
+						"Horror from the Deep"
+					],
+					"Skills":{},
+					"Items":[
+						"Shortbow",
+						"Bronze arrow",
+						"Pet rock"
+					]
+				},
+				{
+					"Task":"Mine some gold at the Arzinian Mine.",
+					"Quests":[
+						"Between a Rock..."
+					],
+					"Skills":{
+						"Mining":40
+					},
+					"Items":[
+						"Bronze pickaxe",
+						"Gold helmet",
+						["Coins",2]
+					]
+				}
+			],
+			"Rewards": [
+				"All easy diary rewards",
+				"1 Antique lamp worth 7,500 experience in any skill above 40",
+				"Shortcut jump from Miscellania dock to Etceteria",
+				"Improved rate of gaining approval on Miscellania"
+			],
+			"RewardItem":"Fremennik sea boots 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task": "Teleport to Trollheim.",
+					"Quests": [
+						"Eadgar's Ruse"
+					],
+					"Skills": {
+						"Magic": 61
+					},
+					"Items": [
+						["Law rune",2],
+						["Fire rune",2]
+					]
+				},
+				{
+					"Task": "Catch a Sabre-toothed kyatt.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 55
+					},
+					"Items": [
+						"Teasing stick",
+						"Logs",
+						"Knife"
+					]
+				},
+				{
+					"Task": "Mix a Super defence potion in the Fremennik province.",
+					"Quests": [],
+					"Skills": {
+						"Herblore": 66
+					},
+					"Items": [
+						"Vial of water",
+						"Cadantine potion (unf)",
+						"White berries"
+					]
+				},
+				{
+					"Task": "Steal from the Keldagrim Gem Stall.",
+					"Quests": [
+						"(Started)The Giant Dwarf"
+					],
+					"Skills": {
+						"Thieving": 75
+					},
+					"Items": []
+				},
+				{
+					"Task":"Craft a Fremennik shield on Neitznot.",
+					"Quests":[
+						"Fremennik isles"
+					],
+					"Skills":{
+						"Woodcutting":56
+					},
+					"Items":[
+						"Bronze axe",
+						"Hammer",
+						"Rope",
+						"Bronze nails"
+					]
+				},
+				{
+					"Task":"Mine 5 Adamantite ores on Jatizso.",
+					"Quests":[],
+					"Skills":{
+						"Mining":70
+					},
+					"Items":[
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Obtain 100% support from your kingdom subjects.",
+					"Quests": [
+						"Throne of Miscellania"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Teleport to Waterbirth Island.",
+					"Quests": [
+						"Lunar Diplomacy"
+					],
+					"Skills": {
+						"Magic": 72
+					},
+					"Items": [
+						"Law rune",
+						["Astral rune",2],
+						"Water rune"
+					]
+				},
+				{
+					"Task":"Obtain the Blast Furnace Foreman's permission to use the Blast Furnace for free.",
+					"Quests":[
+						"Started The Giant Dwarf"
+					],
+					"Skills":{
+						"Smithing":60
+					},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"All medium diary rewards",
+				"1 Antique lamp worth 15,000 experience in any skill above 50",
+				" Ability to change Enchanted Lyre teleport location to Waterbirth Island",
+				" Aviansies in the God Wars Dungeon will now drop adamantite bars in noted form",
+				" Shortcut to roof of the Troll Stronghold (area) - Requires {{skill clickpic|Agility}} 73",
+				" Access to 2 new Lunar Spellbook spells:",
+				"* Tan Leather - Requires 78 {{Skill clickpic|Magic}}, {{RuneReq|Astral=2|Nature=1|Fire=5}}. Tans 5 hides per spell.",
+				"* Recharge Dragonstone - Requires 89 {{Skill clickpic|Magic}}, {{RuneReq|Astral=1|Soul=1|Water=4}}. Recharges all items in inventory per spell."
+			],
+			"RewardItem":"Fremennik sea boots 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Kill each of the Dagannoth Kings",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Craft 56 astral runes at once",
+					"Quests": [
+						"Lunar Diplomacy"
+					],
+					"Skills": {
+						"Runecrafting": 82
+					},
+					"Items": [
+						["Pure essence",28]
+					]
+				},
+				{
+					"Task": "Create a dragonstone amulet in the Neitiznot furnace",
+					"Quests": [
+						"Started The Fremennik Isles"
+					],
+					"Skills": {
+						"Crafting": 80
+					},
+					"Items": [
+						"Dragonstone",
+						"Gold bar",
+						"Amulet mould"
+					]
+				},
+				{
+					"Task": "Complete a lap of the Rellekka Agility Course",
+					"Quests": [
+						"The Fremennik Trials"
+					],
+					"Skills": {
+						"Agility": 80
+					},
+					"Items": []
+				},
+				{
+					"Task":"Kill each of the God Wars Dungeon generals.",
+					"Quests":[
+						"Troll Stronghold"
+					],
+					"Skills":{
+						"Agility":70,
+						"Strength":70,
+						"Hitpoints":70,
+						"Ranged":70
+					},
+					"Items":[]
+				},
+				{
+					"Task":"Slay a Spiritual mage within the God Wars Dungeon.",
+					"Quests":[
+						"Troll Stronghold"
+					],
+					"Skills":{
+						"Slayer":83
+					},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"All hard diary rewards",
+				"1 Antique lamp worth 50,000 experience in any skill above 70",
+				"Dagannoth bones will be dropped as notes",
+				"Ability to change Enchanted Lyre teleport location to Jatizso or Neitiznot",
+				"Even faster approval gain in Miscellania"
+			],
+			"RewardItem":"Fremennik sea boots 4"
+		}
+	},
+	"Kandarin": {
+		"Name":"Kandarin",
+		"Easy": {
+			"Tasks": [
+				{
+					"Task": "Catch a Mackerel at Catherby",
+					"Quests": [],
+					"Skills": {
+						"Fishing": 16
+					},
+					"Items": [
+						"Big fishing net"
+					]
+				},
+				{
+					"Task": "Buy a Candle from the Candle Shop in Catherby",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						["Coins",3]
+					]
+				},
+				{
+					"Task": "Collect 5 Flax from the Seers' Village Flax Field",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Play the Organ in the Seers' Village Saradomin Altar",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Plant Jute seeds in the farming patch north of McGrubor's Wood",
+					"Quests": [],
+					"Skills": {
+						"Farming": 13
+					},
+					"Items": [
+						["Jute seed",3],
+						"Seed dibber",
+						"Rake"
+					]
+				},
+				{
+					"Task": "Have Galahad make you a Cup of tea",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Defeat one of each elemental in the Elemental workshop.",
+					"Quests": [
+						"Started Elemental Workshop I"
+					],
+					"Skills": {},
+					"Items": [
+						"Battered key",
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task":"Get a pet fish from Harry in Catherby.",
+					"Quests":[],
+					"Skills":{},
+					"Items":[
+						"Fishbowl",
+						"Seaweed",
+						["Coins",10]
+					]
+				},
+				{
+					"Task": "Buy a Stew from the Seers' Village pub.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						["Coins",20]
+					]
+				},
+				{
+					"Task": "Speak to Sherlock",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Cross the Coal Trucks log balance.",
+					"Quests":[],
+					"Skills":{
+						"Agility":20
+					},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"Extra logs when cutting normal trees anywhere (no additional experience)",
+				"30 flax daily from the Flax keeper found at the Seers' Village#Flax Field",
+				"Coal trucks hold 140 coal",
+				"5% more marks of grace on Seers' Village Agility Course",
+				"Easy Lamp (2,500 experience in any skill over level 30)",
+				"Functions as a light source"
+			],
+			"RewardItem":"Kandarin headgear 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Complete a lap of the Barbarian Outpost.",
+					"Quests": [
+						"Alfred Grimhand Barcrawl"
+					],
+					"Skills": {
+						"Agility": 35
+					},
+					"Items": []
+				},
+				{
+					"Task": "Create a Superantipoison potion from scratch in the Seers/Catherby Area.",
+					"Quests": [],
+					"Skills": {
+						"Herblore": 48
+					},
+					"Items": [
+						"Vial of water",
+						"Irit leaf",
+						"Unicorn horn dust"
+					]
+				},
+				{
+					"Task": "Enter the Ranging Guild.",
+					"Quests": [],
+					"Skills": {
+						"Ranged": 40
+					},
+					"Items": []
+				},
+				{
+					"Task":"Use the grapple shortcut to get from the water obelisk to Catherby shore.",
+					"Quests":[],
+					"Skills":{
+						"Agility":36,
+						"Strength":22,
+						"Ranged":39
+					},
+					"Items":[
+						"Mith grapple",
+						"Bronze crossbow",
+						"Dusty key",
+						"Anti-dragon shield"
+					]
+				},
+				{
+					"Task":"Catch and cook a Bass in Catherby. ",
+					"Quests":[],
+					"Skills":{
+						"Fishing":46,
+						"Cooking":43
+					},
+					"Items":[
+						"Big fishing net"
+					]
+				},
+				{
+					"Task": "Teleport to Camelot.",
+					"Quests": [],
+					"Skills": {
+						"Magic": 45
+					},
+					"Items": [
+						"Law rune",
+						["Air rune",5]
+					]
+				},
+				{
+					"Task": "String a Maple shortbow in Seers' Village bank.",
+					"Quests": [],
+					"Skills": {
+						"Fletching": 50
+					},
+					"Items": [
+						"Maple shortbow (u)",
+						"Bow string"
+					]
+				},
+				{
+					"Task": "Pick some Limpwurt root from the farming patch in Catherby.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 26
+					},
+					"Items": [
+						"Limpwurt seed",
+						"Seed dibber",
+						"Rake"
+					]
+				},
+				{
+					"Task": "Create a Mind helmet.",
+					"Quests": [
+						"Elemental Workshop II"
+					],
+					"Skills": {},
+					"Items": [
+						"Primed mind bar",
+						"Hammer",
+						"Beaten book",
+						"Battered key"
+					]
+				},
+				{
+					"Task": "Kill a Fire giant in the Waterfall Dungeon.",
+					"Quests": [
+						"Waterfall Quest"
+					],
+					"Skills": {},
+					"Items": [
+						"Glarial's amulet","Rope"
+					]
+				},
+				{
+					"Task": "Complete a wave of Barbarian Assault.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Steal from the chest in Hemenster.",
+					"Quests": [],
+					"Skills": {
+						"Thieving": 47
+					},
+					"Items": [
+						"Lockpick"
+					]
+				},
+				{
+					"Task": "Travel to McGrubor's Wood by Fairy ring",
+					"Quests": [
+						"Started Fairytale II - Cure a Queen"
+					],
+					"Skills": {},
+					"Items": [
+						"Dramen staff"
+					]
+				},
+				{
+					"Task":"Mine some coal near the coal trucks. ",
+					"Quests":[],
+					"Skills":{
+						"Mining":30
+					},
+					"Items":[
+						"Bronze pickaxe"
+					]
+				}
+			],
+			"Rewards": [
+				"10% extra experience when cutting maple trees in Seers' Village",
+				"33% faster spinning at the Seers' Village Spinning wheel",
+				"60 flax daily from the Flax keeper found at the Seers' Village#Flax Field",
+				"Coal trucks hold 280 coal",
+				"10% more marks of grace from Seers' Village Agility Course",
+				"5% higher yield from the Catherby herb patch",
+				"Medium Lamp (7,500 experience in any skill over level 40)"
+			],
+			"RewardItem":"Kandarin headgear 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task":"Catch a leaping sturgeon. ",
+					"Quests":[
+						"Barbarian fishing"
+					],
+					"Skills":{
+						"Fishing":70,
+						"Agility":45,
+						"Strength":45
+					},
+					"Items":[
+						"Barbarian rod",
+						"Fishing bait"
+					]
+				},
+				{
+					"Task": "Complete a lap of the Seers' Village Agility Course.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 60
+					},
+					"Items": []
+				},
+				{
+					"Task":"Create a Yew longbow from scratch around Seers' Village.",
+					"Quests":[],
+					"Skills":{
+						"Woodcutting":60,
+						"Fletching":70,
+						"Crafting":10
+						},
+					"Items":[
+						"Bronze axe",
+						"Bow string",
+						"Knife"
+					]
+				},
+				{
+					"Task": "Enter the Seers' Village courthouse with Piety turned on.",
+					"Quests": [
+						"King's Ransom","Knight Waves Training Grounds"
+					],
+					"Skills": {
+						"Prayer": 70,
+						"Defence": 70
+					},
+					"Items": []
+				},
+				{
+					"Task": "Charge a water orb.",
+					"Quests": [],
+					"Skills": {
+						"Magic": 56
+					},
+					"Items": [
+						"Unpowered orb",
+						"Dusty key",
+						["Cosmic rune",3],
+						["Water rune",30]
+					]
+				},
+				{
+					"Task": "Burn some maple logs with a bow in Seers' Village.",
+					"Quests": [
+						"Barbarian Firemaking"
+					],
+					"Skills": {
+						"Firemaking": 65
+					},
+					"Items": [
+						"Maple logs",
+						"Shortbow"
+					]
+				},
+				{
+					"Task": "Kill a shadow hound in the Shadow Dungeon.",
+					"Quests": [
+						"Started Desert Treasure"
+					],
+					"Skills": {},
+					"Items": [
+						"Ring of visibility"
+					]
+				},
+				{
+					"Task": "Kill a Mithril dragon.",
+					"Quests": [
+						"Barbarian Firemaking"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Purchase and equip a granite body from Barbarian Assault.",
+					"Quests": [],
+					"Skills": {
+						"Strength": 50,
+						"Defence": 50
+					},
+					"Items": [
+						["Coins",95000]
+					]
+				},
+				{
+					"Task": "Have the Seers estate agent decorate your house with Fancy Stone.",
+					"Quests": [],
+					"Skills": {
+						"Construction": 50
+					},
+					"Items": [
+						["Coins",30000]
+					]
+				},
+				{
+					"Task":"Smith an Adamant spear at Otto's Grotto.",
+					"Quests":[
+						"Barbarian Smithing",
+						"Tai Bwo Wannia Trio"
+					],
+					"Skills":{
+						"Smithing":75
+					},
+					"Items":[
+						"Yew logs",
+						"Adamantite bar",
+						"Hammer"
+					]
+				}
+			],
+			"Rewards": [
+				"Thormac will enchant Battlestaves for 30k rather than 40k (Coins)",
+				"120 flax daily from the Flax keeper found at the Seers' Village#Flax_Field",
+				"Coal trucks hold 308 coal",
+				"Option to move Camelot Teleport to just outside the Seers' Village#Bank",
+				"15% more marks of grace from Seers' Village Agility Course",
+				"One free teleport to Sherlock every day",
+				"10% more reward points from Barbarian Assault",
+				"10% more likely that your Enchanted crossbow bolts special effect will activate*",
+				"10% higher yield from the Catherby herb patch",
+				"Hard Lamp (15,000 experience in any skill over level 50)<nowiki>*</nowiki>Also works in PVP"
+			],
+			"RewardItem":"Kandarin headgear 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Read the Blackboard at Barbarian Assault after reaching level 5 in every role.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+					]
+				},
+				{
+					"Task": "Pick some Dwarf weed from the herb patch at Catherby.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 79
+					},
+					"Items": [
+						"Dwarf weed seed",
+						"Seed dibber",
+						"Rake",
+						"Spade"
+					]
+				},
+				{
+					"Task":"Fish and cook 5 sharks in Catherby using the Cooking gauntlets.",
+					"Quests":[
+						"Family Crest"
+					],
+					"Skills":{
+						"Fishing":76,
+						"Cooking":80
+					},
+					"Items":[
+						"Harpoon",
+						"Cooking gauntlets"
+					]
+				},
+				{
+					"Task":"Mix a Stamina mix on top of the Seers' Village bank.",
+					"Quests":[],
+					"Skills":{
+						"Herblore":86,
+						"Agility":60
+					},
+					"Items":[
+						"Stamina potion(2)",
+						"Caviar"
+					]
+				},
+				{
+					"Task": "Smith a rune hasta at Otto's Grotto.",
+					"Quests": [
+						"Barbarian Smithing"
+					],
+					"Skills": {
+						"Smithing": 90
+					},
+					"Items": [
+						"Runite bar",
+						"Magic logs",
+						"Hammer"
+					]
+				},
+				{
+					"Task":"Construct a pyre ship from Magic logs. ",
+					"Quests":[
+						"Barbarian Firemaking"
+					],
+					"Skills":{
+						"Firemaking":85,
+						"Crafting":85
+					},
+					"Items":[
+						"Magic logs",
+						"Chewed bones",
+						"Tinderbox",
+						"Bronze axe"
+					]
+				},
+				{
+					"Task":"Teleport to Catherby",
+					"Quests":[
+						"Lunar Diplomacy"
+					],
+					"Skills":{
+						"Magic":87
+					},
+					"Items":[
+						["Law rune",3],
+						["Astral rune",3],
+						["Water rune",10]
+					]
+				}
+			],
+			"Rewards": [
+				"Thormac will enchant Battlestaves for 20k rather than 30k/40k (Coins)",
+				"250 flax daily from the Flax keeper at the Seers' Village#Flax Field",
+				"The first 200 coal placed in the coal trucks every day are transported to your bank",
+				"Unlimited teleports to Sherlock",
+				"50% discount from Otto Godblessed when converting Zamorakian spears into Zamorakian hasta",
+				"15% higher yield from the Catherby herb patch",
+				"Elite Lamp (50,000 experience in any skill over level 70)"
+			],
+			"RewardItem":"Kandarin headgear 4"
+		}
+	},
+	"Karamja": {
+		"Name":"Karamja",
+		"Easy": {
+			"Tasks": [
+				{
+					"Task": "Pick 5 bananas from the plantation located east of the volcano.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Use the rope swing to travel to the Moss Giant Island north-west of Karamja.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 10
+					},
+					"Items": []
+				},
+				{
+					"Task": "Mine some gold ore from the rocks on the north-west peninsula of Karamja.",
+					"Quests": [],
+					"Skills": {
+						"Mining": 40
+					},
+					"Items": [
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Travel to Port Sarim via the dock, east of Musa Point.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						["Coins",30]
+					]
+				},
+				{
+					"Task": "Travel to Ardougne via the port near Brimhaven.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						["Coins",30]
+					]
+				},
+				{
+					"Task": "Explore Cairn Island to the west of Karamja.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 15
+					},
+					"Items": []
+				},
+				{
+					"Task": "Use the Fishing spots north of the banana plantation. You can use Barbarian Training",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Collect 5 seaweed from anywhere on Karamja. You can reuse the seaweed",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Attempt the TzHaar Fight Pits or Fight Cave.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Kill a Jogre in the Pothole Dungeon.",
+					"Quests":[],
+					"Skills":{},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"Once finished, Pirate Jackie the Fruit will grant you your rewards.",
+				"1 Antique lamp worth 1,000 experience in any skill. Unlike other lamps acquired from task diaries, this lamp can be used on any skills regardless of the level.",
+				"Lowers boat trip costs from Port Sarim - Musa Point and Ardougne - Brimhaven from 30 coins to 15 when worn."
+			],
+			"RewardItem":"Karamja gloves 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Claim a ticket from the Brimhaven Agility Arena in Brimhaven.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 30
+					},
+					"Items": [
+						["Coins",200]
+					]
+				},
+				{
+					"Task": "Discover hidden wall in the dungeon below the volcano.",
+					"Quests": [
+						"Dragon Slayer (partial completion)"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Visit the Isle of Crandor via the dungeon below the volcano.",
+					"Quests": [
+						"Dragon Slayer (partial completion)"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Use Vigroy and Hajedy's cart service.",
+					"Quests": [
+						"Shilo Village"
+					],
+					"Skills": {},
+					"Items": [
+						["Coins",200]
+					]
+				},
+				{
+					"Task": "Earn 100% favour in the Tai Bwo Wannai Cleanup minigame.",
+					"Quests": [
+						"Jungle Potion"
+					],
+					"Skills": {
+						"Woodcutting": 10
+					},
+					"Items": []
+				},
+				{
+					"Task": "Cook a Spider on stick.",
+					"Quests": [],
+					"Skills": {
+						"Cooking": 16
+					},
+					"Items": [
+						"Spider carcass",
+						"Arrow shaft"
+					]
+				},
+				{
+					"Task": "Charter the Lady of the Waves from Cairn Isle to Port Khazard.",
+					"Quests": [
+						"Shilo Village (quest)"
+					],
+					"Skills": {},
+					"Items": [
+						["Coins",20]
+					]
+				},
+				{
+					"Task": "Cut a log from a teak tree.",
+					"Quests": [
+						"Jungle Potion (unless using tree in the Ruins of Uzer)"
+					],
+					"Skills": {
+						"Woodcutting": 35
+					},
+					"Items": [
+						"Bronze axe"
+					]
+				},
+				{
+					"Task": "Cut a log from a mahogany tree.",
+					"Quests": [
+						"Jungle Potion"
+					],
+					"Skills": {
+						"Woodcutting": 50
+					},
+					"Items": [
+						"Bronze axe"
+					]
+				},
+				{
+					"Task": "Catch a raw karambwan.",
+					"Quests": [
+						"Tai Bwo Wannai Trio (partial completion)"
+					],
+					"Skills": {
+						"Fishing": 65
+					},
+					"Items": [
+						"Karambwan vessel",
+						"Karambwanji",
+						"Small fishing net"
+					]
+				},
+				{
+					"Task": "Exchange gems with Safta Doc in the house with an anvil in the northern part of Tai Bwo Wannai (must be in cleanup mode) for a machete.",
+					"Quests": [
+						"Jungle Potion"
+					],
+					"Skills": {},
+					"Items": [
+						"Gout tuber",
+						["Opal",3],
+						["Trading sticks",300]
+					]
+				},
+				{
+					"Task": "Use the Gnome glider to travel to Karamja.",
+					"Quests": [
+						"The Grand Tree"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Grow a healthy Fruit tree in the patch near Brimhaven.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 27
+					},
+					"Items": [
+						"Apple sapling",
+						"Spade",
+						"Rake"
+					]
+				},
+				{
+					"Task": "Trap a Horned Graahk.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 41
+					},
+					"Items": [
+						"Teasing stick",
+						"Knife",
+						"Logs"
+					]
+				},
+				{
+					"Task": "Chop the vines to gain deeper access to Brimhaven Dungeon.",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting": 10
+					},
+					"Items": [
+						"Bronze axe",
+						["Coins",875]
+					]
+				},
+				{
+					"Task": "Cross the lava using the stepping stones within Brimhaven Dungeon.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 12
+					},
+					"Items": [
+						"Bronze axe",
+						["Coins",875]
+					]
+				},
+				{
+					"Task": "Climb the stairs within Brimhaven Dungeon.",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting": 10
+					},
+					"Items": [
+						"Bronze axe",
+						["Coins",875]
+					]
+				},
+				{
+					"Task": "Charter a ship from the shipyard in the far east of Karamja.",
+					"Quests": [
+						"The Grand Tree"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Mine a Red topaz from a Gem rock. ",
+					"Quests":[
+						"Shilo Village"
+					],
+					"Skills":{
+						"Mining":40
+						},
+					"Items":[
+						"Bronze pickaxe"
+					]
+				}
+			],
+			"Rewards": [
+				"Once finished, Kaleb Paramaya will grant you your rewards.",
+				"All easy diary rewards",
+				"1 Antique lamp worth 5,000 experience in any skill above 40",
+				"10% additional Agility experience in the Brimhaven Agility Arena when worn",
+				"Increased Agility experience from any Agility tickets cashed in"
+			],
+			"RewardItem":"Karamja gloves 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task": "Become the champion of the TzHaar Fight Pit.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Kill a Ket-Zek in the TzHaar Fight Cave.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Eat an Oomlie wrap.",
+					"Quests": [
+						"Legends Quest"
+					],
+					"Skills": {},
+					"Items": [
+						"Cooked oomlie wrap"
+					]
+				},
+				{
+					"Task": "Craft some Nature runes.",
+					"Quests": [
+						"Rune Mysteries"
+					],
+					"Skills": {},
+					"Items": [
+						"Pure essence"
+					]
+				},
+				{
+					"Task": "Cook a Karambwan thoroughly.",
+					"Quests": [
+						"Tai Bwo Wannai Trio"
+					],
+					"Skills": {
+						"Cooking": 30
+					},
+					"Items": [
+						"Raw karambwan"
+					]
+				},
+				{
+					"Task":"Kill a Deathwing in the dungeon under the Kharazi Jungle. ",
+					"Quests":[
+						"Legends Quest"
+					],
+					"Skills":{
+						"Woodcutting":15,
+						"Strength":50,
+						"Agility":50,
+						"Thieving":50,
+						"Mining":52
+						},
+					"Items":[
+						"Bronze axe",
+						"Machete",
+						"Bronze pickaxe",
+						"Lockpick"
+					]
+				},
+				{
+					"Task": "Use the Crossbow shortcut south of the volcano.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Bronze crossbow",
+						"Mith grapple"
+					]
+				},
+				{
+					"Task": "Collect 5 Palm leaf. You can use the same leaf.",
+					"Quests": [
+						"Legends Quest"
+					],
+					"Skills": {
+						"Woodcutting": 15
+					},
+					"Items": [
+						"Bronze axe",
+						"Machete"
+					]
+				},
+				{
+					"Task":"Be assigned a Slayer task by Duradel in Shilo Village. ",
+					"Quests":[
+						"Shilo Village"
+					],
+					"Skills":{
+						"Combat":100,
+						"Slayer":50
+						},
+					"Items":[]
+				},
+				{
+					"Task":"Kill a Metal dragon in Brimhaven Dungeon.",
+					"Quests":[],
+					"Skills":{
+						"Agility":12,
+						"Woodcutting":34
+					},
+					"Items":[
+						"Bronze axe",
+						"Anti-dragon shield"
+					]
+				}
+			],
+			"Rewards": [
+				"Once finished a Jungle Forester will grant you your rewards.",
+				"All medium diary rewards",
+				"1 Antique lamp worth 10,000 experience in any skill above 50",
+				"Access to the underground portion of the Shilo Village mine",
+				"Unlimited teleportation to the underground portion of the Shilo Village mine when operated",
+				"Jiminua's Jungle Store will buy items for 1.75 times their low alchemy value"
+			],
+			"RewardItem":"Karamja gloves 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Craft 56 Nature runes at once.",
+					"Quests": [],
+					"Skills": {
+						"Runecrafting": 91
+					},
+					"Items": [
+						["Pure essence",28]
+					]
+				},
+				{
+					"Task": "Equip a fire cape in the TzHaar City.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Fire cape"
+					]
+				},
+				{
+					"Task": "Check the health of a palm tree in Brimhaven.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 68
+					},
+					"Items": [
+						"Palm sapling",
+						["Papaya fruit",15]
+					]
+				},
+				{
+					"Task": "Create an Anti-venom potion whilst standing in the horseshoe mine.",
+					"Quests": [],
+					"Skills": {
+						"Herblore": 87
+					},
+					"Items": [
+						"Antidote++(4)",
+						["Zulrah's scales",20]
+					]
+				},
+				{
+					"Task":"Check the health of your Calquat tree patch.",
+					"Quests":[],
+					"Skills":{
+						"Farming":72
+					},
+					"Items":[
+						"Calquat sapling",
+						["Poison ivy berries",8]
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 50,000 experience in any skill above 70",
+				"Double Tokkul from the TzHaar Fight Cave",
+				"10% chance at receiving double tickets in the Brimhaven Agility Arena",
+				"Shortcut across Shilo Village river",
+				"One TzHaar Fight Cave resurrection per day (requires owning a fire cape)",
+				"Shortcut to red dragons",
+				"Noted red dragonhide from Brimhaven dungeon",
+				"Free access to Shilo Village furnace",
+				"Free access to the Hardwood Grove",
+				"Ability to teleport directly to Duradel"
+			],
+			"RewardItem":"Karamja gloves 4"
+		}
+	},
+	"LumbridgeAndDraynor": {
+		"Name":"Lumbridge & Draynor",
+		"Easy": {
+			"Tasks": [
+				{
+					"Task": "Complete a lap of the Draynor Village Agility Course",
+					"Quests": [],
+					"Skills": {
+						"Agility": 10
+					},
+					"Items": []
+				},
+				{
+					"Task": "Slay a cave bug in the Lumbridge Swamp Caves",
+					"Quests": [],
+					"Skills": {
+						"Slayer": 7
+					},
+					"Items": [
+						"Lit torch",
+						"Rope"
+					]
+				},
+				{
+					"Task": "Have Sedridor teleport you to the Rune essence mine",
+					"Quests": [
+						"Rune Mysteries"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Craft some water runes",
+					"Quests": [
+						"Rune Mysteries"
+					],
+					"Skills": {
+						"Runecrafting": 5
+					},
+					"Items": [
+						"Rune essence",
+						"Water talisman"
+					]
+				},
+				{
+					"Task": "Learn your age from Hans in Lumbridge",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Pickpocket a man or woman in Lumbridge",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Chop and burn some oak logs in Lumbridge ",
+					"Quests":[],
+					"Skills":{
+						"Woodcutting":15,
+						"Firemaking":15
+					},
+					"Items":[
+						"Bronze axe",
+						"Tinderbox"
+					]
+				},
+				{
+					"Task": "Kill a zombie in the Draynor Sewers.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Catch some anchovies in Al-Kharid",
+					"Quests": [],
+					"Skills": {
+						"Fishing": 15
+					},
+					"Items": [
+						"Small fishing net"
+					]
+				},
+				{
+					"Task": "Bake some bread on the Lumbridge kitchen range",
+					"Quests": [
+						"Cook's Assistant"
+					],
+					"Skills": {},
+					"Items": [
+						"Bread dough"
+					]
+				},
+				{
+					"Task": "Mine some iron ore at the Al Kharid mine",
+					"Quests": [],
+					"Skills": {
+						"Mining": 15
+					},
+					"Items": [
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task":"Enter the H.A.M. Hideout",
+					"Quests":[],
+					"Skills":{},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 2,500 experience in any skill above 30",
+				"Allows you to cast Low Level Alchemy 30 times a day without runes ",
+				"50% run energy replenish twice a day"
+			],
+			"RewardItem":"Explorer's ring 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Complete a lap of the Al Kharid Agility Course",
+					"Quests": [],
+					"Skills": {
+						"Agility": 20
+					},
+					"Items": []
+				},
+				{
+					"Task":"Grapple across the River Lum.",
+					"Quests":[],
+					"Skills":{
+						"Ranged":37,
+						"Strength":19,
+						"Agility":8
+					},
+					"Items":[
+						"Mith grapple",
+						"Mith crossbow"
+					]
+				},
+				{
+					"Task": "Purchase an Ava's accumulator from Ava",
+					"Quests": [
+						"Animal Magnetism"
+					],
+					"Skills": {
+						"Ranged": 50
+					},
+					"Items": [
+						["Steel arrow",75],
+						["Coins",999]
+					]
+				},
+				{
+					"Task": "Travel to the Wizards' Tower by fairy ring. D-I-S",
+					"Quests": [
+						"Started Fairytale II - Cure a Queen"
+					],
+					"Skills": {},
+					"Items": [
+						"Dramen staff"
+					]
+				},
+				{
+					"Task": "Cast the Lumbridge Teleport spell",
+					"Quests": [],
+					"Skills": {
+						"Magic": 31
+					},
+					"Items": [
+						["Air rune",3],
+						"Earth rune",
+						"Law rune"
+					]
+				},
+				{
+					"Task": "Catch some salmon in Lumbridge",
+					"Quests": [],
+					"Skills": {
+						"Fishing": 30
+					},
+					"Items": [
+						"Fly fishing rod",
+						"Feather"
+					]
+				},
+				{
+					"Task": "Craft a coif in the Lumbridge cow pen (eastern cows)",
+					"Quests": [],
+					"Skills": {
+						"Crafting": 38
+					},
+					"Items": [
+						"Leather",
+						"Needle",
+						"Thread"
+					]
+				},
+				{
+					"Task": "Chop some willow logs in Draynor Village",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting": 30
+					},
+					"Items": [
+						"Bronze axe"
+					]
+				},
+				{
+					"Task": "Pickpocket Martin the Master Gardener",
+					"Quests": [],
+					"Skills": {
+						"Thieving": 38
+					},
+					"Items": []
+				},
+				{
+					"Task": "Get a slayer task from Chaeldar",
+					"Quests": [
+						"Lost City"
+					],
+					"Skills": {
+						"Combat": 70
+					},
+					"Items": []
+				},
+				{
+					"Task":"Catch an essence or eclectic impling in Puro-Puro.",
+					"Quests":[],
+					"Skills":{
+						"Hunter":42
+					},
+					"Items":[
+						"Butterfly net",
+						"Impling jar"
+					]
+				},
+				{
+					"Task":"Craft some lava runes at the Fire altar in Al Kharid",
+					"Quests":[
+						"Rune Mysteries"
+					],
+					"Skills":{
+						"Runecrafting":23
+					},
+					"Items":[
+						"Fire talisman",
+						"Earth talisman",
+						"Earth rune",
+						"Pure essence"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 7,500 experience in any skill above 40",
+				"50% run energy replenish 3 times a day",
+				"3 daily teleports to cabbage patch near Falador farm",
+				"Access to Draynor Village wall shortcut"
+			],
+			"RewardItem":"Explorer's ring 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task":"Cast Bones to Peaches in Al kharid Palace ",
+					"Quests":[],
+					"Skills":{
+						"Magic":60
+					},
+					"Items":[
+						"Bones",
+						["Nature rune",2],
+						["Water rune",4],
+						["Earth rune",4]
+					]
+				},
+				{
+					"Task": "Squeeze past the jutting wall on your way to the Cosmic altar",
+					"Quests": [
+						"Lost City"
+					],
+					"Skills": {
+						"Agility": 46
+					},
+					"Items": []
+				},
+				{
+					"Task": "Craft 56 cosmic runes simultaneously",
+					"Quests": [
+						"Lost City"
+					],
+					"Skills": {
+						"Runecrafting": 59
+					},
+					"Items": [
+						["Pure essence",28]
+					]
+				},
+				{
+					"Task": "Travel from Lumbridge to Edgeville on a waka canoe",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting": 57
+					},
+					"Items": [
+						"Bronze axe"
+					]
+				},
+				{
+					"Task": "Collect at least 100 tears of guthix in one visit",
+					"Quests": [
+						"Tears of Guthix",
+						"125 QP Minimum"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Take the Dorgesh-Kaan - Keldagrim Train System from Dorgesh-Kaan to Keldagrim",
+					"Quests": [
+						"Another Slice of H.A.M."
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Purchase some barrows gloves from the Culinaromancer's Chest",
+					"Quests": [
+						"Recipe for Disaster (full completion)"
+					],
+					"Skills": {},
+					"Items": [
+						["Coins",130000]
+					]
+				},
+				{
+					"Task": "Pick some belladonna from the farming patch at Draynor manor",
+					"Quests": [],
+					"Skills": {
+						"Farming": 63
+					},
+					"Items": [
+						"Belladonna seed",
+						"Seed dibber",
+						"Spade",
+						"Rake",
+						"Leather gloves"
+					]
+				},
+				{
+					"Task": "Light your mining helmet in the lumbridge castle basement",
+					"Quests": [
+						"The Lost Tribe"
+					],
+					"Skills": {
+						"Firemaking": 65
+					},
+					"Items": [
+						"Tinderbox",
+						"Mining helmet"
+					]
+				},
+				{
+					"Task": "Recharge your prayer at Clan Wars with Smite activated",
+					"Quests": [],
+					"Skills": {
+						"Prayer": 52
+					},
+					"Items": []
+				},
+				{
+					"Task":"Craft, string and enchant an amulet of power in Lumbridge (not upstairs in castle) ",
+					"Quests":[],
+					"Skills":{
+						"Crafting":70,
+						"Magic":57
+					},
+					"Items":[
+						"Gold bar",
+						"Diamond",
+						"Amulet mould",
+						"Ball of wool",
+						"Cosmic rune",
+						["Earth rune",10]
+					]
+				}
+			],
+			"Rewards": [
+				"All medium diary rewards",
+				"1 Antique lamp worth 15,000 experience in any skill above 50",
+				"50% run energy replenish 4 times a day",
+				"Access to a shortcut from Lumbridge swamp to the desert",
+				"10% increased experience from Tears of Guthix (minigame)",
+				"Unlimited teleports to cabbage patch near Falador farm"
+			],
+			"RewardItem":"Explorer's ring 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Steal from a Dorgesh-Kaan rich chest",
+					"Quests": [
+						"Death to the Dorgeshuun"
+					],
+					"Skills": {
+						"Thieving": 78
+					},
+					"Items": [
+						"Lockpick"
+					]
+				},
+				{
+					"Task": "Pickpocket Movario on the Dorgesh-Kaan Agility Course.",
+					"Quests": [
+						"Death to the Dorgeshuun"
+					],
+					"Skills": {
+						"Agility": 70,
+						"Ranged":70,
+						"Strength":70
+					},
+					"Items": [
+						"Bronze crossbow",
+						"Mith grapple"
+					]
+				},
+				{
+					"Task": "Chop some magic logs at the Mage Training Arena",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting": 75
+					},
+					"Items": [
+						"Bronze axe"
+					]
+				},
+				{
+					"Task": "Smith an adamant platebody down Draynor sewer",
+					"Quests": [],
+					"Skills": {
+						"Smithing": 88
+					},
+					"Items": [
+						["Adamantite bar",5],
+						"Hammer"
+					]
+				},
+				{
+					"Task": "Craft 140 or more water runes at once",
+					"Quests": [
+						"Rune Mysteries"
+					],
+					"Skills": {
+						"Runecrafting": 76
+					},
+					"Items": [
+						["Rune essence",28]
+					]
+				},
+				{
+					"Task":"Perform the Quest point cape emote in the Wise Old Man's house.",
+					"Quests":[
+						"All quests"
+					],
+					"Skills":{},
+					"Items":[
+						"Quest point cape"
+					]
+				}
+			],
+			"Rewards": [
+				"All hard diary rewards",
+				"1 Antique lamp worth 50,000 experience in any skill above 70",
+				"5th slot to block Slayer tasks with",
+				"100% run energy replenish 3 times a day",
+				"20% discount on items in the Culinaromancer's Chest",
+				"30 casts of High Level Alchemy per day (does not provide experience)",
+				"Ability to use Fairy rings without the need of a Dramen staff or Lunar staff"
+			],
+			"RewardItem":"Explorer's ring 4"
+		}
+	},
+	"Morytania": {
+		"Name":"Morytania",
+		"Easy": {
+			"Tasks": [
+				{
+					"Task": "Craft any Snelm from scratch in Morytania.",
+					"Quests": [],
+					"Skills": {
+						"Crafting": 15
+					},
+					"Items": [
+						"Chisel"
+					]
+				},
+				{
+					"Task": "Cook a Thin snail on the Port Phasmatys range.",
+					"Quests": [],
+					"Skills": {
+						"Cooking": 12
+					},
+					"Items": [
+						"Thin snail"
+					]
+				},
+				{
+					"Task": "Get a Slayer assignment from Mazchna.",
+					"Quests": [],
+					"Skills": {
+						"Combat": 20
+					},
+					"Items": []
+				},
+				{
+					"Task": "Kill a Banshee in the Slayer Tower.",
+					"Quests": [],
+					"Skills": {
+						"Slayer": 15
+					},
+					"Items": [
+						"Earmuffs"
+					]
+				},
+				{
+					"Task": "Have Sbott tan something for you.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Cowhide",
+						["Coins",45]
+					]
+				},
+				{
+					"Task": "Enter Mort Myre Swamp.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Kill a Ghoul.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Place a Scarecrow in the Morytania Flower (patch).",
+					"Quests": [],
+					"Skills": {
+						"Farming": 23
+					},
+					"Items": [
+						"Scarecrow"
+					]
+				},
+				{
+					"Task": "Offer some Bonemeal at the Ectofuntus.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Bonemeal",
+						"Bucket of slime"
+					]
+				},
+				{
+					"Task": "Kill a Werewolf in its human form using Wolfbane.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Wolfbane"
+					]
+				},
+				{
+					"Task":"Restore your prayer points at the Nature Grotto. ",
+					"Quests":[
+						"Nature Spirit"
+					],
+					"Skills":{},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 2,500 experience in any skill above 30",
+				"50% chance of a Ghast ignoring you rather than attacking",
+				"2 daily teleports to the Slime Pit beneath the Ectofuntus"
+			],
+			"RewardItem":"Morytania legs 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Catch a swamp lizard.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 29
+					},
+					"Items": [
+						"Rope",
+						"Small fishing net"
+					]
+				},
+				{
+					"Task": "Complete a lap of the Canifis Agility Course.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 40
+					},
+					"Items": []
+				},
+				{
+					"Task": "Obtain some Bark from a Hollow tree.",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting": 45
+					},
+					"Items": [
+						"Bronze axe"
+					]
+				},
+				{
+					"Task": "Travel to Dragontooth Island.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Ghostspeak amulet",
+						["Ecto-token",25]
+					]
+				},
+				{
+					"Task": "Kill a Terror dog.",
+					"Quests": [
+						"Haunted Mine"
+					],
+					"Skills": {
+						"Slayer": 40
+					},
+					"Items": []
+				},
+				{
+					"Task": "Complete a game of Trouble Brewing.",
+					"Quests": [
+						"Cabin Fever"
+					],
+					"Skills": {
+						"Cooking": 40
+					},
+					"Items": []
+				},
+				{
+					"Task": "Board the Swampy boat at the Hollows.",
+					"Quests": [
+						"In Search of the Myreque"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Make a batch of cannonballs at the Port Phasmatys furnace.",
+					"Quests": [
+						"Started Ghosts Ahoy","Dwarf Cannon"
+					],
+					"Skills": {
+						"Smithing": 35
+					},
+					"Items": [
+						"Steel bar",
+						"Ammo mould"
+					]
+				},
+				{
+					"Task": "Kill a Fever spider on Braindeath Island.",
+					"Quests": [
+						"Rum Deal"
+					],
+					"Skills": {
+						"Slayer": 42
+					},
+					"Items": [
+						"Slayer gloves"
+					]
+				},
+				{
+					"Task": "Use an ectophial to return to Port Phasmatys.",
+					"Quests": [
+						"Ghosts Ahoy"
+					],
+					"Skills": {},
+					"Items": [
+						"Ectophial"
+					]
+				},
+				{
+					"Task":"Mix a Guthix balance potion while in Morytania.",
+					"Quests":[
+						"In Aid of the Myreque (partial)"
+					],
+					"Skills":{
+						"Herblore":22
+					},
+					"Items":[
+						"Restore potion(4)",
+						"Garlic",
+						"Silver dust"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 7,500 experience in any skill above 40",
+				"5 daily teleports to the Slime Pit beneath the Ectofuntus",
+				"Robin offers 13 lots of Bonemeal in exchange for bones and 13 free Bucket of slime each day",
+				"Acts as a Ghostspeak amulet when worn"
+			],
+			"RewardItem":"Morytania legs 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task":"",
+					"Quests":[],
+					"Skills":{},
+					"Items":[]
+				},
+				{
+					"Task": "Climb the advanced spike chain within Slayer Tower. Do not wear graceful.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Harvest some Watermelon from the Allotment patch on Harmony Island.",
+					"Quests": [
+						"Started The Great Brain Robbery"
+					],
+					"Skills": {
+						"Farming": 47
+					},
+					"Items": [
+						["Watermelon seed",3],
+						"Seed dibber",
+						"Rake",
+						"Spade"
+					]
+				},
+				{
+					"Task":"",
+					"Quests":[],
+					"Skills":{},
+					"Items":[]
+				},
+				{
+					"Task": "Complete a hard Temple Trekking.",
+					"Quests": [
+						"In Aid of the Myreque"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Kill a Cave horror.",
+					"Quests": [
+						"Cabin Fever"
+					],
+					"Skills": {
+						"Slayer": 58
+					},
+					"Items": [
+						"Witchwood icon",
+						"Candle"
+					]
+				},
+				{
+					"Task": "Harvest some Bittercap Mushrooms from the patch in Canifis.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 53
+					},
+					"Items": [
+						"Mushroom spore",
+						"Seed dibber",
+						"Rake",
+						"Spade"
+					]
+				},
+				{
+					"Task": "Pray at the Nature Grotto with Piety activated.",
+					"Quests": [
+						"Nature Spirit","King's Ransom"
+					],
+					"Skills": {
+						"Prayer": 70,
+						"Defence": 70
+					},
+					"Items": []
+				},
+				{
+					"Task": "Use the shortcut to get to the bridge over the Salve.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 65
+					},
+					"Items": []
+				},
+				{
+					"Task":"Mine some Mithril ore in the Abandoned Mine.",
+					"Quests":[
+						"Haunted Mine"
+					],
+					"Skills":{
+						"Mining":55
+					},
+					"Items":[
+						"Bronze pickaxe",
+						"Crystal-mine key"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 15,000 experience in any skill above 50",
+				"Robin offers 26 lots of Bonemeal in exchange for bones and 26 free Bucket of slime each day",
+				"Double Mort myre fungus when casting Bloom",
+				"50% more prayer experience from burning shade remains",
+				"Access to a shortcut across the estuary on Mos Le'Harmless",
+				"50% more runes from the Barrows chest",
+				"Bonecrusher - an item that when carried automatically crushes bone drops and provides '''half''' the prayer experience you would have gotten for burying them. The bonecrusher is claimed and charged with a small amount of Ecto-tokens",
+				"Unlimited Burgh de Rott teleports"
+			],
+			"RewardItem":"Morytania legs 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Catch a shark in Burgh de Rott with your bare hands.",
+					"Quests": [
+						"In Aid of the Myreque", "Barbarian Fishing Training"
+					],
+					"Skills": {
+						"Fishing": 96,
+						"Strength": 76
+					},
+					"Items": []
+				},
+				{
+					"Task": "Cremate any Shade remains on a Magic pyre.",
+					"Quests": [
+						"Shades of Mort'ton"
+					],
+					"Skills": {
+						"Firemaking": 80
+					},
+					"Items": [
+						"Magic pyre logs",
+						"Loar remains",
+						"Tinderbox"
+					]
+				},
+				{
+					"Task": "Fertilize the Morytania herb patch using Lunar spells.",
+					"Quests": [
+						"Lunar Diplomacy"
+					],
+					"Skills": {
+						"Magic": 83
+					},
+					"Items": [
+						["Nature rune",2],
+						["Astral rune",3],
+						["Earth rune",15]
+					]
+				},
+				{
+					"Task": "Craft a Black d'hide body in Canifis bank.",
+					"Quests": [],
+					"Skills": {
+						"Crafting": 84
+					},
+					"Items": [
+						["Black dragon leather",3],
+						"Needle",
+						"Thread"
+					]
+				},
+				{
+					"Task": "Kill an Abyssal demon in the Slayer Tower.",
+					"Quests": [],
+					"Skills": {
+						"Slayer": 85
+					},
+					"Items": []
+				},
+				{
+					"Task":"Loot the Barrows chest while wearing any complete barrows set. You Need 70 Attack or Ranged",
+					"Quests":[],
+					"Skills":{
+						"Defence":70
+					},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 50,000 experience in any skill above 70",
+				"Robin offers 39 lots of Bonemeal and 39 free Bucket of slime each day in exchange for bones.",
+				"10% more Slayer experience in Slayer Tower",
+				" 50% more Firemaking experience when burning Shade remains",
+				"Bonecrusher - now provides '''full''' prayer experience you would have received for burying the bones.",
+				"Access to a new herb patch on Harmony Island"
+			],
+			"RewardItem":"Morytania legs 4"
+		}
+	},
+	"Varrock": {
+		"Name":"Varrock",
+		"Easy": {
+			"Tasks": [
+				{
+					"Task": "Browse Thessalia's Thessalia's Fine Clothes.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Have Aubury teleport you to the Rune essence mine.",
+					"Quests": [
+						"Rune Mysteries"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Mine some iron in the South-east Varrock mine.",
+					"Quests": [],
+					"Skills": {
+						"Mining": 15
+					},
+					"Items": [
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Make a plank at the Sawmill.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Logs",
+						["Coins",100]
+					]
+				},
+				{
+					"Task": "Enter the second level of the Stronghold of Security.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Jump over the fence south of Varrock.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 13
+					},
+					"Items": []
+				},
+				{
+					"Task": "Chop down a dying tree in the Lumber Yard.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Bronze axe"
+					]
+				},
+				{
+					"Task": "Buy a newspaper.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						["Coins",50]
+					]
+				},
+				{
+					"Task": "Give a dog a bone!",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Bones"
+					]
+				},
+				{
+					"Task": "Spin a bowl on the pottery wheel and fire it in the oven in Barbarian Village.",
+					"Quests": [],
+					"Skills": {
+						"Crafting": 8
+					},
+					"Items": [
+						"Soft clay"
+					]
+				},
+				{
+					"Task": "Speak to Curator Haig Halen after obtaining at least 50 Kudos.",
+					"Quests": [
+						
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Craft some earth runes.",
+					"Quests": [
+						"Rune Mysteries"
+					],
+					"Skills": {
+						"Runecrafting": 9
+					},
+					"Items": [
+						"Earth talisman",
+						"Rune essence"
+					]
+				},
+				{
+					"Task": "Catch some trout in the River Lum at Barbarian Village.",
+					"Quests": [],
+					"Skills": {
+						"Fishing": 20
+					},
+					"Items": [
+						"Fly fishing rod",
+						"Feather"
+					]
+				},
+				{
+					"Task":"Steal from the Tea stall in Varrock",
+					"Quests":[],
+					"Skills":{
+						"Thieving":5
+					},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 2,500 experience in any skill above 30",
+				"15 Battlestaff from Zaff every day for 7,000 coins each",
+				"Skull sceptre will now hold up to 7 charges",
+				"Access to the furnace in Edgeville"
+			],
+			"RewardItem":"Varrock armour 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Have the Apothecary in Varrock make you a strength potion.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Limpwurt root",
+						"Red spiders' eggs",
+						["Coins",5]
+					]
+				},
+				{
+					"Task": "Enter the Champions Guild.",
+					"Quests": [
+						"32 quest points"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Select a colour for your kitten.",
+					"Quests": [
+						"Garden of Tranquility (partial)",
+						"Gertrude's Cat"
+					],
+					"Skills": {},
+					"Items": [
+						"Ring of charos(a)",
+						["Coins",100]
+					]
+				},
+				{
+					"Task": "Use the spirit tree in the north-eastern corner of Grand Exchange.",
+					"Quests": [
+						"Tree Gnome Village"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Perform the 4 emotes from the Stronghold of Security. Idea, Stamp, Flap, and Slap Head",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Enter the Tolna's rift after completing A Soul's Bane.",
+					"Quests": [
+						"A Soul's Bane"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Teleport to the digsite using a Digsite pendant",
+					"Quests": [
+						"The Digsite"
+					],
+					"Skills": {
+						"Magic": 49
+					},
+					"Items": [
+						"Digsite pendant (1)"
+					]
+				},
+				{
+					"Task": "Cast the teleport to Varrock spell.",
+					"Quests": [],
+					"Skills": {
+						"Magic": 25
+					},
+					"Items": [
+						"Law rune",
+						"Fire rune",
+						["Air rune",3]
+					]
+				},
+				{
+					"Task": "Get a Slayer task from Vannaka",
+					"Quests": [],
+					"Skills": {
+						"Combat": 40
+					},
+					"Items": []
+				},
+				{
+					"Task": "Make 20 Mahogany Planks in one go.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						["Mahogany logs",20],
+						["Coins",30000]
+					]
+				},
+				{
+					"Task": "Pick a White tree fruit.",
+					"Quests": [
+						"Garden of Tranquility"
+					],
+					"Skills": {
+						"Farming": 25
+					},
+					"Items": []
+				},
+				{
+					"Task": "Use the balloon to travel from Varrock.",
+					"Quests": [
+						"Enlightened Journey"
+					],
+					"Skills": {
+						"Firemaking": 40
+					},
+					"Items": [
+						["Willow logs",10],
+						"Logs"
+					]
+				},
+				{
+					"Task":"Complete a lap of the Varrock Agility Course",
+					"Quests":[],
+					"Skills":{
+						"Agility":30
+					},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 7,500 experience in any skill above 40",
+				"30 Battlestaff from Zaff every day for 7,000 coins each",
+				"Ability to switch the Varrock Teleport destination to the Grand Exchange by right clicking the spell icon in the Spellbook interface",
+				"Skull sceptre will now hold up to 9 charges"
+			],
+			"RewardItem":"Varrock armour 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task": "Trade furs with the Fancy-dress shop owner for a spottier cape and equip it.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 66
+					},
+					"Items": [
+						["Dashing kebbit fur",2],
+						["Coins",800]
+					]
+				},
+				{
+					"Task": "Speak to Orlando Smith when you have achieved 153 Kudos.",
+					"Quests": [
+						"Various"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Make a Waka Canoe near Edgeville.",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting": 57
+					},
+					"Items": [
+						"Bronze axe"
+					]
+				},
+				{
+					"Task": "Teleport to Paddewwa.",
+					"Quests": [
+						"Desert Treasure"
+					],
+					"Skills": {
+						"Magic": 54
+					},
+					"Items": [
+						"Fire rune",
+						"Air rune",
+						["Law rune",2]
+					]
+				},
+				{
+					"Task": "Teleport to Barbarian Village with a skull sceptre.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Skull sceptre"
+					]
+				},
+				{
+					"Task": "Chop some yew logs in Varrock and burn them at the top of the Varrock church.",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting": 60,
+						"Firemaking": 60
+					},
+					"Items": [
+						"Bronze axe",
+						"Tinderbox"
+					]
+				},
+				{
+					"Task": "Have the Varrock estate agent decorate your house with Fancy Stone.",
+					"Quests": [],
+					"Skills": {
+						"Construction": 50
+					},
+					"Items": [
+						["Coins",30000]
+					]
+				},
+				{
+					"Task": "Collect at least 2 yew roots from the Tree patch in Varrock Palace.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 68,
+						"Woodcutting": 60
+					},
+					"Items": [
+						"Yew sapling",
+						"Bronze axe",
+						"Spade"
+					]
+				},
+				{
+					"Task": "Pray at the altar in Varrock palace with Smite active.",
+					"Quests": [],
+					"Skills": {
+						"Prayer": 52
+					},
+					"Items": []
+				},
+				{
+					"Task":"Squeeze through the obstacle pipe by Vannaka",
+					"Quests":[],
+					"Skills":{
+						"Agility":51
+					},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 15,000 experience in any skill above 50",
+				"60 Battlestaff from Zaff every day for 7,000 coins each",
+				"Access to the Cooking guild bank."
+			],
+			"RewardItem":"Varrock armour 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Create a super combat potion in Varrock west bank",
+					"Quests": [],
+					"Skills": {
+						"Herblore": 90
+					},
+					"Items": [
+						"Super attack(4)",
+						"Super strength(4)",
+						"Super defence(4)",
+						"Torstol"
+					]
+				},
+				{
+					"Task": "Use Lunar magic to make 20 mahogany planks at the Lumber Yard.",
+					"Quests": [
+						"Dream Mentor"
+					],
+					"Skills": {
+						"Magic": 86
+					},
+					"Items": [
+						["Nature rune",20],
+						["Astral rune",40],
+						["Earth rune",300],
+						["Coins",21000],
+						["Mahogany logs",20]
+					]
+				},
+				{
+					"Task": "Bake a summer pie in the Cooking Guild.",
+					"Quests": [],
+					"Skills": {
+						"Cooking": 95
+					},
+					"Items": [
+						"Pastry dough",
+						"Strawberry",
+						"Watermelon",
+						"Cooking apple",
+						"Pie dish"
+					]
+				},
+				{
+					"Task": "Smith and fletch ten rune darts within Varrock.",
+					"Quests": [
+						"The Tourist Trap"
+					],
+					"Skills": {
+						"Smithing": 89,
+						"Fletching": 81
+					},
+					"Items": [
+						"Runite bar",
+						"Hammer",
+						["Feather",10]
+					]
+				},
+				{
+					"Task":"Craft 100 or more earth runes simultaneously",
+					"Quests":[],
+					"Skills":{
+						"Runecrafting":78
+					},
+					"Items":[
+						["Rune essence",25]
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 50,000 experience in any skill above 70",
+				"120 Battlestaff from Zaff every day for 7,000 coins each"
+			],
+			"RewardItem":"Varrock armour 4"
+		}
+	},
+	"Wilderness": {
+		"Name":"Wilderness",
+		"Easy": {
+			"Tasks": [
+				{
+					"Task": "Cast Low Level Alchemy at the Fountain of Rune.",
+					"Quests": [],
+					"Skills": {
+						"Magic": 21
+					},
+					"Items": []
+				},
+				{
+					"Task": "Enter the Wilderness from the Ardougne teleport lever or Edgeville teleport lever lever.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Pray at the Chaos Altar in level 38, Western Wilderness.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Enter the Chaos Runecrafting temple. ",
+					"Quests":[],
+					"Skills":{},
+					"Items":[]
+				},
+				{
+					"Task": "Kill a Mammoth.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Kill an earth warrior in the Edgeville Dungeon.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 15
+					},
+					"Items": []
+				},
+				{
+					"Task": "Restore some Prayer points at the Demonic Ruins.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Enter the King Black Dragon Lair.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Collect 5 red spiders' eggs from the Wilderness.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Red spiders' eggs"
+					]
+				},
+				{
+					"Task": "Mine some iron ore in the Wilderness.",
+					"Quests": [],
+					"Skills": {
+						"Mining": 15
+					},
+					"Items": [
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Have the Mage of Zamorak teleport you to the Abyss.",
+					"Quests": [
+						"Abyss Miniquest"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Equip any team cape in the Wilderness. ",
+					"Quests":[],
+					"Skills":{},
+					"Items":[
+						"Team-1 cape"
+					]
+				}
+			],
+			"Rewards": [
+				"When wielded, wilderness swords will always successfully slash webs",
+				"1 Antique lamp worth 2,500 experience in any skill above 30",
+				"Wilderness lever can teleport you to either Edgeville or Ardougne",
+				"10 random, free runes from Lundail once per day"
+			],
+			"RewardItem":"Wilderness sword 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Mine some mithril ore in the Wilderness.",
+					"Quests": [],
+					"Skills": {
+						"Mining": 55
+					},
+					"Items": [
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Chop some yew logs from an ent.",
+					"Quests": [],
+					"Skills": {
+						"Woodcutting": 61
+					},
+					"Items": [
+						"Bronze axe"
+					]
+				},
+				{
+					"Task":"Enter the Wilderness God Wars Dungeon. Requires 60 Agility or Strength",
+					"Quests":[],
+					"Skills":{},
+					"Items":[]
+				},
+				{
+					"Task": "Complete a lap of the Wilderness Agility Course.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 52
+					},
+					"Items": []
+				},
+				{
+					"Task": "Kill a green dragon.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Kill an ankou in the Wilderness.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Charge Earth Orb an earth orb.",
+					"Quests": [],
+					"Skills": {
+						"Magic": 60
+					},
+					"Items": [
+						"Unpowered orb",
+						["Cosmic rune",3],
+						["Earth rune",30]
+					]
+				},
+				{
+					"Task": "Kill a bloodveld in the Wilderness God Wars Dungeon.",
+					"Quests": [],
+					"Skills": {
+						"Slayer": 50
+					},
+					"Items": []
+				},
+				{
+					"Task": "Sell a mysterious emblem to the Emblem Trader in Edgeville.",
+					"Quests": [],
+					"Skills": {},
+					"Items": [
+						"Mysterious emblem"
+					]
+				},
+				{
+					"Task":"Smith a gold helmet in the Resource Arena. ",
+					"Quests":[
+						"Between a Rock"
+					],
+					"Skills":{
+						"Smithing":50
+					},
+					"Items":[
+						["Coins",7500],
+						["Gold bar",3],
+						"Hammer"
+					]
+				},
+				{
+					"Task":"Open the muddy chest in the Lava Maze",
+					"Quests":[],
+					"Skills":{},
+					"Items":[
+						"Muddy key"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 7,500 experience in any skill above 40",
+				"Faster log cutting from Ents",
+				"20% off entry to Resource Arena",
+				"Access to a shortcut in the Deep Wilderness Dungeon",
+				"Can have 4 ecumenical keys at a time",
+				"20 random, free runes from Lundail once per day"
+			],
+			"RewardItem":"Wilderness sword 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task":"Cast one of the 3 God spells against another player in the Wilderness.",
+					"Quests":[],
+					"Skills":{
+						"Magic":60
+					},
+					"Items":[
+						"Guthix staff",
+						"Fire rune",
+						["Blood rune",2],
+						["Air rune",4]
+					]
+				},
+				{
+					"Task": "Charge Air Orb an air orb.",
+					"Quests": [],
+					"Skills": {
+						"Magic": 66
+					},
+					"Items": [
+						"Unpowered orb",
+						["Cosmic rune",3],
+						["Air rune",30]
+					]
+				},
+				{
+					"Task": "Catch a black salamander.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 67
+					},
+					"Items": [
+						"Small fishing net","Rope"
+					]
+				},
+				{
+					"Task": "Smith an adamant scimitar in the Resource Arena.",
+					"Quests": [],
+					"Skills": {
+						"Smithing": 75
+					},
+					"Items": [
+						"Hammer",
+						["Coins",7500],
+						["Adamantite bar",2]
+					]
+				},
+				{
+					"Task": "Kill a Lava dragon & bury the Lava dragon bones on Lava Dragon Isle.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Kill the Chaos Elemental.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Kill the Crazy archaeologist, Chaos Fanatic and Scorpia.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Take the Agility Shortcut from Trollheim into the Wilderness.",
+					"Quests": [],
+					"Skills": {
+						"Agility": 64
+					},
+					"Items": []
+				},
+				{
+					"Task": "Kill a spiritual warrior in the Wilderness God Wars Dungeon.",
+					"Quests": [],
+					"Skills": {
+						"Slayer": 68
+					},
+					"Items": []
+				},
+				{
+					"Task":"Fish some raw lava eel in the Wilderness.",
+					"Quests":[],
+					"Skills":{
+						"Fishing":53
+					},
+					"Items":[
+						"Oily fishing rod",
+						"Fishing bait",
+						"Knife"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 15,000 experience in any skill above 50",
+				"One free daily teleport to the Fountain of Rune",
+				"50% more Lava scale shard per Lava scale",
+				"Access to a shortcut to the Lava Dragon Isle",
+				"Can have 5 ecumenical keys at a time",
+				"30 random, free runes from Lundail once per day",
+				"Able to choose your destination when teleporting through the Wilderness Obelisk",
+				"50% entrance fee to Resource Arena (3750gp)"
+			],
+			"RewardItem":"Wilderness sword 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Kill Callisto, Venenatis & Vet'ion.",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Teleport to Ghorrock Teleport.",
+					"Quests": [
+						"Desert Treasure"
+					],
+					"Skills": {
+						"Magic": 96
+					},
+					"Items": [
+						["Law rune",2],
+						["Water rune",8]
+					]
+				},
+				{
+					"Task":"Fish and Cook a Dark crab in the Resource Arena.",
+					"Quests":[],
+					"Skills":{
+						"Fishing":85,
+						"Cooking":90
+					},
+					"Items":[
+						"Lobster pot",
+						"Dark fishing bait",
+						["Coins",7500]
+					]
+				},
+				{
+					"Task":"Smith a rune scimitar from scratch in the Resource Arena.",
+					"Quests":[],
+					"Skills":{
+						"Mining":85,
+						"Smithing":90
+					},
+					"Items":[
+						"Bronze pickaxe",
+						"Hammer",
+						["Coins",7500]
+					]
+				},
+				{
+					"Task": "Steal from the Wilderness Rogues' Chests.",
+					"Quests": [],
+					"Skills": {
+						"Thieving": 84
+					},
+					"Items": []
+				},
+				{
+					"Task":"Slay a spiritual mage inside the Wilderness God Wars Dungeon. You need 60 Agility or Strength",
+					"Quests":[],
+					"Skills":{
+						"Slayer":83
+						},
+					"Items":[]
+				},
+				{
+					"Task":"Cut and burn some magic logs in the Resource Arena. ",
+					"Quests":[],
+					"Skills":{
+						"Woodcutting":75,
+						"Firemaking":75
+					},
+					"Items":[
+						"Bronze axe",
+						"Tinderbox"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 50,000 experience in any skill above 70",
+				"Three free daily teleports to the Fountain of Rune",
+				"Free entry to the Resource Arena",
+				"All dragon bones drops in the Wilderness are noted (Note: This does not include The KBD, as his place is not Wilderness affected)",
+				"50 random, free runes from Lundail once per day",
+				"Increased dark crab catch rate"
+			],
+			"RewardItem":"Wilderness sword 4"
+		}
+	},
+	"WesternProvinces": {
+		"Name":"Western Provinces",
+		"Easy": {
+			"Tasks": [
+				{
+					"Task": "Catch a Copper longtail.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 9
+					},
+					"Items": [
+						"Bird snare"
+					]
+				},
+				{
+					"Task": "Complete a novice game of Pest Control.",
+					"Quests": [],
+					"Skills": {
+						"Combat": 40
+					},
+					"Items": []
+				},
+				{
+					"Task": "Mine some Iron ore near Piscatoris",
+					"Quests": [],
+					"Skills": {
+						"Mining": 15
+					},
+					"Items": [
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Complete a lap of the Gnome Agility Course",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Score a goal in a Gnome Ball match",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task":"Claim any Chompy bird hat from Rantz",
+					"Quests":[
+						"Big Chompy Bird Hunting"
+					],
+					"Skills":{
+						"Fletching":5,
+						"Ranged":30
+						},
+					"Items":[
+						"Ogre bow"
+					]
+				},
+				{
+					"Task": "Teleport to Pest Control using the Minigame teleports",
+					"Quests": [],
+					"Skills": {
+						"Combat": 40
+					},
+					"Items": []
+				},
+				{
+					"Task": "Collect a swamp toad at the Tree Gnome Stronghold",
+					"Quests": [],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Have Brimstail teleport you to the Rune essence mine. (Must right click teleport)",
+					"Quests": [
+						"Rune Mysteries"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Fletch an oak shortbow from scratch in the Gnome stronghold (Oak Tree just north of the bank by Nieve.)",
+					"Quests": [],
+					"Skills": {
+						"Fletching": 20
+					},
+					"Items": [
+						"Oak shortbow (u)",
+						"Bow string"
+					]
+				},
+				{
+					"Task":"Kill a Terrorbird in the terrorbird enclosure.",
+					"Quests":[],
+					"Skills":{},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 2,500 experience in any skill above 30",
+				"25% chance of 2 chompy birds appearing when chompy bird hunting",
+				"25 free ogre arrows every day from Rantz"
+			],
+			"RewardItem":"Western banner 1"
+		},
+		"Medium": {
+			"Tasks": [
+				{
+					"Task": "Take the agility shortcut from the Grand Tree to Otto's Grotto.",
+					"Quests": [
+						"Tree Gnome Village","The Grand Tree"
+					],
+					"Skills": {
+						"Agility": 37
+					},
+					"Items": []
+				},
+				{
+					"Task": "Travel to the Tree Gnome Stronghold by Spirit tree.",
+					"Quests": [
+						"Tree Gnome Village"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Trap a Spined larupia.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 31
+					},
+					"Items": [
+						"Teasing stick",
+						"Logs",
+						"Knife"
+					]
+				},
+				{
+					"Task": "Fish some Bass on Ape Atoll.",
+					"Quests": [
+						"Monkey Madness"
+					],
+					"Skills": {
+						"Fishing": 46
+					},
+					"Items": [
+						"Big fishing net"
+					]
+				},
+				{
+					"Task":"Chop and burn some teak logs on Ape Atoll. ",
+					"Quests":[
+						"Monkey Madness"
+					],
+					"Skills":{
+						"Woodcutting":35,
+						"Firemaking":35
+					},
+					"Items":[
+						"Bronze axe",
+						"Tinderbox"
+					]
+				},
+				{
+					"Task": "Complete an intermediate game of Pest Control.",
+					"Quests": [],
+					"Skills": {
+						"Combat": 70
+					},
+					"Items": []
+				},
+				{
+					"Task":"Travel to the Feldip Hills by Gnome glider. ",
+					"Quests":[
+						"The Grand Tree",
+						"One Small Favour"
+					],
+					"Skills":{},
+					"Items":[]
+				},
+				{
+					"Task":"Claim a Chompy bird hat from Rantz after registering at least 125 kills. ",
+					"Quests":[
+						"Big Chompy Bird Hunting"
+					],
+					"Skills":{
+						"Fletching":5,
+						"Ranged":30
+						},
+					"Items":[
+						"Ogre bow"
+					]
+				},
+				{
+					"Task": "Travel from Eagles' Peak (mountain) to the Feldip Hills by Eagle transport system.",
+					"Quests": [
+						"Eagles' Peak"
+					],
+					"Skills": {},
+					"Items": [
+						"Rope"
+					]
+				},
+				{
+					"Task": "Make a Chocolate bomb at the Grand tree.",
+					"Quests": [],
+					"Skills": {
+						"Cooking": 42
+					},
+					"Items": [
+						"Gnomebowl mould",
+						"Gianne dough",
+						"Equa leaves",
+						"Chocolate dust",
+						["Chocolate bar",4],
+						["Pot of cream",2]
+					]
+				},
+				{
+					"Task": "Complete a delivery for the Gnome Restaurant.",
+					"Quests": [],
+					"Skills": {
+						"Cooking": 42
+					},
+					"Items": []
+				},
+				{
+					"Task": "Turn your small crystal seed into a Crystal saw.",
+					"Quests": [
+						"The Eyes of Glouphrie"
+					],
+					"Skills": {},
+					"Items": [
+						"Small crystal seed"
+					]
+				},
+				{
+					"Task":"Mine some Gold ore underneath the Grand Tree.",
+					"Quests":[
+						"The Grand Tree"
+					],
+					"Skills":{
+						"Mining":40
+					},
+					"Items":[
+						"Bronze pickaxe"
+					]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 7,500 experience in any skill above 40",
+				"50% chance of 2 chompy birds appearing when chompy bird hunting",
+				"Crystal saw holds twice as many charges (56 charges)",
+				"50 free ogre arrows every day from Rantz"
+			],
+			"RewardItem":"Western banner 2"
+		},
+		"Hard": {
+			"Tasks": [
+				{
+					"Task":"Kill an Elf with a Crystal bow. ",
+					"Quests":[
+						"Roving Elves"
+					],
+					"Skills":{
+						"Fletching":70,
+						"Agility":50
+					},
+					"Items":[
+						"Crystal bow 1/10"
+					]
+				},
+				{
+					"Task":"Catch and cook a Monkfish in Piscatoris.",
+					"Quests":[
+						"Swan Song"
+					],
+					"Skills":{
+						"Fishing":62,
+						"Cooking":62
+					},
+					"Items":[
+						"Small fishing net"
+					]
+				},
+				{
+					"Task": "Complete a Veteran game of Pest Control.",
+					"Quests": [],
+					"Skills": {
+						"Combat": 100
+					},
+					"Items": []
+				},
+				{
+					"Task": "Catch a Dashing kebbit.",
+					"Quests": [],
+					"Skills": {
+						"Hunter": 69
+					},
+					"Items": [
+						["Coins",500]
+					]
+				},
+				{
+					"Task": "Complete a lap of the Ape Atoll Agility Course.",
+					"Quests": [
+						"Monkey Madness"
+					],
+					"Skills": {
+						"Agility": 48
+					},
+					"Items": [
+						4026
+					]
+				},
+				{
+					"Task":"Chop and burn some Mahogany logs on Ape Atoll.",
+					"Quests":[
+						"Monkey Madness"
+					],
+					"Skills":{
+						"Woodcutting":50,
+						"Firemaking":50
+					},
+					"Items":[
+						"Bronze axe",
+						"Tinderbox"
+					]
+				},
+				{
+					"Task": "Mine some Adamantite ore in Tirannwn.",
+					"Quests": [
+						"Regicide"
+					],
+					"Skills": {
+						"Mining": 70
+					},
+					"Items": [
+						"Bronze pickaxe"
+					]
+				},
+				{
+					"Task": "Check the health of your palm tree in Lletya",
+					"Quests": [
+						"Started Mourning's Ends Part I"
+					],
+					"Skills": {
+						"Farming": 68
+					},
+					"Items": [
+						"Palm sapling"
+					]
+				},
+				{
+					"Task":"Claim a Chompy bird hat from Rantz after registering at least 300 kills. ",
+					"Quests":[
+						"Big Chompy Bird Hunting"
+					],
+					"Skills":{
+						"Fletching":5,
+						"Ranged":30
+						},
+					"Items":[
+						"Ogre bow"
+					]
+				},
+				{
+					"Task": "Build an Isafdar (painting) in your POH Quest Hall.",
+					"Quests": [
+						"Roving Elves"
+					],
+					"Skills": {
+						"Construction": 65
+					},
+					"Items": [
+						"Isafdar painting",
+						"Saw",
+						"Hammer",
+						["Mahogany plank",3]
+					]
+				},
+				{
+					"Task": "Kill Zulrah.",
+					"Quests": [
+						"Started Regicide"
+					],
+					"Skills": {},
+					"Items": []
+				},
+				{
+					"Task": "Teleport to Ape Atoll.",
+					"Quests": [
+						"Recipe for Disaster (Freeing Awowogei)"
+					],
+					"Skills": {
+						"Magic": 64
+					},
+					"Items": [
+						"Banana",
+						["Law rune",2],
+						["Fire rune",2],
+						["Water rune",2]
+					]
+				},
+				{
+					"Task":"Pickpocket a Gnome.",
+					"Quests":[
+						"Tree Gnome Village"
+					],
+					"Skills":{
+						"Thieving":75
+					},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 15,000 experience in any skill above 50",
+				"Ability to upgrade the Void knight top and void knight bottom to have Elite Void Knight equipment for 200 Void Knight commendation points each by speaking to the Elite Void Knight",
+				"Access to the locked room under the temple on Ape Atoll (The room with the Monkey skull.)",
+				"Access to the Hunter masters new private red chinchompa hunting ground",
+				"100 free ogre arrows every day from Rantz",
+				"Teleport crystals can hold up to 5 charges",
+				"One free daily teleport to the Piscatoris Fishing Colony",
+				"Islwyn will now offer to sell you a Crystal halberd for 750,000 coins."
+			],
+			"RewardItem":"Western banner 3"
+		},
+		"Elite": {
+			"Tasks": [
+				{
+					"Task": "Fletch a Magic longbow in the Elven lands.",
+					"Quests": [
+						"Mourning's Ends Part I"
+					],
+					"Skills": {
+						"Fletching": 85
+					},
+					"Items": [
+						"Magic longbow (u)",
+						"Bow string"
+					]
+				},
+				{
+					"Task": "Kill the Thermonuclear smoke devil.",
+					"Quests": [],
+					"Skills": {
+						"Slayer": 93
+					},
+					"Items": []
+				},
+				{
+					"Task": "Have Prissy Scilla protect your magic tree.",
+					"Quests": [],
+					"Skills": {
+						"Farming": 75
+					},
+					"Items": [
+						"Magic seed",
+						["Coconut",25]
+					]
+				},
+				{
+					"Task": "Use the Elven overpass advanced cliffside shortcut.",
+					"Quests": [
+						"Underground Pass"
+					],
+					"Skills": {
+						"Agility": 85
+					},
+					"Items": []
+				},
+				{
+					"Task":"Equip any complete void set. ",
+					"Quests":[],
+					"Skills":{
+						"Combat":40,
+						"Attack":42,
+						"Strength":42,
+						"Defence":42,
+						"Hitpoints":42,
+						"Ranged":42,
+						"Magic":42,
+						"Prayer":22
+					},
+					"Items":[
+						"Void knight top",
+						"Void knight robe",
+						"Void knight gloves",
+						"Void ranger helm"
+					]
+				},
+				{
+					"Task":"Claim a Chompy bird hat from Rantz after registering at least 1.000 kills. ",
+					"Quests":[
+						"Big Chompy Bird Hunting"
+					],
+					"Skills":{
+						"Fletching":5,
+						"Ranged":30
+						},
+					"Items":[
+						"Ogre bow"
+					]
+				},
+				{
+					"Task":"Pickpocket an Elf. ",
+					"Quests":[
+						"Mourning's Ends Part I"
+					],
+					"Skills":{
+						"Thieving":85
+					},
+					"Items":[]
+				}
+			],
+			"Rewards": [
+				"1 Antique lamp worth 50,000 experience in any skill above 70",
+				"2 chompy birds will always appear when chompy bird hunting",
+				"Chance of receiving a chompy chick pet when chompy bird hunting",
+				"Increased slayer points from Nieve (to match Duradel)",
+				"150 free ogre arrows every day from Rantz",
+				"One free resurrection per day at Zulrah",
+				"Unlimited teleports to the Piscatoris Fishing Colony"
+			],
+			"RewardItem":"Western banner 4"
+		}
+	}
+}

@@ -109,7 +109,21 @@ rsdb-item table{
   border-collapse: collapse;
 }
 
-tr rsdb-item .ico{
+rsdb-icon{
+  display: block;
+}
+rsdb-icon>span{
+  display: block;
+  width:0;
+  height:0;
+  position: relative;
+  top:-6px;
+}
+rsdb-skill{
+  display: inline-block;
+  margin:-1px 0px -5px 0px;
+}
+tr rsdb-item rsdb-icon{
   position:absolute;
 }
 tr rsdb-item>div {
@@ -117,11 +131,11 @@ tr rsdb-item>div {
   width:0px;
   height:0px;
 }
-tr:nth-child(odd) rsdb-item .ico {
+tr:nth-child(odd) rsdb-icon {
   left:32px;
   top:-8px;
 }
-tr:nth-child(even) rsdb-item .ico {
+tr:nth-child(even) rsdb-icon {
   top:-8px;
 }
 .repeating{

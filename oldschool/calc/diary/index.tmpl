@@ -1,0 +1,129 @@
+<rsdb-title>Diary</rsdb-title>
+<template require="skills,diary,itemlist,prices">
+	<form action="#" onsubmit="update()">
+		<label>Player: <input type="text" id="playerName"/></label>
+		<input type="submit" value="Get"/>
+	</form>
+	<table id="diarytable" class="linetable">
+		<tr>
+			<th></th><th>Easy</th><th>Medium</th><th>Hard</th><th>Elite</th>
+		</tr>
+	</table>
+	<div id="desc"></div>
+	<script>
+var stats;
+var currentShown;
+function render(){
+	document.getElementById("diarytable").innerHTML=
+	"<tr><th>"+["","Easy","Med","Hard","Elite"].join("</th><th>")+"</th></tr>"+
+	Diary.List.map(function(diaryn){
+		var diary=Diary[diaryn];
+		return [
+	"<tr><th>",diary.Name,"</th>",
+		Diary.Difficulties.map(function(difn){
+				var c="";
+				if(stats){
+					c="has";
+					diary[difn].Tasks.forEach(function(task){
+						for(var skill in task.Skills){
+							if(stats[skill].Level<task.Skills[skill])c="missing";
+						}
+					});
+				}
+				return "<td onclick='Show(\""+diaryn+"\",\""+difn+"\")' title='"+diary.Name+" "+difn+"' class='diffbutton "+c+"'>"+ItemList.Get(diary[difn].RewardItem).IconHTML+"</td>";
+			}).join(""),
+			,"</tr>"].join("");
+		}).join("");
+	if(currentShown)Show.apply(null,currentShown);
+}
+function update(){
+	var Name=document.getElementById("playerName").value
+	if(Name){
+		Skills.Lookup(Name,function(err,data){
+			if(err){
+				alert("Cannot find player "+Name);
+				stats=undefined;
+				return render();
+			}
+			stats=data;
+			render();
+		});	
+	}else{
+		stats=undefined;
+		render();
+	}
+}
+function Show(diaryn,difn){
+	currentShown=arguments;
+	var dif=Diary[diaryn][difn];
+	document.getElementById("desc").innerHTML=[
+	"<h2>",Diary[diaryn].Name," ",difn,"</h2>",
+	"Rewards:<br><ul><li>",
+	dif.Rewards.join("</li><li>"),
+	"</li></ul>",
+	"<table id='tasktable'>",
+	"<tr><th>Task</th><th>Quests</th><th class='skillscol'>Skills</th><th>Items</th></tr>",
+	dif.Tasks.map(function(task,taski){
+		var cols=[
+			[task.Task],
+			task.Quests,
+			Object.keys(task.Skills).map(function(sname){
+				var o={	v:task.Skills[sname]+"<rsdb-skill>"+sname+"</rsdb-skill>" };
+				if(stats&&stats[sname].Level<task.Skills[sname])o.class="missing";
+				return o;
+			}),
+			task.Items.map(function(e){return ItemList.Get(e).HTML}),
+		];
+		var max=Math.max.apply(Math,cols.map(function(col){return col.length;}));
+		var ends=cols.map(function(col){return col.length<=1?0:col.length;});
+		var out=[];
+		for(var i=0;i<max;i++){
+			out.push("<tr class='"+(taski%2?"odd":"even")+"'>");
+			cols.forEach(function(col,coli){
+				var cs=""
+				var content="";
+				if(i==ends[coli]){
+					cs=' rowspan="'+(max-ends[coli])+'"';
+				}
+				if(col[i]){
+					content=col[i];
+					if(content.class)cs+=" class=\""+content.class+"\"";
+					if(content.v)content=content.v;
+				}
+				if(cs||content)out.push("<td"+cs+">"+content+"</td>");
+			});
+			out.push("</tr>");
+		}
+		return out.join("");
+	}).join(""),
+	"</table>",
+	].join("");
+}
+update();
+	</script>
+</template>
+<style>
+.has{
+	background:#AFA;
+}
+.missing,
+#tasktable>tbody>tr>td.missing{
+	background: #FAA;
+}
+.diffbutton{
+	cursor:pointer;
+}
+#tasktable{
+	border-collapse: collapse;
+}
+#tasktable>tbody>tr>th,
+.odd>td{
+	background:#d9d9d9;
+}
+#tasktable>tbody>tr>td{
+	border:1px solid #d9d9d9;
+}
+.skillscol{
+	width:50px;
+}
+</style>

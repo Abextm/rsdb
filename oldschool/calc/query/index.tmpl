@@ -1,7 +1,10 @@
 <rsdb-title>query</rsdb-title>
 <template require="itemlist">
-	<label>require: <input id="require" value="prices" oninput="update();"></label>
-	<label>filter: <input id="filter" value="451" oninput="update();"></label>
+	<form onsubmit="update()" action="#">
+		<label>require: <input id="require" value="prices" ></label>
+		<label>filter: <input id="filter" value="451" ></label>
+		<button type="submit">Update</button>
+	</form>
 	<div id="out"></div>
 	<script>
 function update() {
@@ -11,9 +14,10 @@ function update() {
 	}),function(){
 		var filt = document.getElementById("filter").value;
 		var item = ItemList.Get(filt)
+		filt=filt.toLowerCase();
 		if(!item){
 			item=ItemList.Func().filter(function(v){
-				return v.Name.indexOf(filt)!=-1
+				return v.Name.toLowerCase().indexOf(filt)!=-1
 			});
 		}else{
 			item=[item];

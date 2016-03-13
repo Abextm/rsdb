@@ -33,4 +33,5 @@ Item
 |`.Count`    | Number | The count of the item           |
 |`.Valid`    | Boolean| Does this ID exist?             |
 |`.IconHTML` | String | HTML to embed the icon          |
-|`.HTML`     | String | HTML to embed the item (w\text)|
+|`.HTML`     | String | HTML to embed the item (w\text) |
+|`.Serial`   | ID|Arr | [ID,Count] or ID                |

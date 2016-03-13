@@ -45,17 +45,11 @@
 		Note:function(){return GetID(this.NoteID);},
 		IsNote:function(){return d[this.ID][0];},
 		Valid:function(){return d[this.ID]!==undefined},
-		HTML:function(){return "<rsdb-item id='"+this.ID+"' count='"+this.Count+"'></rsdb-item>"},
-		IconHTML:function(){
-			var _=d[this.ID];
-			if(!_||!_[2])return "";
-			_=Array.isArray(_[2])?_[2]:d[_[2]][2];
-			var s=_[4]>1?_[4]:0;
-			return o=["<div class='ico' style='margin-top:"+((32-_[3])/2)+"px;",s?"background-image:url(\"/ico/bg"+_[4]+".png\");width:36px;height:32px;'><div style='":"",
-			"width:"+_[2]+"px;height:"+_[3]+"px;background-position:"+(-_[0])+"px "+(-_[1])+"px;background-image:url(\"/ico/"+s+".png\")'></div>",
-			s?"</div>":""].join("");
-		}
-	})
+		HTML:function(){return "<rsdb-item iid='"+this.ID+"' count='"+this.Count+"'></rsdb-item>"},
+		Serial:function(){return this.Count>1?[this.ID,this.Count]:this.ID},
+		IconData:function(){var _=d[this.ID][2];return Array.isArray(_)?_:d[_][2]},
+		IconHTML:function(){return "<rsdb-icon iid='"+this.ID+"' count='"+this.Count+"'></rsdb-icon>"}
+	});
 	var n={};
 	var i=new Item(0);
 	for(var k in d){
