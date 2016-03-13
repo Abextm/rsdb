@@ -9,10 +9,6 @@ app.use(require("helmet")());
 
 //subdomain routers
 var sub={};
-var staticMap={
-	"":"static/www",
-	"os":"static/os",
-};
 ["","www","os","db.os"].map(function(s){
 	sub[s]=express.Router();
 });
@@ -22,12 +18,14 @@ app.use(function(req,res,next){
 	var s=[].concat(req.subdomains);
 	s.reverse();
 	var subs=s.join(".");
-	res.set({
-		"Access-Control-Allow-Origin":"http://"+req.hostname.replace("db.",""),
-		"Access-Control-Max-Age":"86400",
-		"Access-Control-Allow-Headers":"*",
-		"Access-Control-Allow-Methods":"*",
-	});
+	if(subs=="db.os"){
+		res.set({
+			"Access-Control-Allow-Origin":"http://"+req.hostname.replace("db.",""),
+			"Access-Control-Max-Age":"86400",
+			"Access-Control-Allow-Headers":"*",
+			"Access-Control-Allow-Methods":"*",
+		});
+	}
 	if(req.method=="OPTIONS") return res.send();
 		sub[subs]&&sub[subs](req,res,next);
 });
@@ -52,15 +50,22 @@ var serveTMPL=function(v,req,res,next){
 		res.send(tmpl[0]+data.toString()+tmpl[1]);
 	});
 }
-for(var k in staticMap){
-	sub[k].use(express.static(__dirname+"/"+staticMap[k]+"/"));
-	sub[k].use(serveTMPL.bind(0,__dirname+"/"+staticMap[k]+"/"));
-}
 
-sub["os"].use(express.static(__dirname+"/oldschool/calc/"));
-sub["os"].use(serveTMPL.bind(0,__dirname+"/oldschool/calc/"));
-sub["os"].use(express.static(__dirname+"/static/www/"));
-sub["os"].use(serveTMPL.bind(0,__dirname+"/static/www/"));
+var serves=[
+	["","static/www"],
+	["os","static/os"],
+	["os","oldschool/calc"],
+	["os","static/www"]
+]
+
+serves.forEach(function(v){
+	sub[v[0]].use(express.static(__dirname+"/"+v[1]+"/",{
+		maxAge:1000*60*5,
+		lastModified:true,
+	}));
+	sub[v[0]].use(serveTMPL.bind(0,__dirname+"/"+v[1]+"/"));
+});
+
 
 sub["db.os"].get("/:name/:res",function(req,res,next){
 	load("oldschool/db/"+req.params.name,function(err,mod){
