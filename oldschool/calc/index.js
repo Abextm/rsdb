@@ -9,6 +9,6 @@ define({
 	},
 	diary:{
 		Name:"Dairy",
-		Desc:"Shows you the diarys you have the skills to do."
+		Desc:"Shows you the diaries you have the skills to do."
 	},
 });
