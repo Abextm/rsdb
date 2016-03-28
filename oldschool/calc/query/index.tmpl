@@ -2,7 +2,7 @@
 <template require="itemlist">
 	<form onsubmit="update()" action="#">
 		<label>require: <input id="require" value="prices" ></label>
-		<label>filter: <input id="filter" value="451" ></label>
+		<label>filter: <input id="filter" value="" ></label>
 		<button type="submit">Update</button>
 	</form>
 	<div id="out"></div>
@@ -15,6 +15,7 @@ function update() {
 		var filt = document.getElementById("filter").value;
 		var item = ItemList.Get(filt)
 		filt=filt.toLowerCase();
+		if(filt.length<2)return;
 		if(!item){
 			item=ItemList.Func().filter(function(v){
 				return v.Name.toLowerCase().indexOf(filt)!=-1
@@ -43,6 +44,5 @@ function escapeHtml(str) {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
 };
-update();
 	</script>
 </template>

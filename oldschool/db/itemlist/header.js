@@ -5,12 +5,6 @@
 		this.Count=count||1;
 	};
 	Item.prototype=Object.create(Object.prototype,{});
-	var AddGetter=function(o,t){
-		t=t||Item;
-		for (var k in o) {
-			Object.defineProperty(t.prototype,k,{enumerable:true,configurable:true,get:o[k]});
-		}
-	};
 	var GetName=function(v,count,s){
 		if(Array.isArray(v)){
 			count=v[1];
@@ -49,7 +43,7 @@
 		Serial:function(){return this.Count>1?[this.ID,this.Count]:this.ID},
 		IconData:function(){var _=d[this.ID][2];return Array.isArray(_)?_:d[_][2]},
 		IconHTML:function(){return "<rsdb-icon iid='"+this.ID+"' count='"+this.Count+"'></rsdb-icon>"}
-	});
+	},Item);
 	var n={};
 	var i=new Item(0);
 	for(var k in d){
@@ -72,6 +66,5 @@
 		Each:each,forEach:each,
 		Func:function(){return Object.keys(d).map(function(v){return new Item(v);})},
 		Data:function(){return d;},
-		AddGetter:AddGetter,
 	};
 });

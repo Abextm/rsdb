@@ -13,6 +13,7 @@
 				this.innerHTML='<label><input type="checkbox">'+this.innerHTML+'</label>'
 				this.xtag.child=this.querySelector("input");
 				var that=this;
+				this.xtag.child.name=this.id;
 				this.xtag.child.addEventListener("change",function(){
 					if(that.change)eval(that.change);
 				})
@@ -342,12 +343,11 @@
 				while(tr.tagName!="TR"){
 					tr=tr.parentElement;
 				}
-				console.log(tr,cid,tr.children[cid])
 				tr.children[cid].getElementsByTagName("RSDB-SORT")[0].mode=mode;
-				console.log(tr.children[cid].getElementsByTagName("RSDB-SORT")[0].mode);
 			},
 			update:function(v){
-				if(this.last==v)return;
+				if(v===undefined)v=this.mode;
+				if(v<1&&this.last==v)return;
 				this.last=v;
 				if(v==-1){
 					return this.mode=this.last=0;
@@ -381,7 +381,9 @@
 						sort=e.dataset.defaultsort;
 					}else{
 						var ee=e.children[cid];
-						if(ee.children&&ee.children[0]&&ee.children[0].tagName=="RSDB-NUM"){
+						if(!ee){
+							sort="";
+						}else if(ee.children&&ee.children[0]&&ee.children[0].tagName=="RSDB-NUM"){
 							sort=ee.children[0].value;
 						}else{
 							sort=ee.innerText;
@@ -392,6 +394,15 @@
 						s:sort,
 					};
 				}).sort(function(a,b){
+					do{
+						var ab=!a.s||a.s.length<1;
+						var bb=!b.s||b.s.length<1;
+						if(ab){
+							if(bb)return 0;
+							return 1;
+						}
+						if(bb)return -1;
+					}while(0);
 					var aa=parseInt(a.s);
 					var v;
 					if(!isNaN(aa)){

@@ -2,13 +2,13 @@
 var PotRec=function(id){
 	this.ID=id;
 };
-ItemList.AddGetter({//Level Exp Primary Secondarys[],
+AddGetter({//Level Exp Primary Secondarys[],
 	Level:function(){var _=p[this.ID];return _?_[0]:undefined;},
 	Exp:function(){var _=p[this.ID];return _?_[1]:undefined;},
 	Primary:function(){var _=p[this.ID];return _?ItemList.GetID(_[2]):undefined;},
 	Secondarys:function(){var _=p[this.ID];return _?((_[3]||[]).map(ItemList.GetID)):undefined;},
 },PotRec);
-ItemList.AddGetter({// Exp Lvl CleanID UnfID
+AddGetter({// Exp Lvl CleanID UnfID
 	PotionRecipe:function(){if(p[this.ID])return new PotRec(this.ID);},
 	CleanExp:function(){if(h[this.ID])return h[this.ID][0]},
 	CleanLevel:function(){if(h[this.ID])return h[this.ID][1]},
@@ -16,7 +16,7 @@ ItemList.AddGetter({// Exp Lvl CleanID UnfID
 	GrimyHerb:function(){if(glook[this.ID])return ItemList.GetID(glook[this.ID])},
 	UnfPot:function(){return ItemList.GetID(h[this.ID]?h[this.ID][3]:ulook[this.ID],1,1)},
 	Herb:function(){if(uhlook[this.ID])return ItemList.GetID(uhlook[this.ID])},
-});
+},ItemList.Type);
 var it=ItemList.Get(0);
 var glook={};//c>g
 var ulook={};//c>u

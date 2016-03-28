@@ -65,6 +65,11 @@ var Waiter = function(opts, process){
 					if(m)return m;
 					return subreq(id);
 				};
+				sandbox.AddGetter=function(o,t){
+					for (var k in o) {
+						Object.defineProperty(t.prototype,k,{enumerable:true,configurable:true,get:o[k]});
+					}
+				};
 				vm.runInNewContext(src,extend(sandbox,global),{
 					filename:"",
 					lineOffset:0,

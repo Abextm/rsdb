@@ -16,7 +16,7 @@ var wait = waiter({
 	},
 },function(done){
 	nextupdate=Date.now()+(1000*60*5);
-	var doErr=function(){
+	var doErr=function(err){
 		console.log(err);
 		var out=JSON.stringify(err);
 		str="define(function(){var d={"+out+"};"+str;

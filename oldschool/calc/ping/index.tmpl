@@ -1,0 +1,119 @@
+<rsdb-title>Ping</rsdb-title><button title="Refresh" onclick="updatePings()" class="refresh"><div></div></button>
+<template require="worldlist">
+	<div id="table"></div>
+	<fieldset><legend>Options</legend>
+		<rsdb-opt change="update()" name="!Members">Hide F2P Worlds</rsdb-opt><br>
+		<rsdb-opt change="update()" name="Members">Hide P2P Worlds</rsdb-opt><br>
+		<rsdb-opt change="update()" name="Deadman">Hide Deadman Worlds</rsdb-opt><br>
+		<rsdb-opt change="update()" name="NormalPvP||HighRiskPvP">Hide PvP Worlds</rsdb-opt><br>
+		<rsdb-opt change="update()" name="BountyHunter">Hide Bounty Hunter Worlds</rsdb-opt><br>
+		<rsdb-opt change="update()" name="SkillTotal2000">Hide 2000 Skill total Worlds</rsdb-opt><br>
+		<rsdb-opt change="update()" name="SkillTotal1750">Hide 1750 Skill total Worlds</rsdb-opt><br>
+		<rsdb-opt change="update()" name="SkillTotal1500">Hide 1500 Skill total Worlds</rsdb-opt><br>
+		<rsdb-opt change="update()" name="SkillTotal1250">Hide 1250 Skill total Worlds</rsdb-opt><br>
+	</fieldset>
+	<script>
+	var doPing=[];
+	var pingCache={};
+	function updatePings(){
+		pingCache={};
+		update();
+	}
+	function update(){
+		var removeExpression=Array.from(document.getElementsByTagName("rsdb-opt")).filter(function(el){
+			return el.value;
+		}).map(function(el){
+			return el.name;
+		}).join("||");
+		replaceSortedTable(document.getElementById("table"),[
+"<table class='linetable' id='table'>",
+	"<th><rsdb-sort>",
+		["Num","Description","Players","","Ping","P2P","Attr"].join("</rsdb-sort></th><th><rsdb-sort>"),
+	"</rsdb-sort></th><tr><td>",
+		WorldList.Worlds.map(function(wid){
+			return WorldList.Get(wid);
+		}).filter(function(world){
+			with(world)return !eval(removeExpression);
+		}).map(function(world){
+			if(pingCache[world.ID]===undefined){
+				doPing.push(world);
+				pingCache[world.ID]="";
+			}
+			return [
+				world.Number,
+				world.Description=="-"?"":world.Description,
+				"<span title='Connected player count'>"+world.Players+"</span>",
+				world.LocationHTML,
+				"<span id='ping_"+world.ID+"' title='Approximate round trip time to server'>"+pingCache[world.ID]+"</span>",
+				world.Members?"<span title='Members'>P2P</span>":"<span title='Free to play'>F2P</span>",
+				[
+					world.BountyHunter?"<span title='Bounty Hunter'>BH</span>":"",
+					world.HighRiskPvP?"<span title='High risk Player vs Player'>HR</span>":(world.NormalPvP?"<span title='Normal Player vs Player'>PvP</span>":""),
+					world.DeadmanSeasonal?"<span title='Deadman Seasonal'>DMS</span>":(world.Deadman?"<span title='Deadman'>DM</span>":""),
+					world.SkillTotal?"<span title='TotalLevel >= "+world.SkillTotal+"'>"+world.SkillTotal+"</span>":"",
+				].join(""),
+			].join("</td><td>");
+		}).join("</td></tr><tr><td>"),
+	"</td></tr>",
+"</table>",
+		].join(""));
+	}
+	function handlePings(){
+		if(doPing.length>0){
+			var w=doPing.shift().ID;
+			var start;
+			var xhr=new XMLHttpRequest();
+			xhr.open("OPTIONS","http://"+WorldList.Get(w).Host+"/"+Date.now());
+			var timeout;
+			var done=function(){
+				if(timeout){
+					clearTimeout(timeout);
+					timeout=0;
+					setTimeout(handlePings,50);
+					var ping=Date.now()-start;
+					pingCache[w]=ping;
+					var el=document.getElementById("ping_"+w);
+					if(el){
+						el.innerHTML=ping;
+						Array.from(document.getElementById("table").getElementsByTagName("rsdb-sort")).filter(function(el){
+							return el.textContent=="Ping";
+						})[0].update();
+					}
+				}
+			};
+			timeout=setTimeout(done,2000);
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState>=2){
+					done();
+				}
+			};
+			xhr.onerror=done;
+			start=Date.now();
+			xhr.send();
+		}else{
+			setTimeout(handlePings,150);
+		}
+	}
+	window.onload=function(){
+		setTimeout(function(){
+			for(var i=0;i<3;i++){
+				handlePings();
+			}
+		},500);
+	};
+	update();
+	</script>
+</template>
+<style>
+.refresh{
+	border:none;
+	background:none;
+	cursor: pointer;
+	padding:0;
+}
+.refresh>div:before{
+	padding:0px 6px;
+	content:"\21bb";
+	font-size:150%;
+}
+</style>
