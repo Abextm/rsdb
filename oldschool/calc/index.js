@@ -11,6 +11,10 @@ define({
 		Name:"Ping",
 		Desc:"Shows the latency to the Oldschool servers."
 	},
+	necromancy:{
+		Name:"Necromancy",
+		Desc:"Shows GP/XP for the Arceuus spellbook."
+	},
 	herblore:{
 		Name:"Herblore",
 		Desc:"Profit/xp/gp for all herblore operations(w/o mixes)."

@@ -1,0 +1,51 @@
+<rsdb-title>Necromancy</rsdb-title>
+<template require="itemlist,necromancy,prices">
+	<div id="table" class="linetable"><div></div></div>
+	<script>
+function update(){
+	var headsphr=parseInt(document.getElementById("headsphr").value);
+	var header = ["Head","Level","Mage<br>XP","Prayer<br>XP","Cost","Magic<br>GP/XP","Prayer<br>GP/XP",];
+	if(headsphr){
+		header.push("Magic<br>XP/HR","Prayer<br>XP/HR");
+	}
+	header.push("Runes","","");
+	var rows=Necromancy.Spells.map(function(v){
+		var cost=v.Head.Buy+v.Runes.reduce(function(acc,r){
+			return acc+r.Buy;
+		},0);
+		var fmt=function(str){return "<rsdb-num precision='2'>"+str+"</rsdb-num>"};
+		var fmt2=function(str){return "<rsdb-num>"+str+"</rsdb-num>"};
+		var cols=[
+			v.Head.HTML,
+			v.Level,
+			v.MagicExp,
+			v.PrayerExp,
+			fmt(cost),
+			fmt(cost/v.MagicExp),
+			fmt(cost/v.PrayerExp),
+		];
+		if(headsphr){
+			cols.push(fmt2(v.MagicExp*headsphr),fmt2(v.PrayerExp*headsphr));
+		}
+		cols=cols.concat(v.Runes.map(function(v){
+			return v.HTML;
+		}));
+		while(cols.length<header.length)cols.push("");
+		return cols.join("</td><td>");
+	});
+	replaceSortedTable(document.getElementById("table").children[0],[
+"<table>",
+	"<tr><th><rsdb-sort>",
+		header.join("</rsdb-sort></th><th><rsdb-sort>"),
+  "</rsdb-sort></th></tr>",
+  "<tr><td>",
+  	rows.join("</td></tr><tr><td>"),
+  "</td></tr></table>",
+ "</table>"].join(""));
+}
+update();
+	</script>
+	<fieldset><legend>Options</legend>
+		<label><input type="number" oninput="update()" id="headsphr" value="200"/>Heads/Hr</label>
+	</fieldset>
+</template>
