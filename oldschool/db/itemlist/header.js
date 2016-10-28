@@ -34,7 +34,7 @@
 		OStore:function(){return (d[this.ID][5]!==undefined)?d[this.ID][5]:this.Note.Store;},
 		Store:function(){return this.OStore*this.Count;},
 		HighAlch:function(){return (~~(this.OStore*.6))*this.Count;},
-		LowAlch:function(){return (~~(this.OStore*.3))*this.Count;},
+		LowAlch:function(){return (~~(this.OStore*.4))*this.Count;},
 		NoteID:function(){return d[this.ID][1];},
 		Note:function(){return GetID(this.NoteID);},
 		IsNote:function(){return d[this.ID][0];},

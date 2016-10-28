@@ -14,6 +14,7 @@ var wait = waiter({
 		var out=names.map(function(item,ii){
 			//We manually write the js object so we can just skip instead of using null, saving data
 			//noted noteid (name members price)
+			item.name=item.name.replace(" (noted)","");
 			var o=item.noted?-1:1;
 			var note=(names[ii+o]&&names[ii+o].noted!=item.noted&&names[ii+o].name==item.name)?names[ii+o].id:""
 			var icon;
