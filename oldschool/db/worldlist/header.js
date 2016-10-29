@@ -10,12 +10,11 @@
 		BountyHunter:6,
 		Deadman:30,
 		DeadmanSeasonal:31,
-		SkillTotal2000:19,
-		SkillTotal1750:29,
-		SkillTotal1500:8,
-		SkillTotal1250:28,
+		SkillTotal:8,
+		LastManStanding:15,
 	};
-	FlagMask=Object.keys(Flags).map(i=>Flags[i]).reduce((acc,b)=>acc|(1<<b-1),0);
+	var FlagMask=Object.keys(Flags).map(i=>Flags[i]).reduce((acc,b)=>acc|(1<<b-1),0);
+	var skmatch = /([0-9]+) skill total/;
 	AddGetter({//World.Description=="-"?"":JSON.stringify(World.Description),World.Location,World.Players,World.Flags
 		Number:function(){return this.ID+300;},
 		Host:function(){return "oldschool"+this.ID+".runescape.com";},
@@ -26,7 +25,7 @@
 		LocationHTML:function(){return "<span class='flag flag-"+this.LocationCC+"' title='"+this.Location+"'></span>"},
 		Players:function(){return d[this.ID][2]},
 		Flags:function(){return d[this.ID][3]},
-		SkillTotal:function(){return (this.SkillTotal2000&&2000)||(this.SkillTotal1750&&1750)||(this.SkillTotal1500&&1500)||(this.SkillTotal1250&&1250)||"";},
+		MinimumLevel:function(){return this.SkillTotal?parseInt(skmatch.exec(this.Description)[1]):0;},
 		ExtraFlags:function(){return this.Flags&~FlagMask},
 	},World);
 	Object.keys(Flags).forEach(function(k){

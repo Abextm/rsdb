@@ -7,17 +7,24 @@
 		<rsdb-opt change="update()" name="Deadman">Hide Deadman Worlds</rsdb-opt><br>
 		<rsdb-opt change="update()" name="NormalPvP||HighRiskPvP">Hide PvP Worlds</rsdb-opt><br>
 		<rsdb-opt change="update()" name="BountyHunter">Hide Bounty Hunter Worlds</rsdb-opt><br>
-		<rsdb-opt change="update()" name="SkillTotal2000">Hide 2000 Skill total Worlds</rsdb-opt><br>
-		<rsdb-opt change="update()" name="SkillTotal1750">Hide 1750 Skill total Worlds</rsdb-opt><br>
-		<rsdb-opt change="update()" name="SkillTotal1500">Hide 1500 Skill total Worlds</rsdb-opt><br>
-		<rsdb-opt change="update()" name="SkillTotal1250">Hide 1250 Skill total Worlds</rsdb-opt><br>
+		<input oninput="update()" id="MinLevel" value="0" type="number"/> Dont show above level<br>
 	</fieldset>
 	<script>
 	var doPing=[];
 	var pingCache={};
+	var debug=false;
 	function updatePings(){
 		pingCache={};
 		update();
+	}
+	function debugcolgen(flags){
+		var bits=[];
+		for(var i=0;i<32;i++){
+			if(flags&(1<<i)){
+				bits[bits.length]=i+1;
+			}
+		}
+		return "<td>"+bits.join()+"</td>";
 	}
 	function update(){
 		var removeExpression=Array.from(document.getElementsByTagName("rsdb-opt")).filter(function(el){
@@ -25,19 +32,29 @@
 		}).map(function(el){
 			return el.name;
 		}).join("||");
+		var headers=["Num","Description","Players","","Ping","P2P","Attr"];
+		if(debug){
+			headers.push("Flags","ExtraFlags");
+		}
+		minLevel = parseInt(document.getElementById("MinLevel").value);
 		replaceSortedTable(document.getElementById("table"),[
 "<table class='linetable' id='table'>",
 	"<th><rsdb-sort>",
-		["Num","Description","Players","","Ping","P2P","Attr"].join("</rsdb-sort></th><th><rsdb-sort>"),
+		headers.join("</rsdb-sort></th><th><rsdb-sort>"),
 	"</rsdb-sort></th><tr><td>",
 		WorldList.Worlds.map(function(wid){
 			return WorldList.Get(wid);
 		}).filter(function(world){
+			if(minLevel&&world.MinimumLevel>minLevel) return false;
 			with(world)return !eval(removeExpression);
 		}).map(function(world){
 			if(pingCache[world.ID]===undefined){
 				doPing.push(world);
 				pingCache[world.ID]="";
+			}
+			var debugcol = "";
+			if(debug){
+				debugcol=debugcolgen(world.Flags)+debugcolgen(world.ExtraFlags);
 			}
 			return [
 				world.Number,
@@ -50,9 +67,10 @@
 					world.BountyHunter?"<span title='Bounty Hunter'>BH</span>":"",
 					world.HighRiskPvP?"<span title='High risk Player vs Player'>HR</span>":(world.NormalPvP?"<span title='Normal Player vs Player'>PvP</span>":""),
 					world.DeadmanSeasonal?"<span title='Deadman Seasonal'>DMS</span>":(world.Deadman?"<span title='Deadman'>DM</span>":""),
-					world.SkillTotal?"<span title='TotalLevel >= "+world.SkillTotal+"'>"+world.SkillTotal+"</span>":"",
+					world.LastManStanding?"<span title='Last man standing'>LMS</span>":"",
+					world.SkillTotal?"<span title='TotalLevel >= "+world.MinimumLevel+"'>"+world.MinimumLevel+"</span>":"",
 				].join(""),
-			].join("</td><td>");
+			].join("</td><td>")+debugcol;
 		}).join("</td></tr><tr><td>"),
 	"</td></tr>",
 "</table>",
