@@ -13,6 +13,13 @@
 	<script>
 var stats;
 var currentShown;
+function boostLevel(stats,task,sname){
+	if(!stats)return 0; //n/a
+	if(stats[sname].Level>=task.Skills[sname]) return 1;//has
+	if(Skills.Boost[sname](stats[sname].Level)>=task.Skills[sname]) return 2;//boost
+	if(Skills.Stew[sname](stats[sname].Level)>=task.Skills[sname]) return 3;//stew
+	return 4;//missing
+}
 function render(){
 	document.getElementById("diarytable").innerHTML=
 	"<tr><th>"+["","Easy","Med","Hard","Elite"].join("</th><th>")+"</th></tr>"+
@@ -23,13 +30,16 @@ function render(){
 		Diary.Difficulties.map(function(difn){
 				var c="";
 				if(stats){
-					c="has";
+					c=0;
 					diary[difn].Tasks.forEach(function(task){
-						for(var skill in task.Skills){
-							if(stats[skill].Level<task.Skills[skill])c="missing";
+						if(task.Skills){
+							for(var skill in task.Skills){
+								c=Math.max(c,boostLevel(stats,task,skill));
+							}
 						}
 					});
 				}
+				c=["","has","boostable","stewable","missing"][c];
 				return "<td onclick='Show(\""+diaryn+"\",\""+difn+"\")' title='"+diary.Name+" "+difn+"' class='diffbutton "+c+"'>"+ItemList.Get(diary[difn].RewardItem).IconHTML+"</td>";
 			}).join(""),
 			,"</tr>"].join("");
@@ -69,7 +79,7 @@ function Show(diaryn,difn){
 			task.Quests,
 			Object.keys(task.Skills).map(function(sname){
 				var o={	v:task.Skills[sname]+"<rsdb-skill>"+sname+"</rsdb-skill>" };
-				if(stats&&stats[sname].Level<task.Skills[sname])o.class="missing";
+				o.class=["","","boostable","stewable","missing"][boostLevel(stats,task,sname)];
 				return o;
 			}),
 			task.Items.map(function(e){return ItemList.Get(e).HTML}),
@@ -109,6 +119,14 @@ update();
 .missing,
 #tasktable>tbody>tr>td.missing{
 	background: #FAA;
+}
+.stewable,
+#tasktable>tbody>tr>td.stewable{
+	background: #DCA;
+}
+.boostable,
+#tasktable>tbody>tr>td.boostable{
+	background: #CDA;
 }
 .diffbutton{
 	cursor:pointer;
