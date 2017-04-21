@@ -1,6 +1,6 @@
 <rsdb-title>Diary</rsdb-title>
 <template require="skills,diary,itemlist,prices">
-	<form action="#" onsubmit="update()">
+	<form onsubmit="updateHash();">
 		<label>Player: <input type="text" id="playerName"/></label>
 		<input type="submit" value="Get"/>
 	</form>
@@ -16,10 +16,13 @@ var currentShown;
 function boostLevel(stats,task,sname){
 	if(!stats)return 0; //n/a
 	if(stats[sname].Level>=task.Skills[sname]) return 1;//has
-	if(Skills.Boost[sname](stats[sname].Level)>=task.Skills[sname]) return 2;//boost
-	if(Skills.Stew[sname](stats[sname].Level)>=task.Skills[sname]) return 3;//stew
+	if(Skills.Boost[sname]&&(Skills.Boost[sname](stats[sname].Level)>=task.Skills[sname])) return 2;//boost
+	if(Skills.Stew[sname]&&(Skills.Stew[sname](stats[sname].Level)>=task.Skills[sname])) return 3;//stew
 	return 4;//missing
 }
+window.addEventListener("hashchange",_=>{
+	update();
+});
 function render(){
 	document.getElementById("diarytable").innerHTML=
 	"<tr><th>"+["","Easy","Med","Hard","Elite"].join("</th><th>")+"</th></tr>"+
@@ -46,8 +49,11 @@ function render(){
 		}).join("");
 	if(currentShown)Show.apply(null,currentShown);
 }
+function updateHash(){
+	window.location.hash=document.getElementById("playerName").value;
+}
 function update(){
-	var Name=document.getElementById("playerName").value
+	var Name=window.location.hash.replace("#","");
 	if(Name){
 		Skills.Lookup(Name,function(err,data){
 			if(err){
