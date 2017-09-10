@@ -53,7 +53,7 @@ define(function () {
 			});
 		},
 		Stew: slmap([0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 8]),
-		Boost: slmap([0, 0, 0, 0, 0, 0, 0, l => Math.max(4, Math.floor(l * .1) + 1) + l, l => Math.floor(l * .05) + 2 + l, 3, 0, 5, 0, 1, 2, 3, 4, 5, 3, 5, 3, 0, 3, l => l + 3 + ((l > 6) ? ((l > 23) ? ((l > 67) ? 3 : 2) : 1) : 0)]),
+		Boost: slmap([0, 0, 0, 0, 0, 0, 0, l => Math.max(4, Math.floor(l * .1) + 1) + l, l => Math.floor(l * .05) + 2 + l, 3, 0, 5, 0, 4, 2, 3, 4, 5, 3, 5, 3, 0, 3, l => l + 3 + ((l > 6) ? ((l > 23) ? ((l > 67) ? 3 : 2) : 1) : 0)]),
 		Skills: Skills,
 		Name: "Skills",
 	}
